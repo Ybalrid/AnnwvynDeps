@@ -4,8 +4,6 @@
 
 #This file is for finding TinyXML2 on windows 64 without too much trouble for the Annwvyn engine
 
-message(${TinyXML2_ROOT})
-
 find_path (TinyXML2_INCLUDE_DIR tinyxml2.h 
     HINTS ${TinyXML2_ROOT})
 

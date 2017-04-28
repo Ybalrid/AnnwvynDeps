@@ -1,0 +1,23 @@
+﻿  OISEffect.cpp
+  OISException.cpp
+  OISForceFeedback.cpp
+  OISInputManager.cpp
+  OISJoyStick.cpp
+  OISKeyboard.cpp
+  OISObject.cpp
+  Win32ForceFeedback.cpp
+  Win32InputManager.cpp
+  Win32JoyStick.cpp
+  Win32KeyBoard.cpp
+  Win32Mouse.cpp
+  hiddevice.cpp
+  OISWiiMote.cpp
+  OISWiiMoteFactoryCreator.cpp
+  OISWiiMoteForceFeedback.cpp
+  OISWiiMoteRingBuffer.cpp
+  wiimote.cpp
+  OISLIRC.cpp
+  OISLIRCFactoryCreator.cpp
+  Génération de code en cours...
+     Création de la bibliothèque D:\Documents\ois-v1-3\ois-v1-3\Win32\x64\OIS_ReleaseDll\OIS.lib et de l'objet D:\Documents\ois-v1-3\ois-v1-3\Win32\x64\OIS_ReleaseDll\OIS.exp
+  OIS.vcxproj -> D:\Documents\ois-v1-3\ois-v1-3\Win32\x64\OIS_ReleaseDll\OIS.dll

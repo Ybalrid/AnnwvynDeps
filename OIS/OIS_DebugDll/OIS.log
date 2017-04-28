@@ -1,0 +1,25 @@
+﻿  OISEffect.cpp
+  OISException.cpp
+  OISForceFeedback.cpp
+  OISInputManager.cpp
+  OISJoyStick.cpp
+  OISKeyboard.cpp
+  OISObject.cpp
+  Win32ForceFeedback.cpp
+  Win32InputManager.cpp
+  Win32JoyStick.cpp
+  Win32KeyBoard.cpp
+  Win32Mouse.cpp
+  hiddevice.cpp
+  OISWiiMote.cpp
+  OISWiiMoteFactoryCreator.cpp
+  OISWiiMoteForceFeedback.cpp
+  OISWiiMoteRingBuffer.cpp
+  wiimote.cpp
+  OISLIRC.cpp
+  OISLIRCFactoryCreator.cpp
+  Génération de code en cours...
+C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V110\Microsoft.CppBuild.targets(1137,5): warning MSB8012: TargetPath(D:\Documents\ois-v1-3\ois-v1-3\Win32\x64\OIS_DebugDll\OIS.dll) does not match the Linker's OutputFile property value (D:\Documents\ois-v1-3\ois-v1-3\Win32\x64\OIS_DebugDll\OIS_d.dll). This may cause your project to build incorrectly. To correct this, please make sure that $(OutDir), $(TargetName) and $(TargetExt) property values match the value specified in %(Link.OutputFile).
+C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V110\Microsoft.CppBuild.targets(1139,5): warning MSB8012: TargetName(OIS) does not match the Linker's OutputFile property value (OIS_d). This may cause your project to build incorrectly. To correct this, please make sure that $(OutDir), $(TargetName) and $(TargetExt) property values match the value specified in %(Link.OutputFile).
+     Création de la bibliothèque D:\Documents\ois-v1-3\ois-v1-3\Win32\x64\OIS_DebugDll\OIS.lib et de l'objet D:\Documents\ois-v1-3\ois-v1-3\Win32\x64\OIS_DebugDll\OIS.exp
+  OIS.vcxproj -> D:\Documents\ois-v1-3\ois-v1-3\Win32\x64\OIS_DebugDll\OIS.dll

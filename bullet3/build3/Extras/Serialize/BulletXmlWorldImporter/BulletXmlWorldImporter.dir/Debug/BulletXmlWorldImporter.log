@@ -1,0 +1,26 @@
+﻿  Building Custom Rule C:/Oculus/AnnwvynSDK64-2015/bullet3/Extras/Serialize/BulletXmlWorldImporter/CMakeLists.txt
+  CMake does not need to re-run because C:\Oculus\AnnwvynSDK64-2015\bullet3\build3\Extras\Serialize\BulletXmlWorldImporter\CMakeFiles\generate.stamp is up-to-date.
+  btBulletXmlWorldImporter.cpp
+C:\Oculus\AnnwvynSDK64-2015\bullet3\Extras\Serialize\BulletXmlWorldImporter\btBulletXmlWorldImporter.cpp(236): warning C4312: 'type cast': conversion from 'int' to 'btVector3FloatData *' of greater size
+C:\Oculus\AnnwvynSDK64-2015\bullet3\Extras\Serialize\BulletXmlWorldImporter\btBulletXmlWorldImporter.cpp(237): warning C4312: 'type cast': conversion from 'int' to 'btVector3DoubleData *' of greater size
+C:\Oculus\AnnwvynSDK64-2015\bullet3\Extras\Serialize\BulletXmlWorldImporter\btBulletXmlWorldImporter.cpp(241): warning C4312: 'type cast': conversion from 'int' to 'void *' of greater size
+C:\Oculus\AnnwvynSDK64-2015\bullet3\Extras\Serialize\BulletXmlWorldImporter\btBulletXmlWorldImporter.cpp(265): warning C4312: 'type cast': conversion from 'int' to 'btCollisionShapeData *' of greater size
+C:\Oculus\AnnwvynSDK64-2015\bullet3\Extras\Serialize\BulletXmlWorldImporter\btBulletXmlWorldImporter.cpp(295): warning C4312: 'type cast': conversion from 'int' to 'void *' of greater size
+C:\Oculus\AnnwvynSDK64-2015\bullet3\Extras\Serialize\BulletXmlWorldImporter\btBulletXmlWorldImporter.cpp(322): warning C4312: 'type cast': conversion from 'int' to 'btCompoundShapeChildData *' of greater size
+C:\Oculus\AnnwvynSDK64-2015\bullet3\Extras\Serialize\BulletXmlWorldImporter\btBulletXmlWorldImporter.cpp(331): warning C4312: 'type cast': conversion from 'int' to 'void *' of greater size
+C:\Oculus\AnnwvynSDK64-2015\bullet3\Extras\Serialize\BulletXmlWorldImporter\btBulletXmlWorldImporter.cpp(351): warning C4312: 'type cast': conversion from 'int' to 'void *' of greater size
+C:\Oculus\AnnwvynSDK64-2015\bullet3\Extras\Serialize\BulletXmlWorldImporter\btBulletXmlWorldImporter.cpp(385): warning C4312: 'type cast': conversion from 'int' to 'void *' of greater size
+C:\Oculus\AnnwvynSDK64-2015\bullet3\Extras\Serialize\BulletXmlWorldImporter\btBulletXmlWorldImporter.cpp(416): warning C4312: 'type cast': conversion from 'int' to 'btRigidBodyFloatData *' of greater size
+C:\Oculus\AnnwvynSDK64-2015\bullet3\Extras\Serialize\BulletXmlWorldImporter\btBulletXmlWorldImporter.cpp(417): warning C4312: 'type cast': conversion from 'int' to 'btRigidBodyFloatData *' of greater size
+C:\Oculus\AnnwvynSDK64-2015\bullet3\Extras\Serialize\BulletXmlWorldImporter\btBulletXmlWorldImporter.cpp(442): warning C4312: 'type cast': conversion from 'int' to 'void *' of greater size
+C:\Oculus\AnnwvynSDK64-2015\bullet3\Extras\Serialize\BulletXmlWorldImporter\btBulletXmlWorldImporter.cpp(460): warning C4312: 'type cast': conversion from 'int' to 'void *' of greater size
+C:\Oculus\AnnwvynSDK64-2015\bullet3\Extras\Serialize\BulletXmlWorldImporter\btBulletXmlWorldImporter.cpp(509): warning C4312: 'type cast': conversion from 'int' to 'void *' of greater size
+C:\Oculus\AnnwvynSDK64-2015\bullet3\Extras\Serialize\BulletXmlWorldImporter\btBulletXmlWorldImporter.cpp(654): warning C4312: 'type cast': conversion from 'int' to 'void *' of greater size
+  string_split.cpp
+C:\Oculus\AnnwvynSDK64-2015\bullet3\Extras\Serialize\BulletXmlWorldImporter\string_split.cpp(31): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+  tinyxml.cpp
+  tinystr.cpp
+  tinyxmlerror.cpp
+  tinyxmlparser.cpp
+  Generating Code...
+  BulletXmlWorldImporter.vcxproj -> C:\Oculus\AnnwvynSDK64-2015\bullet3\build3\lib\Debug\BulletXmlWorldImporter_Debug.lib

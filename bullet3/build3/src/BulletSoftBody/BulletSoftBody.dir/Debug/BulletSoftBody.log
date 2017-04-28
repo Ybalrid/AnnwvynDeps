@@ -1,0 +1,19 @@
+﻿  Building Custom Rule C:/Oculus/AnnwvynSDK64-2015/bullet3/src/BulletSoftBody/CMakeLists.txt
+  CMake does not need to re-run because C:\Oculus\AnnwvynSDK64-2015\bullet3\build3\src\BulletSoftBody\CMakeFiles\generate.stamp is up-to-date.
+  btSoftBody.cpp
+C:\Oculus\AnnwvynSDK64-2015\bullet3\src\BulletSoftBody\btSoftBody.cpp(3340): warning C4244: '=': conversion from '__int64' to 'int', possible loss of data
+C:\Oculus\AnnwvynSDK64-2015\bullet3\src\BulletSoftBody\btSoftBody.cpp(3341): warning C4244: '=': conversion from '__int64' to 'int', possible loss of data
+C:\Oculus\AnnwvynSDK64-2015\bullet3\src\BulletSoftBody\btSoftBody.cpp(3365): warning C4244: '=': conversion from '__int64' to 'int', possible loss of data
+C:\Oculus\AnnwvynSDK64-2015\bullet3\src\BulletSoftBody\btSoftBody.cpp(3386): warning C4244: '=': conversion from '__int64' to 'int', possible loss of data
+C:\Oculus\AnnwvynSDK64-2015\bullet3\src\BulletSoftBody\btSoftBody.cpp(3410): warning C4244: '=': conversion from '__int64' to 'int', possible loss of data
+  btSoftBodyConcaveCollisionAlgorithm.cpp
+  btSoftBodyHelpers.cpp
+C:\Oculus\AnnwvynSDK64-2015\bullet3\src\BulletSoftBody\btSoftBodyHelpers.cpp(572): warning C4244: '=': conversion from '__int64' to 'int', possible loss of data
+C:\Oculus\AnnwvynSDK64-2015\bullet3\src\BulletSoftBody\btSoftBodyHelpers.cpp(573): warning C4244: '=': conversion from '__int64' to 'int', possible loss of data
+  btSoftBodyRigidBodyCollisionConfiguration.cpp
+  btSoftRigidCollisionAlgorithm.cpp
+  btSoftRigidDynamicsWorld.cpp
+  btSoftSoftCollisionAlgorithm.cpp
+  btDefaultSoftBodySolver.cpp
+  Generating Code...
+  BulletSoftBody.vcxproj -> C:\Oculus\AnnwvynSDK64-2015\bullet3\build3\lib\Debug\BulletSoftBody_Debug.lib

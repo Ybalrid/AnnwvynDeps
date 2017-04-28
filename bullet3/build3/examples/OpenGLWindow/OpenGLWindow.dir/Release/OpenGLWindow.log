@@ -1,0 +1,39 @@
+﻿  Building Custom Rule C:/Oculus/AnnwvynSDK64-2015/bullet3/examples/OpenGLWindow/CMakeLists.txt
+  CMake does not need to re-run because C:\Oculus\AnnwvynSDK64-2015\bullet3\build3\examples\OpenGLWindow\CMakeFiles\generate.stamp is up-to-date.
+  glew.c
+  Win32OpenGLWindow.cpp
+C:\Oculus\AnnwvynSDK64-2015\bullet3\examples\OpenGLWindow\Win32OpenGLWindow.cpp(176): warning C4267: 'return': conversion from 'size_t' to 'int', possible loss of data
+  Win32Window.cpp
+C:\Oculus\AnnwvynSDK64-2015\bullet3\examples\OpenGLWindow\Win32Window.cpp(190): warning C4244: 'argument': conversion from 'WPARAM' to 'int', possible loss of data
+C:\Oculus\AnnwvynSDK64-2015\bullet3\examples\OpenGLWindow\Win32Window.cpp(220): warning C4244: 'argument': conversion from 'WPARAM' to 'int', possible loss of data
+C:\Oculus\AnnwvynSDK64-2015\bullet3\examples\OpenGLWindow\Win32Window.cpp(226): warning C4244: 'argument': conversion from 'WPARAM' to 'int', possible loss of data
+C:\Oculus\AnnwvynSDK64-2015\bullet3\examples\OpenGLWindow\Win32Window.cpp(234): warning C4244: 'argument': conversion from 'WPARAM' to 'int', possible loss of data
+C:\Oculus\AnnwvynSDK64-2015\bullet3\examples\OpenGLWindow\Win32Window.cpp(272): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Oculus\AnnwvynSDK64-2015\bullet3\examples\OpenGLWindow\Win32Window.cpp(286): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Oculus\AnnwvynSDK64-2015\bullet3\examples\OpenGLWindow\Win32Window.cpp(302): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Oculus\AnnwvynSDK64-2015\bullet3\examples\OpenGLWindow\Win32Window.cpp(319): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Oculus\AnnwvynSDK64-2015\bullet3\examples\OpenGLWindow\Win32Window.cpp(357): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Oculus\AnnwvynSDK64-2015\bullet3\examples\OpenGLWindow\Win32Window.cpp(368): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Oculus\AnnwvynSDK64-2015\bullet3\examples\OpenGLWindow\Win32Window.cpp(379): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Oculus\AnnwvynSDK64-2015\bullet3\examples\OpenGLWindow\Win32Window.cpp(411): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Oculus\AnnwvynSDK64-2015\bullet3\examples\OpenGLWindow\Win32Window.cpp(437): warning C4101: 'dwResult': unreferenced local variable
+C:\Oculus\AnnwvynSDK64-2015\bullet3\examples\OpenGLWindow\Win32Window.cpp(778): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+  fontstash.cpp
+C:\Oculus\AnnwvynSDK64-2015\bullet3\examples\OpenGLWindow\fontstash.cpp(233): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+  GLInstancingRenderer.cpp
+  GLPrimitiveRenderer.cpp
+C:\Oculus\AnnwvynSDK64-2015\bullet3\examples\OpenGLWindow\GLPrimitiveRenderer.cpp(315): warning C4800: 'int': forcing value to bool 'true' or 'false' (performance warning)
+  GLRenderToTexture.cpp
+  LoadShader.cpp
+  opengl_fontstashcallbacks.cpp
+c:\oculus\annwvynsdk64-2015\bullet3\examples\openglwindow\stb_image_write.h(321): warning C4244: 'initializing': conversion from '__int64' to 'int', possible loss of data
+  OpenSans.cpp
+  SimpleCamera.cpp
+  SimpleOpenGL2App.cpp
+  SimpleOpenGL2Renderer.cpp
+  SimpleOpenGL3App.cpp
+C:\Oculus\AnnwvynSDK64-2015\bullet3\examples\OpenGLWindow\SimpleOpenGL3App.cpp(775): warning C4244: 'argument': conversion from 'float' to 'GLsizei', possible loss of data
+C:\Oculus\AnnwvynSDK64-2015\bullet3\examples\OpenGLWindow\SimpleOpenGL3App.cpp(782): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+  TwFonts.cpp
+  Generating Code...
+  OpenGLWindow.vcxproj -> C:\Oculus\AnnwvynSDK64-2015\bullet3\build3\lib\Release\OpenGLWindow.lib

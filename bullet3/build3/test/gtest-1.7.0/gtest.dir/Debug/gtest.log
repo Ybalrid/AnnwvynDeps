@@ -1,0 +1,4 @@
+﻿  Building Custom Rule C:/Oculus/AnnwvynSDK64-2015/bullet3/test/gtest-1.7.0/CMakeLists.txt
+  CMake does not need to re-run because C:\Oculus\AnnwvynSDK64-2015\bullet3\build3\test\gtest-1.7.0\CMakeFiles\generate.stamp is up-to-date.
+  gtest-all.cc
+  gtest.vcxproj -> C:\Oculus\AnnwvynSDK64-2015\bullet3\build3\lib\Debug\gtest_Debug.lib

@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Project ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="C:\Oculus\AnnwvynSDK64-2015\bullet3\test\InverseDynamics\test_invdyn_kinematics.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Oculus\AnnwvynSDK64-2015\bullet3\test\InverseDynamics\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{DBDEFCEB-30A0-3129-BE2C-A98CE84551E0}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

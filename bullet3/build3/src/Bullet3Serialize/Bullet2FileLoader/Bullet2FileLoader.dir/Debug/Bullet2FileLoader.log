@@ -1,0 +1,21 @@
+﻿  Building Custom Rule C:/Oculus/AnnwvynSDK64-2015/bullet3/src/Bullet3Serialize/Bullet2FileLoader/CMakeLists.txt
+  CMake does not need to re-run because C:\Oculus\AnnwvynSDK64-2015\bullet3\build3\src\Bullet3Serialize\Bullet2FileLoader\CMakeFiles\generate.stamp is up-to-date.
+  b3BulletFile.cpp
+  b3Chunk.cpp
+  b3DNA.cpp
+C:\Oculus\AnnwvynSDK64-2015\bullet3\src\Bullet3Serialize\Bullet2FileLoader\b3DNA.cpp(278): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+C:\Oculus\AnnwvynSDK64-2015\bullet3\src\Bullet3Serialize\Bullet2FileLoader\b3DNA.cpp(393): warning C4311: 'type cast': pointer truncation from 'char *' to 'long'
+C:\Oculus\AnnwvynSDK64-2015\bullet3\src\Bullet3Serialize\Bullet2FileLoader\b3DNA.cpp(393): warning C4302: 'type cast': truncation from 'char *' to 'long'
+C:\Oculus\AnnwvynSDK64-2015\bullet3\src\Bullet3Serialize\Bullet2FileLoader\b3DNA.cpp(429): warning C4311: 'type cast': pointer truncation from 'char *' to 'long'
+C:\Oculus\AnnwvynSDK64-2015\bullet3\src\Bullet3Serialize\Bullet2FileLoader\b3DNA.cpp(429): warning C4302: 'type cast': truncation from 'char *' to 'long'
+C:\Oculus\AnnwvynSDK64-2015\bullet3\src\Bullet3Serialize\Bullet2FileLoader\b3DNA.cpp(526): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+  b3File.cpp
+C:\Oculus\AnnwvynSDK64-2015\bullet3\src\Bullet3Serialize\Bullet2FileLoader\b3File.cpp(34): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+C:\Oculus\AnnwvynSDK64-2015\bullet3\src\Bullet3Serialize\Bullet2FileLoader\b3File.cpp(78): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+C:\Oculus\AnnwvynSDK64-2015\bullet3\src\Bullet3Serialize\Bullet2FileLoader\b3File.cpp(432): warning C4311: 'type cast': pointer truncation from 'char *' to 'long'
+C:\Oculus\AnnwvynSDK64-2015\bullet3\src\Bullet3Serialize\Bullet2FileLoader\b3File.cpp(432): warning C4302: 'type cast': truncation from 'char *' to 'long'
+C:\Oculus\AnnwvynSDK64-2015\bullet3\src\Bullet3Serialize\Bullet2FileLoader\b3File.cpp(469): warning C4311: 'type cast': pointer truncation from 'char *' to 'long'
+C:\Oculus\AnnwvynSDK64-2015\bullet3\src\Bullet3Serialize\Bullet2FileLoader\b3File.cpp(469): warning C4302: 'type cast': truncation from 'char *' to 'long'
+  b3Serializer.cpp
+  Generating Code...
+  Bullet2FileLoader.vcxproj -> C:\Oculus\AnnwvynSDK64-2015\bullet3\build3\lib\Debug\Bullet2FileLoader_Debug.lib

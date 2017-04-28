@@ -1,0 +1,61 @@
+﻿  Building Custom Rule C:/Oculus/AnnwvynSDK64-2015/bullet3/test/InverseDynamics/CMakeLists.txt
+  CMake does not need to re-run because C:\Oculus\AnnwvynSDK64-2015\bullet3\build3\test\InverseDynamics\CMakeFiles\generate.stamp is up-to-date.
+  test_invdyn_kinematics.cpp
+c:\oculus\annwvynsdk64-2015\bullet3\src\bulletinversedynamics\details/IDLinearMathInterface.hpp(45): warning C4244: 'argument': conversion from 'double' to 'const btScalar', possible loss of data
+C:\Oculus\AnnwvynSDK64-2015\bullet3\src\../Extras/InverseDynamics/DillCreator.hpp(25): warning C4373: 'btInverseDynamicsBullet3::DillCreator::getBody': virtual function overrides 'btInverseDynamicsBullet3::MultiBodyTreeCreator::getBody', previous versions of the compiler did not override when parameters only differed by const/volatile qualifiers
+  c:\oculus\annwvynsdk64-2015\bullet3\extras\inversedynamics\MultiBodyTreeCreator.hpp(27): note: see declaration of 'btInverseDynamicsBullet3::MultiBodyTreeCreator::getBody'
+C:\Oculus\AnnwvynSDK64-2015\bullet3\test\InverseDynamics\test_invdyn_kinematics.cpp(19): warning C4244: 'argument': conversion from 'const int' to 'btScalar', possible loss of data
+C:\Oculus\AnnwvynSDK64-2015\bullet3\test\InverseDynamics\test_invdyn_kinematics.cpp(19): warning C4244: 'initializing': conversion from 'btScalar' to 'int', possible loss of data
+C:\Oculus\AnnwvynSDK64-2015\bullet3\test\InverseDynamics\test_invdyn_kinematics.cpp(19): warning C4244: 'initializing': conversion from 'btScalar' to 'const int', possible loss of data
+C:\Oculus\AnnwvynSDK64-2015\bullet3\test\InverseDynamics\test_invdyn_kinematics.cpp(49): warning C4244: '=': conversion from 'double' to 'idScalar', possible loss of data
+C:\Oculus\AnnwvynSDK64-2015\bullet3\test\InverseDynamics\test_invdyn_kinematics.cpp(50): warning C4244: '=': conversion from 'double' to 'idScalar', possible loss of data
+C:\Oculus\AnnwvynSDK64-2015\bullet3\test\InverseDynamics\test_invdyn_kinematics.cpp(51): warning C4244: '=': conversion from 'double' to 'idScalar', possible loss of data
+C:\Oculus\AnnwvynSDK64-2015\bullet3\test\InverseDynamics\test_invdyn_kinematics.cpp(214): warning C4244: '=': conversion from 'double' to 'idScalar', possible loss of data
+C:\Oculus\AnnwvynSDK64-2015\bullet3\test\InverseDynamics\test_invdyn_kinematics.cpp(215): warning C4244: '=': conversion from 'double' to 'idScalar', possible loss of data
+C:\Oculus\AnnwvynSDK64-2015\bullet3\test\InverseDynamics\test_invdyn_kinematics.cpp(217): warning C4244: '=': conversion from 'double' to 'idScalar', possible loss of data
+C:\Oculus\AnnwvynSDK64-2015\bullet3\test\InverseDynamics\test_invdyn_kinematics.cpp(77): warning C4244: 'argument': conversion from 'double' to 'const idScalar', possible loss of data
+  C:\Oculus\AnnwvynSDK64-2015\bullet3\test\InverseDynamics\test_invdyn_kinematics.cpp(73): note: while compiling class template member function 'void DiffFD<ValueType,DiffType>::update(const ValueType &,const DiffType &)'
+          with
+          [
+              ValueType=btInverseDynamicsBullet3::mat33,
+              DiffType=btInverseDynamicsBullet3::vec3
+          ]
+  C:\Oculus\AnnwvynSDK64-2015\bullet3\test\InverseDynamics\test_invdyn_kinematics.cpp(143): note: see reference to function template instantiation 'void DiffFD<ValueType,DiffType>::update(const ValueType &,const DiffType &)' being compiled
+          with
+          [
+              ValueType=btInverseDynamicsBullet3::mat33,
+              DiffType=btInverseDynamicsBullet3::vec3
+          ]
+  C:\Oculus\AnnwvynSDK64-2015\bullet3\test\InverseDynamics\test_invdyn_kinematics.cpp(157): note: see reference to class template instantiation 'DiffFD<ValueType,DiffType>' being compiled
+          with
+          [
+              ValueType=btInverseDynamicsBullet3::mat33,
+              DiffType=btInverseDynamicsBullet3::vec3
+          ]
+  C:\Oculus\AnnwvynSDK64-2015\bullet3\test\InverseDynamics\test_invdyn_kinematics.cpp(154): note: while compiling class template member function 'idScalar VecDiffFD<btInverseDynamicsBullet3::mat33,btInverseDynamicsBullet3::vec3>::getMaxValue(void) const'
+  C:\Oculus\AnnwvynSDK64-2015\bullet3\test\InverseDynamics\test_invdyn_kinematics.cpp(255): note: see reference to function template instantiation 'idScalar VecDiffFD<btInverseDynamicsBullet3::mat33,btInverseDynamicsBullet3::vec3>::getMaxValue(void) const' being compiled
+  C:\Oculus\AnnwvynSDK64-2015\bullet3\test\InverseDynamics\test_invdyn_kinematics.cpp(209): note: see reference to class template instantiation 'VecDiffFD<btInverseDynamicsBullet3::mat33,btInverseDynamicsBullet3::vec3>' being compiled
+C:\Oculus\AnnwvynSDK64-2015\bullet3\test\InverseDynamics\test_invdyn_kinematics.cpp(77): warning C4244: 'argument': conversion from 'double' to 'const btScalar', possible loss of data
+  C:\Oculus\AnnwvynSDK64-2015\bullet3\test\InverseDynamics\test_invdyn_kinematics.cpp(73): note: while compiling class template member function 'void DiffFD<ValueType,DiffType>::update(const ValueType &,const DiffType &)'
+          with
+          [
+              ValueType=btInverseDynamicsBullet3::vec3,
+              DiffType=btInverseDynamicsBullet3::vec3
+          ]
+  C:\Oculus\AnnwvynSDK64-2015\bullet3\test\InverseDynamics\test_invdyn_kinematics.cpp(143): note: see reference to function template instantiation 'void DiffFD<ValueType,DiffType>::update(const ValueType &,const DiffType &)' being compiled
+          with
+          [
+              ValueType=btInverseDynamicsBullet3::vec3,
+              DiffType=btInverseDynamicsBullet3::vec3
+          ]
+  C:\Oculus\AnnwvynSDK64-2015\bullet3\test\InverseDynamics\test_invdyn_kinematics.cpp(157): note: see reference to class template instantiation 'DiffFD<ValueType,DiffType>' being compiled
+          with
+          [
+              ValueType=btInverseDynamicsBullet3::vec3,
+              DiffType=btInverseDynamicsBullet3::vec3
+          ]
+  C:\Oculus\AnnwvynSDK64-2015\bullet3\test\InverseDynamics\test_invdyn_kinematics.cpp(154): note: while compiling class template member function 'idScalar VecDiffFD<btInverseDynamicsBullet3::vec3,btInverseDynamicsBullet3::vec3>::getMaxValue(void) const'
+  C:\Oculus\AnnwvynSDK64-2015\bullet3\test\InverseDynamics\test_invdyn_kinematics.cpp(254): note: see reference to function template instantiation 'idScalar VecDiffFD<btInverseDynamicsBullet3::vec3,btInverseDynamicsBullet3::vec3>::getMaxValue(void) const' being compiled
+  C:\Oculus\AnnwvynSDK64-2015\bullet3\test\InverseDynamics\test_invdyn_kinematics.cpp(207): note: see reference to class template instantiation 'VecDiffFD<btInverseDynamicsBullet3::vec3,btInverseDynamicsBullet3::vec3>' being compiled
+  Test_BulletInverseDynamics.vcxproj -> C:\Oculus\AnnwvynSDK64-2015\bullet3\build3\test\InverseDynamics\Debug\Test_BulletInverseDynamics.exe
+  Test_BulletInverseDynamics.vcxproj -> C:/Oculus/AnnwvynSDK64-2015/bullet3/build3/test/InverseDynamics/Debug/Test_BulletInverseDynamics.pdb (Full PDB)

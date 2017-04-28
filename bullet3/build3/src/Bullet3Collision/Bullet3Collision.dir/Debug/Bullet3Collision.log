@@ -1,0 +1,15 @@
+﻿  Building Custom Rule C:/Oculus/AnnwvynSDK64-2015/bullet3/src/Bullet3Collision/CMakeLists.txt
+  CMake does not need to re-run because C:\Oculus\AnnwvynSDK64-2015\bullet3\build3\src\Bullet3Collision\CMakeFiles\generate.stamp is up-to-date.
+  b3DynamicBvh.cpp
+  b3DynamicBvhBroadphase.cpp
+C:\Oculus\AnnwvynSDK64-2015\bullet3\src\Bullet3Collision/BroadPhaseCollision/b3DynamicBvh.h(968): warning C4101: 'resultNormal': unreferenced local variable
+  C:\Oculus\AnnwvynSDK64-2015\bullet3\src\Bullet3Collision\BroadPhaseCollision\b3DynamicBvhBroadphase.cpp(249): note: see reference to function template instantiation 'void b3DynamicBvh::rayTestInternal<BroadphaseRayTester>(const b3DbvtNode *,const b3Vector3 &,const b3Vector3 &,const b3Vector3 &,unsigned int [],b3Scalar,const b3Vector3 &,const b3Vector3 &,T &) const' being compiled
+          with
+          [
+              T=BroadphaseRayTester
+          ]
+  b3OverlappingPairCache.cpp
+  b3ConvexUtility.cpp
+  b3CpuNarrowPhase.cpp
+  Generating Code...
+  Bullet3Collision.vcxproj -> C:\Oculus\AnnwvynSDK64-2015\bullet3\build3\lib\Debug\Bullet3Collision_Debug.lib

@@ -1,0 +1,13 @@
+﻿  Building Custom Rule C:/Oculus/AnnwvynSDK64-2015/bullet3/src/Bullet3Common/CMakeLists.txt
+  CMake does not need to re-run because C:\Oculus\AnnwvynSDK64-2015\bullet3\build3\src\Bullet3Common\CMakeFiles\generate.stamp is up-to-date.
+  b3AlignedAllocator.cpp
+  b3Vector3.cpp
+C:\Oculus\AnnwvynSDK64-2015\bullet3\src\Bullet3Common\b3Vector3.cpp(170): warning C4267: '=': conversion from 'size_t' to 'long', possible loss of data
+C:\Oculus\AnnwvynSDK64-2015\bullet3\src\Bullet3Common\b3Vector3.cpp(175): warning C4267: '-=': conversion from 'size_t' to 'unsigned long', possible loss of data
+C:\Oculus\AnnwvynSDK64-2015\bullet3\src\Bullet3Common\b3Vector3.cpp(418): warning C4267: '=': conversion from 'size_t' to 'long', possible loss of data
+C:\Oculus\AnnwvynSDK64-2015\bullet3\src\Bullet3Common\b3Vector3.cpp(556): warning C4267: '=': conversion from 'size_t' to 'long', possible loss of data
+C:\Oculus\AnnwvynSDK64-2015\bullet3\src\Bullet3Common\b3Vector3.cpp(561): warning C4267: '-=': conversion from 'size_t' to 'unsigned long', possible loss of data
+C:\Oculus\AnnwvynSDK64-2015\bullet3\src\Bullet3Common\b3Vector3.cpp(807): warning C4267: '=': conversion from 'size_t' to 'long', possible loss of data
+  b3Logging.cpp
+  Generating Code...
+  Bullet3Common.vcxproj -> C:\Oculus\AnnwvynSDK64-2015\bullet3\build3\lib\Release\Bullet3Common.lib

@@ -1,0 +1,50 @@
+﻿  Building Custom Rule C:/Oculus/AnnwvynSDK64-2015/bullet3/Extras/InverseDynamics/CMakeLists.txt
+  CMake does not need to re-run because C:\Oculus\AnnwvynSDK64-2015\bullet3\build3\Extras\InverseDynamics\CMakeFiles\generate.stamp is up-to-date.
+  CoilCreator.cpp
+c:\oculus\annwvynsdk64-2015\bullet3\src\bulletinversedynamics\details/IDLinearMathInterface.hpp(45): warning C4244: 'argument': conversion from 'double' to 'const btScalar', possible loss of data
+C:\Oculus\AnnwvynSDK64-2015\bullet3\Extras\InverseDynamics\CoilCreator.cpp(14): warning C4244: 'initializing': conversion from 'double' to 'idScalar', possible loss of data
+C:\Oculus\AnnwvynSDK64-2015\bullet3\Extras\InverseDynamics\CoilCreator.cpp(14): warning C4244: 'initializing': conversion from 'double' to 'const idScalar', possible loss of data
+C:\Oculus\AnnwvynSDK64-2015\bullet3\Extras\InverseDynamics\CoilCreator.cpp(15): warning C4244: 'initializing': conversion from 'double' to 'idScalar', possible loss of data
+C:\Oculus\AnnwvynSDK64-2015\bullet3\Extras\InverseDynamics\CoilCreator.cpp(15): warning C4244: 'initializing': conversion from 'double' to 'const idScalar', possible loss of data
+C:\Oculus\AnnwvynSDK64-2015\bullet3\Extras\InverseDynamics\CoilCreator.cpp(23): warning C4244: '=': conversion from 'double' to 'idScalar', possible loss of data
+C:\Oculus\AnnwvynSDK64-2015\bullet3\Extras\InverseDynamics\CoilCreator.cpp(24): warning C4244: '=': conversion from 'double' to 'idScalar', possible loss of data
+C:\Oculus\AnnwvynSDK64-2015\bullet3\Extras\InverseDynamics\CoilCreator.cpp(28): warning C4244: '=': conversion from 'double' to 'idScalar', possible loss of data
+C:\Oculus\AnnwvynSDK64-2015\bullet3\Extras\InverseDynamics\CoilCreator.cpp(32): warning C4244: 'argument': conversion from 'int' to 'btScalar', possible loss of data
+C:\Oculus\AnnwvynSDK64-2015\bullet3\Extras\InverseDynamics\CoilCreator.cpp(32): warning C4244: '=': conversion from 'double' to 'idScalar', possible loss of data
+  MultiBodyTreeCreator.cpp
+c:\oculus\annwvynsdk64-2015\bullet3\src\bulletinversedynamics\details/IDLinearMathInterface.hpp(45): warning C4244: 'argument': conversion from 'double' to 'const btScalar', possible loss of data
+  btMultiBodyTreeCreator.cpp
+c:\oculus\annwvynsdk64-2015\bullet3\src\bulletinversedynamics\details/IDLinearMathInterface.hpp(45): warning C4244: 'argument': conversion from 'double' to 'const btScalar', possible loss of data
+c:\oculus\annwvynsdk64-2015\bullet3\extras\inversedynamics\btMultiBodyTreeCreator.hpp(28): warning C4373: 'btInverseDynamicsBullet3::btMultiBodyTreeCreator::getBody': virtual function overrides 'btInverseDynamicsBullet3::MultiBodyTreeCreator::getBody', previous versions of the compiler did not override when parameters only differed by const/volatile qualifiers
+  c:\oculus\annwvynsdk64-2015\bullet3\extras\inversedynamics\MultiBodyTreeCreator.hpp(27): note: see declaration of 'btInverseDynamicsBullet3::MultiBodyTreeCreator::getBody'
+  DillCreator.cpp
+c:\oculus\annwvynsdk64-2015\bullet3\src\bulletinversedynamics\details/IDLinearMathInterface.hpp(45): warning C4244: 'argument': conversion from 'double' to 'const btScalar', possible loss of data
+c:\oculus\annwvynsdk64-2015\bullet3\extras\inversedynamics\DillCreator.hpp(25): warning C4373: 'btInverseDynamicsBullet3::DillCreator::getBody': virtual function overrides 'btInverseDynamicsBullet3::MultiBodyTreeCreator::getBody', previous versions of the compiler did not override when parameters only differed by const/volatile qualifiers
+  c:\oculus\annwvynsdk64-2015\bullet3\extras\inversedynamics\MultiBodyTreeCreator.hpp(27): note: see declaration of 'btInverseDynamicsBullet3::MultiBodyTreeCreator::getBody'
+C:\Oculus\AnnwvynSDK64-2015\bullet3\Extras\InverseDynamics\DillCreator.cpp(7): warning C4244: 'argument': conversion from 'int' to 'btScalar', possible loss of data
+C:\Oculus\AnnwvynSDK64-2015\bullet3\Extras\InverseDynamics\DillCreator.cpp(8): warning C4244: 'initializing': conversion from 'btScalar' to 'int', possible loss of data
+C:\Oculus\AnnwvynSDK64-2015\bullet3\Extras\InverseDynamics\DillCreator.cpp(82): warning C4244: 'initializing': conversion from 'const int' to 'idScalar', possible loss of data
+C:\Oculus\AnnwvynSDK64-2015\bullet3\Extras\InverseDynamics\DillCreator.cpp(90): warning C4244: '=': conversion from 'double' to 'idScalar', possible loss of data
+C:\Oculus\AnnwvynSDK64-2015\bullet3\Extras\InverseDynamics\DillCreator.cpp(91): warning C4244: '=': conversion from 'double' to 'idScalar', possible loss of data
+C:\Oculus\AnnwvynSDK64-2015\bullet3\Extras\InverseDynamics\DillCreator.cpp(103): warning C4244: '=': conversion from 'double' to 'idScalar', possible loss of data
+C:\Oculus\AnnwvynSDK64-2015\bullet3\Extras\InverseDynamics\DillCreator.cpp(104): warning C4244: '=': conversion from 'double' to 'idScalar', possible loss of data
+C:\Oculus\AnnwvynSDK64-2015\bullet3\Extras\InverseDynamics\DillCreator.cpp(112): warning C4244: 'initializing': conversion from 'double' to 'idScalar', possible loss of data
+C:\Oculus\AnnwvynSDK64-2015\bullet3\Extras\InverseDynamics\DillCreator.cpp(116): warning C4244: 'initializing': conversion from 'double' to 'idScalar', possible loss of data
+C:\Oculus\AnnwvynSDK64-2015\bullet3\Extras\InverseDynamics\DillCreator.cpp(116): warning C4244: 'initializing': conversion from 'double' to 'const idScalar', possible loss of data
+C:\Oculus\AnnwvynSDK64-2015\bullet3\Extras\InverseDynamics\DillCreator.cpp(117): warning C4244: 'initializing': conversion from 'double' to 'idScalar', possible loss of data
+C:\Oculus\AnnwvynSDK64-2015\bullet3\Extras\InverseDynamics\DillCreator.cpp(117): warning C4244: 'initializing': conversion from 'double' to 'const idScalar', possible loss of data
+  MultiBodyTreeDebugGraph.cpp
+c:\oculus\annwvynsdk64-2015\bullet3\src\bulletinversedynamics\details/IDLinearMathInterface.hpp(45): warning C4244: 'argument': conversion from 'double' to 'const btScalar', possible loss of data
+  invdyn_bullet_comparison.cpp
+c:\oculus\annwvynsdk64-2015\bullet3\src\bulletinversedynamics\details/IDLinearMathInterface.hpp(45): warning C4244: 'argument': conversion from 'double' to 'const btScalar', possible loss of data
+  IDRandomUtil.cpp
+c:\oculus\annwvynsdk64-2015\bullet3\src\bulletinversedynamics\details/IDLinearMathInterface.hpp(45): warning C4244: 'argument': conversion from 'double' to 'const btScalar', possible loss of data
+C:\Oculus\AnnwvynSDK64-2015\bullet3\Extras\InverseDynamics\IDRandomUtil.cpp(17): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+  SimpleTreeCreator.cpp
+c:\oculus\annwvynsdk64-2015\bullet3\src\bulletinversedynamics\details/IDLinearMathInterface.hpp(45): warning C4244: 'argument': conversion from 'double' to 'const btScalar', possible loss of data
+  MultiBodyNameMap.cpp
+c:\oculus\annwvynsdk64-2015\bullet3\src\bulletinversedynamics\details/IDLinearMathInterface.hpp(45): warning C4244: 'argument': conversion from 'double' to 'const btScalar', possible loss of data
+  User2InternalIndex.cpp
+c:\oculus\annwvynsdk64-2015\bullet3\src\bulletinversedynamics\details/IDLinearMathInterface.hpp(45): warning C4244: 'argument': conversion from 'double' to 'const btScalar', possible loss of data
+  Generating Code...
+  BulletInverseDynamicsUtils.vcxproj -> C:\Oculus\AnnwvynSDK64-2015\bullet3\build3\lib\Debug\BulletInverseDynamicsUtils_Debug.lib

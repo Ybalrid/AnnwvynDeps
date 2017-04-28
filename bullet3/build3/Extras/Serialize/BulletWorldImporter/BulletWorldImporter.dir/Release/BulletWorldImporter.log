@@ -1,0 +1,20 @@
+﻿  Building Custom Rule C:/Oculus/AnnwvynSDK64-2015/bullet3/Extras/Serialize/BulletWorldImporter/CMakeLists.txt
+  CMake does not need to re-run because C:\Oculus\AnnwvynSDK64-2015\bullet3\build3\Extras\Serialize\BulletWorldImporter\CMakeFiles\generate.stamp is up-to-date.
+  btBulletWorldImporter.cpp
+  btWorldImporter.cpp
+C:\Oculus\AnnwvynSDK64-2015\bullet3\Extras\Serialize\BulletWorldImporter\btWorldImporter.cpp(1000): warning C4800: 'char': forcing value to bool 'true' or 'false' (performance warning)
+C:\Oculus\AnnwvynSDK64-2015\bullet3\Extras\Serialize\BulletWorldImporter\btWorldImporter.cpp(1004): warning C4800: 'char': forcing value to bool 'true' or 'false' (performance warning)
+C:\Oculus\AnnwvynSDK64-2015\bullet3\Extras\Serialize\BulletWorldImporter\btWorldImporter.cpp(1007): warning C4800: 'char': forcing value to bool 'true' or 'false' (performance warning)
+C:\Oculus\AnnwvynSDK64-2015\bullet3\Extras\Serialize\BulletWorldImporter\btWorldImporter.cpp(1278): warning C4244: 'argument': conversion from 'double' to 'btScalar', possible loss of data
+C:\Oculus\AnnwvynSDK64-2015\bullet3\Extras\Serialize\BulletWorldImporter\btWorldImporter.cpp(1327): warning C4800: 'char': forcing value to bool 'true' or 'false' (performance warning)
+C:\Oculus\AnnwvynSDK64-2015\bullet3\Extras\Serialize\BulletWorldImporter\btWorldImporter.cpp(1327): warning C4244: 'argument': conversion from 'double' to 'btScalar', possible loss of data
+C:\Oculus\AnnwvynSDK64-2015\bullet3\Extras\Serialize\BulletWorldImporter\btWorldImporter.cpp(1328): warning C4244: 'argument': conversion from 'double' to 'btScalar', possible loss of data
+C:\Oculus\AnnwvynSDK64-2015\bullet3\Extras\Serialize\BulletWorldImporter\btWorldImporter.cpp(1330): warning C4800: 'char': forcing value to bool 'true' or 'false' (performance warning)
+C:\Oculus\AnnwvynSDK64-2015\bullet3\Extras\Serialize\BulletWorldImporter\btWorldImporter.cpp(1330): warning C4244: 'argument': conversion from 'double' to 'btScalar', possible loss of data
+C:\Oculus\AnnwvynSDK64-2015\bullet3\Extras\Serialize\BulletWorldImporter\btWorldImporter.cpp(1334): warning C4800: 'char': forcing value to bool 'true' or 'false' (performance warning)
+C:\Oculus\AnnwvynSDK64-2015\bullet3\Extras\Serialize\BulletWorldImporter\btWorldImporter.cpp(1334): warning C4244: 'argument': conversion from 'double' to 'btScalar', possible loss of data
+C:\Oculus\AnnwvynSDK64-2015\bullet3\Extras\Serialize\BulletWorldImporter\btWorldImporter.cpp(1335): warning C4244: 'argument': conversion from 'double' to 'btScalar', possible loss of data
+C:\Oculus\AnnwvynSDK64-2015\bullet3\Extras\Serialize\BulletWorldImporter\btWorldImporter.cpp(1337): warning C4800: 'char': forcing value to bool 'true' or 'false' (performance warning)
+C:\Oculus\AnnwvynSDK64-2015\bullet3\Extras\Serialize\BulletWorldImporter\btWorldImporter.cpp(1337): warning C4244: 'argument': conversion from 'double' to 'btScalar', possible loss of data
+  Generating Code...
+  BulletWorldImporter.vcxproj -> C:\Oculus\AnnwvynSDK64-2015\bullet3\build3\lib\Release\BulletWorldImporter.lib

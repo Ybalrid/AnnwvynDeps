@@ -1,0 +1,145 @@
+﻿  Building Custom Rule C:/Oculus/AnnwvynSDK64-2015/bullet3/src/Bullet3OpenCL/CMakeLists.txt
+  CMake does not need to re-run because C:\Oculus\AnnwvynSDK64-2015\bullet3\build3\src\Bullet3OpenCL\CMakeFiles\generate.stamp is up-to-date.
+  clew.c
+  b3GpuGridBroadphase.cpp
+C:\Oculus\AnnwvynSDK64-2015\bullet3\src\Bullet3OpenCL\BroadphaseCollision\b3GpuGridBroadphase.cpp(161): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+C:\Oculus\AnnwvynSDK64-2015\bullet3\src\Bullet3OpenCL\BroadphaseCollision\b3GpuGridBroadphase.cpp(168): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+C:\Oculus\AnnwvynSDK64-2015\bullet3\src\Bullet3OpenCL\BroadphaseCollision\b3GpuGridBroadphase.cpp(280): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+C:\Oculus\AnnwvynSDK64-2015\bullet3\src\Bullet3OpenCL\BroadphaseCollision\b3GpuGridBroadphase.cpp(355): warning C4267: 'return': conversion from 'size_t' to 'int', possible loss of data
+C:\Oculus\AnnwvynSDK64-2015\bullet3\src\Bullet3OpenCL/ParallelPrimitives/b3OpenCLArray.h(269): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+  C:\Oculus\AnnwvynSDK64-2015\bullet3\src\Bullet3OpenCL/ParallelPrimitives/b3OpenCLArray.h(268): note: while compiling class template member function 'void b3OpenCLArray<b3Int4>::copyToHost(b3AlignedObjectArray<b3Int4> &,bool) const'
+  C:\Oculus\AnnwvynSDK64-2015\bullet3\src\Bullet3OpenCL\BroadphaseCollision\b3GpuGridBroadphase.cpp(278): note: see reference to function template instantiation 'void b3OpenCLArray<b3Int4>::copyToHost(b3AlignedObjectArray<b3Int4> &,bool) const' being compiled
+  c:\oculus\annwvynsdk64-2015\bullet3\src\bullet3opencl\broadphasecollision\b3GpuGridBroadphase.h(42): note: see reference to class template instantiation 'b3OpenCLArray<b3Int4>' being compiled
+  b3GpuSapBroadphase.cpp
+C:\Oculus\AnnwvynSDK64-2015\bullet3\src\Bullet3OpenCL\BroadphaseCollision\b3GpuSapBroadphase.cpp(1123): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+C:\Oculus\AnnwvynSDK64-2015\bullet3\src\Bullet3OpenCL\BroadphaseCollision\b3GpuSapBroadphase.cpp(1304): warning C4267: 'return': conversion from 'size_t' to 'int', possible loss of data
+C:\Oculus\AnnwvynSDK64-2015\bullet3\src\Bullet3OpenCL/ParallelPrimitives/b3OpenCLArray.h(269): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+  C:\Oculus\AnnwvynSDK64-2015\bullet3\src\Bullet3OpenCL/ParallelPrimitives/b3OpenCLArray.h(268): note: while compiling class template member function 'void b3OpenCLArray<b3Int4>::copyToHost(b3AlignedObjectArray<T> &,bool) const'
+          with
+          [
+              T=b3Int4
+          ]
+  C:\Oculus\AnnwvynSDK64-2015\bullet3\src\Bullet3OpenCL\BroadphaseCollision\b3GpuSapBroadphase.cpp(273): note: see reference to function template instantiation 'void b3OpenCLArray<b3Int4>::copyToHost(b3AlignedObjectArray<T> &,bool) const' being compiled
+          with
+          [
+              T=b3Int4
+          ]
+  c:\oculus\annwvynsdk64-2015\bullet3\src\bullet3opencl\broadphasecollision\b3GpuSapBroadphase.h(49): note: see reference to class template instantiation 'b3OpenCLArray<b3Int4>' being compiled
+  b3GpuParallelLinearBvhBroadphase.cpp
+c:\oculus\annwvynsdk64-2015\bullet3\src\bullet3opencl\broadphasecollision\b3GpuParallelLinearBvhBroadphase.h(48): warning C4267: 'return': conversion from 'size_t' to 'int', possible loss of data
+  b3GpuParallelLinearBvh.cpp
+C:\Oculus\AnnwvynSDK64-2015\bullet3\src\Bullet3OpenCL\BroadphaseCollision\b3GpuParallelLinearBvh.cpp(114): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+C:\Oculus\AnnwvynSDK64-2015\bullet3\src\Bullet3OpenCL\BroadphaseCollision\b3GpuParallelLinearBvh.cpp(115): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+C:\Oculus\AnnwvynSDK64-2015\bullet3\src\Bullet3OpenCL\BroadphaseCollision\b3GpuParallelLinearBvh.cpp(294): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+C:\Oculus\AnnwvynSDK64-2015\bullet3\src\Bullet3OpenCL\BroadphaseCollision\b3GpuParallelLinearBvh.cpp(305): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+C:\Oculus\AnnwvynSDK64-2015\bullet3\src\Bullet3OpenCL\BroadphaseCollision\b3GpuParallelLinearBvh.cpp(330): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+C:\Oculus\AnnwvynSDK64-2015\bullet3\src\Bullet3OpenCL\BroadphaseCollision\b3GpuParallelLinearBvh.cpp(335): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+C:\Oculus\AnnwvynSDK64-2015\bullet3\src\Bullet3OpenCL\BroadphaseCollision\b3GpuParallelLinearBvh.cpp(376): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+C:\Oculus\AnnwvynSDK64-2015\bullet3\src\Bullet3OpenCL\BroadphaseCollision\b3GpuParallelLinearBvh.cpp(377): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+C:\Oculus\AnnwvynSDK64-2015\bullet3\src\Bullet3OpenCL\BroadphaseCollision\b3GpuParallelLinearBvh.cpp(412): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+C:\Oculus\AnnwvynSDK64-2015\bullet3\src\Bullet3OpenCL\BroadphaseCollision\b3GpuParallelLinearBvh.cpp(449): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+  b3OpenCLUtils.cpp
+C:\Oculus\AnnwvynSDK64-2015\bullet3\src\Bullet3OpenCL\Initialize\b3OpenCLUtils.cpp(786): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+C:\Oculus\AnnwvynSDK64-2015\bullet3\src\Bullet3OpenCL\Initialize\b3OpenCLUtils.cpp(865): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+C:\Oculus\AnnwvynSDK64-2015\bullet3\src\Bullet3OpenCL\Initialize\b3OpenCLUtils.cpp(893): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+  b3ContactCache.cpp
+  b3ConvexHullContact.cpp
+C:\Oculus\AnnwvynSDK64-2015\bullet3\src\Bullet3Collision/NarrowPhaseCollision/shared/b3MprPenetration.h(114): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+C:\Oculus\AnnwvynSDK64-2015\bullet3\src\Bullet3Collision/NarrowPhaseCollision/shared/b3MprPenetration.h(118): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+C:\Oculus\AnnwvynSDK64-2015\bullet3\src\Bullet3Collision/NarrowPhaseCollision/shared/b3MprPenetration.h(119): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+C:\Oculus\AnnwvynSDK64-2015\bullet3\src\Bullet3Collision/NarrowPhaseCollision/shared/b3MprPenetration.h(603): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+C:\Oculus\AnnwvynSDK64-2015\bullet3\src\Bullet3Collision/NarrowPhaseCollision/shared/b3MprPenetration.h(607): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+C:\Oculus\AnnwvynSDK64-2015\bullet3\src\Bullet3Collision/NarrowPhaseCollision/shared/b3NewContactReduction.h(155): warning C4244: '=': conversion from 'float' to 'unsigned short', possible loss of data
+C:\Oculus\AnnwvynSDK64-2015\bullet3\src\Bullet3Collision/NarrowPhaseCollision/shared/b3NewContactReduction.h(182): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+C:\Oculus\AnnwvynSDK64-2015\bullet3\src\Bullet3OpenCL\NarrowphaseCollision\b3ConvexHullContact.cpp(695): warning C4101: 'edgeAstart': unreferenced local variable
+C:\Oculus\AnnwvynSDK64-2015\bullet3\src\Bullet3OpenCL\NarrowphaseCollision\b3ConvexHullContact.cpp(695): warning C4101: 'edgeAend': unreferenced local variable
+C:\Oculus\AnnwvynSDK64-2015\bullet3\src\Bullet3OpenCL\NarrowphaseCollision\b3ConvexHullContact.cpp(695): warning C4101: 'edgeBstart': unreferenced local variable
+C:\Oculus\AnnwvynSDK64-2015\bullet3\src\Bullet3OpenCL\NarrowphaseCollision\b3ConvexHullContact.cpp(695): warning C4101: 'edgeBend': unreferenced local variable
+C:\Oculus\AnnwvynSDK64-2015\bullet3\src\Bullet3OpenCL\NarrowphaseCollision\b3ConvexHullContact.cpp(1295): warning C4101: 'centerOut': unreferenced local variable
+C:\Oculus\AnnwvynSDK64-2015\bullet3\src\Bullet3OpenCL\NarrowphaseCollision\b3ConvexHullContact.cpp(2106): warning C4244: '=': conversion from 'float' to 'unsigned short', possible loss of data
+C:\Oculus\AnnwvynSDK64-2015\bullet3\src\Bullet3OpenCL\NarrowphaseCollision\b3ConvexHullContact.cpp(2781): warning C4101: 'contactsOut': unreferenced local variable
+C:\Oculus\AnnwvynSDK64-2015\bullet3\src\Bullet3OpenCL\NarrowphaseCollision\b3ConvexHullContact.cpp(4135): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+C:\Oculus\AnnwvynSDK64-2015\bullet3\src\Bullet3OpenCL\NarrowphaseCollision\b3ConvexHullContact.cpp(4136): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+C:\Oculus\AnnwvynSDK64-2015\bullet3\src\Bullet3OpenCL\NarrowphaseCollision\b3ConvexHullContact.cpp(4137): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+C:\Oculus\AnnwvynSDK64-2015\bullet3\src\Bullet3OpenCL\NarrowphaseCollision\b3ConvexHullContact.cpp(4138): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+C:\Oculus\AnnwvynSDK64-2015\bullet3\src\Bullet3OpenCL\NarrowphaseCollision\b3ConvexHullContact.cpp(4283): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+C:\Oculus\AnnwvynSDK64-2015\bullet3\src\Bullet3OpenCL\NarrowphaseCollision\b3ConvexHullContact.cpp(4439): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+C:\Oculus\AnnwvynSDK64-2015\bullet3\src\Bullet3OpenCL\NarrowphaseCollision\b3ConvexHullContact.cpp(4563): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+C:\Oculus\AnnwvynSDK64-2015\bullet3\src\Bullet3OpenCL\NarrowphaseCollision\b3ConvexHullContact.cpp(4820): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+C:\Oculus\AnnwvynSDK64-2015\bullet3\src\Bullet3OpenCL/ParallelPrimitives/b3OpenCLArray.h(269): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+  C:\Oculus\AnnwvynSDK64-2015\bullet3\src\Bullet3OpenCL/ParallelPrimitives/b3OpenCLArray.h(268): note: while compiling class template member function 'void b3OpenCLArray<b3BvhInfo>::copyToHost(b3AlignedObjectArray<b3BvhInfo> &,bool) const'
+  C:\Oculus\AnnwvynSDK64-2015\bullet3\src\Bullet3OpenCL\NarrowphaseCollision\b3ConvexHullContact.cpp(3679): note: see reference to function template instantiation 'void b3OpenCLArray<b3BvhInfo>::copyToHost(b3AlignedObjectArray<b3BvhInfo> &,bool) const' being compiled
+  C:\Oculus\AnnwvynSDK64-2015\bullet3\src\Bullet3OpenCL\NarrowphaseCollision\b3ConvexHullContact.cpp(3648): note: see reference to class template instantiation 'b3OpenCLArray<b3BvhInfo>' being compiled
+  b3GjkEpa.cpp
+  b3GjkPairDetector.cpp
+  b3OptimizedBvh.cpp
+  b3QuantizedBvh.cpp
+C:\Oculus\AnnwvynSDK64-2015\bullet3\src\Bullet3OpenCL\NarrowphaseCollision\b3QuantizedBvh.cpp(622): warning C4101: 'normal': unreferenced local variable
+  b3StridingMeshInterface.cpp
+  b3TriangleCallback.cpp
+  b3TriangleIndexVertexArray.cpp
+  b3VoronoiSimplexSolver.cpp
+  b3BoundSearchCL.cpp
+  b3FillCL.cpp
+  b3LauncherCL.cpp
+C:\Oculus\AnnwvynSDK64-2015\bullet3\src\Bullet3OpenCL\ParallelPrimitives\b3LauncherCL.cpp(57): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+C:\Oculus\AnnwvynSDK64-2015\bullet3\src\Bullet3OpenCL\ParallelPrimitives\b3LauncherCL.cpp(61): warning C4267: '+=': conversion from 'size_t' to 'int', possible loss of data
+C:\Oculus\AnnwvynSDK64-2015\bullet3\src\Bullet3OpenCL\ParallelPrimitives\b3LauncherCL.cpp(91): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+C:\Oculus\AnnwvynSDK64-2015\bullet3\src\Bullet3OpenCL\ParallelPrimitives\b3LauncherCL.cpp(95): warning C4267: '+=': conversion from 'size_t' to 'int', possible loss of data
+  b3PrefixScanCL.cpp
+  b3PrefixScanFloat4CL.cpp
+  Generating Code...
+  Compiling...
+  b3RadixSort32CL.cpp
+C:\Oculus\AnnwvynSDK64-2015\bullet3\src\Bullet3OpenCL\ParallelPrimitives\b3RadixSort32CL.cpp(189): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+C:\Oculus\AnnwvynSDK64-2015\bullet3\src\Bullet3OpenCL\ParallelPrimitives\b3RadixSort32CL.cpp(569): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+c:\oculus\annwvynsdk64-2015\bullet3\src\bullet3opencl\parallelprimitives\b3OpenCLArray.h(269): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+  c:\oculus\annwvynsdk64-2015\bullet3\src\bullet3opencl\parallelprimitives\b3OpenCLArray.h(268): note: while compiling class template member function 'void b3OpenCLArray<b3SortData>::copyToHost(b3AlignedObjectArray<b3SortData> &,bool) const'
+  C:\Oculus\AnnwvynSDK64-2015\bullet3\src\Bullet3OpenCL\ParallelPrimitives\b3RadixSort32CL.cpp(169): note: see reference to function template instantiation 'void b3OpenCLArray<b3SortData>::copyToHost(b3AlignedObjectArray<b3SortData> &,bool) const' being compiled
+  C:\Oculus\AnnwvynSDK64-2015\bullet3\src\Bullet3OpenCL\ParallelPrimitives\b3RadixSort32CL.cpp(21): note: see reference to class template instantiation 'b3OpenCLArray<b3SortData>' being compiled
+  b3GpuRaycast.cpp
+C:\Oculus\AnnwvynSDK64-2015\bullet3\src\Bullet3OpenCL\Raycast\b3GpuRaycast.cpp(119): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+C:\Oculus\AnnwvynSDK64-2015\bullet3\src\Bullet3OpenCL\Raycast\b3GpuRaycast.cpp(316): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+C:\Oculus\AnnwvynSDK64-2015\bullet3\src\Bullet3OpenCL/ParallelPrimitives/b3OpenCLArray.h(269): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+  C:\Oculus\AnnwvynSDK64-2015\bullet3\src\Bullet3OpenCL/ParallelPrimitives/b3OpenCLArray.h(268): note: while compiling class template member function 'void b3OpenCLArray<b3RayHit>::copyToHost(b3AlignedObjectArray<b3RayHit> &,bool) const'
+  C:\Oculus\AnnwvynSDK64-2015\bullet3\src\Bullet3OpenCL\Raycast\b3GpuRaycast.cpp(388): note: see reference to function template instantiation 'void b3OpenCLArray<b3RayHit>::copyToHost(b3AlignedObjectArray<b3RayHit> &,bool) const' being compiled
+  C:\Oculus\AnnwvynSDK64-2015\bullet3\src\Bullet3OpenCL\Raycast\b3GpuRaycast.cpp(64): note: see reference to class template instantiation 'b3OpenCLArray<b3RayHit>' being compiled
+  b3GpuGenericConstraint.cpp
+  b3GpuJacobiContactSolver.cpp
+C:\Oculus\AnnwvynSDK64-2015\bullet3\src\Bullet3OpenCL\RigidBody\b3GpuJacobiContactSolver.cpp(565): warning C4018: '<': signed/unsigned mismatch
+  b3GpuNarrowPhase.cpp
+C:\Oculus\AnnwvynSDK64-2015\bullet3\src\Bullet3OpenCL\RigidBody\b3GpuNarrowPhase.cpp(751): warning C4267: 'return': conversion from 'size_t' to 'int', possible loss of data
+C:\Oculus\AnnwvynSDK64-2015\bullet3\src\Bullet3OpenCL\RigidBody\b3GpuNarrowPhase.cpp(761): warning C4267: 'return': conversion from 'size_t' to 'int', possible loss of data
+C:\Oculus\AnnwvynSDK64-2015\bullet3\src\Bullet3OpenCL\RigidBody\b3GpuNarrowPhase.cpp(803): warning C4267: 'return': conversion from 'size_t' to 'int', possible loss of data
+C:\Oculus\AnnwvynSDK64-2015\bullet3\src\Bullet3OpenCL\RigidBody\b3GpuNarrowPhase.cpp(812): warning C4267: 'return': conversion from 'size_t' to 'int', possible loss of data
+C:\Oculus\AnnwvynSDK64-2015\bullet3\src\Bullet3OpenCL\RigidBody\b3GpuNarrowPhase.cpp(835): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+C:\Oculus\AnnwvynSDK64-2015\bullet3\src\Bullet3OpenCL/ParallelPrimitives/b3OpenCLArray.h(269): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+  C:\Oculus\AnnwvynSDK64-2015\bullet3\src\Bullet3OpenCL/ParallelPrimitives/b3OpenCLArray.h(268): note: while compiling class template member function 'void b3OpenCLArray<b3Contact4>::copyToHost(b3AlignedObjectArray<b3Contact4> &,bool) const'
+  C:\Oculus\AnnwvynSDK64-2015\bullet3\src\Bullet3OpenCL\RigidBody\b3GpuNarrowPhase.cpp(821): note: see reference to function template instantiation 'void b3OpenCLArray<b3Contact4>::copyToHost(b3AlignedObjectArray<b3Contact4> &,bool) const' being compiled
+  C:\Oculus\AnnwvynSDK64-2015\bullet3\src\Bullet3OpenCL\RigidBody\b3GpuNarrowPhase.cpp(54): note: see reference to class template instantiation 'b3OpenCLArray<b3Contact4>' being compiled
+  b3GpuPgsConstraintSolver.cpp
+C:\Oculus\AnnwvynSDK64-2015\bullet3\src\Bullet3OpenCL/ParallelPrimitives/b3OpenCLArray.h(269): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+  C:\Oculus\AnnwvynSDK64-2015\bullet3\src\Bullet3OpenCL/ParallelPrimitives/b3OpenCLArray.h(268): note: while compiling class template member function 'void b3OpenCLArray<b3GpuSolverConstraint>::copyToHost(b3AlignedObjectArray<b3GpuSolverConstraint> &,bool) const'
+  C:\Oculus\AnnwvynSDK64-2015\bullet3\src\Bullet3OpenCL\RigidBody\b3GpuPgsConstraintSolver.cpp(729): note: see reference to function template instantiation 'void b3OpenCLArray<b3GpuSolverConstraint>::copyToHost(b3AlignedObjectArray<b3GpuSolverConstraint> &,bool) const' being compiled
+  C:\Oculus\AnnwvynSDK64-2015\bullet3\src\Bullet3OpenCL\RigidBody\b3GpuPgsConstraintSolver.cpp(136): note: see reference to class template instantiation 'b3OpenCLArray<b3GpuSolverConstraint>' being compiled
+  b3GpuPgsContactSolver.cpp
+C:\Oculus\AnnwvynSDK64-2015\bullet3\src\Bullet3OpenCL\RigidBody\b3GpuPgsContactSolver.cpp(752): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+C:\Oculus\AnnwvynSDK64-2015\bullet3\src\Bullet3OpenCL\RigidBody\b3GpuPgsContactSolver.cpp(923): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+C:\Oculus\AnnwvynSDK64-2015\bullet3\src\Bullet3OpenCL/ParallelPrimitives/b3OpenCLArray.h(269): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+  C:\Oculus\AnnwvynSDK64-2015\bullet3\src\Bullet3OpenCL/ParallelPrimitives/b3OpenCLArray.h(268): note: while compiling class template member function 'void b3OpenCLArray<b3SortData>::copyToHost(b3AlignedObjectArray<b3SortData> &,bool) const'
+  C:\Oculus\AnnwvynSDK64-2015\bullet3\src\Bullet3OpenCL\RigidBody\b3GpuPgsContactSolver.cpp(856): note: see reference to function template instantiation 'void b3OpenCLArray<b3SortData>::copyToHost(b3AlignedObjectArray<b3SortData> &,bool) const' being compiled
+  C:\Oculus\AnnwvynSDK64-2015\bullet3\src\Bullet3OpenCL\RigidBody\b3GpuPgsContactSolver.cpp(119): note: see reference to class template instantiation 'b3OpenCLArray<b3SortData>' being compiled
+  b3GpuRigidBodyPipeline.cpp
+C:\Oculus\AnnwvynSDK64-2015\bullet3\src\Bullet3OpenCL/ParallelPrimitives/b3OpenCLArray.h(269): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+  C:\Oculus\AnnwvynSDK64-2015\bullet3\src\Bullet3OpenCL/ParallelPrimitives/b3OpenCLArray.h(268): note: while compiling class template member function 'void b3OpenCLArray<b3Contact4>::copyToHost(b3AlignedObjectArray<b3Contact4> &,bool) const'
+  C:\Oculus\AnnwvynSDK64-2015\bullet3\src\Bullet3OpenCL\RigidBody\b3GpuRigidBodyPipeline.cpp(427): note: see reference to function template instantiation 'void b3OpenCLArray<b3Contact4>::copyToHost(b3AlignedObjectArray<b3Contact4> &,bool) const' being compiled
+  C:\Oculus\AnnwvynSDK64-2015\bullet3\src\Bullet3OpenCL\RigidBody\b3GpuRigidBodyPipeline.cpp(374): note: see reference to class template instantiation 'b3OpenCLArray<b3Contact4>' being compiled
+  b3Solver.cpp
+C:\Oculus\AnnwvynSDK64-2015\bullet3\src\Bullet3Dynamics/shared/b3ConvertConstraint4.h(14): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+C:\Oculus\AnnwvynSDK64-2015\bullet3\src\Bullet3Dynamics/shared/b3ConvertConstraint4.h(26): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+C:\Oculus\AnnwvynSDK64-2015\bullet3\src\Bullet3OpenCL/ParallelPrimitives/b3OpenCLArray.h(269): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+  C:\Oculus\AnnwvynSDK64-2015\bullet3\src\Bullet3OpenCL/ParallelPrimitives/b3OpenCLArray.h(268): note: while compiling class template member function 'void b3OpenCLArray<b3GpuConstraint4>::copyToHost(b3AlignedObjectArray<b3GpuConstraint4> &,bool) const'
+  C:\Oculus\AnnwvynSDK64-2015\bullet3\src\Bullet3OpenCL\RigidBody\b3Solver.cpp(550): note: see reference to function template instantiation 'void b3OpenCLArray<b3GpuConstraint4>::copyToHost(b3AlignedObjectArray<b3GpuConstraint4> &,bool) const' being compiled
+  C:\Oculus\AnnwvynSDK64-2015\bullet3\src\Bullet3OpenCL\RigidBody\b3Solver.cpp(550): note: see reference to class template instantiation 'b3OpenCLArray<b3GpuConstraint4>' being compiled
+  Generating Code...
+  Bullet3OpenCL_clew.vcxproj -> C:\Oculus\AnnwvynSDK64-2015\bullet3\build3\lib\Debug\Bullet3OpenCL_clew_Debug.lib

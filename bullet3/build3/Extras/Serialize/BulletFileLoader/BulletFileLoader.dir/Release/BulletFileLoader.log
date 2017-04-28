@@ -1,0 +1,25 @@
+﻿  Building Custom Rule C:/Oculus/AnnwvynSDK64-2015/bullet3/Extras/Serialize/BulletFileLoader/CMakeLists.txt
+  CMake does not need to re-run because C:\Oculus\AnnwvynSDK64-2015\bullet3\build3\Extras\Serialize\BulletFileLoader\CMakeFiles\generate.stamp is up-to-date.
+  bChunk.cpp
+  bDNA.cpp
+C:\Oculus\AnnwvynSDK64-2015\bullet3\Extras\Serialize\BulletFileLoader\bDNA.cpp(279): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+C:\Oculus\AnnwvynSDK64-2015\bullet3\Extras\Serialize\BulletFileLoader\bDNA.cpp(394): warning C4311: 'type cast': pointer truncation from 'char *' to 'long'
+C:\Oculus\AnnwvynSDK64-2015\bullet3\Extras\Serialize\BulletFileLoader\bDNA.cpp(394): warning C4302: 'type cast': truncation from 'char *' to 'long'
+C:\Oculus\AnnwvynSDK64-2015\bullet3\Extras\Serialize\BulletFileLoader\bDNA.cpp(430): warning C4311: 'type cast': pointer truncation from 'char *' to 'long'
+C:\Oculus\AnnwvynSDK64-2015\bullet3\Extras\Serialize\BulletFileLoader\bDNA.cpp(430): warning C4302: 'type cast': truncation from 'char *' to 'long'
+C:\Oculus\AnnwvynSDK64-2015\bullet3\Extras\Serialize\BulletFileLoader\bDNA.cpp(527): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+  bFile.cpp
+C:\Oculus\AnnwvynSDK64-2015\bullet3\Extras\Serialize\BulletFileLoader\bFile.cpp(34): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+C:\Oculus\AnnwvynSDK64-2015\bullet3\Extras\Serialize\BulletFileLoader\bFile.cpp(464): warning C4311: 'type cast': pointer truncation from 'char *' to 'long'
+C:\Oculus\AnnwvynSDK64-2015\bullet3\Extras\Serialize\BulletFileLoader\bFile.cpp(464): warning C4302: 'type cast': truncation from 'char *' to 'long'
+C:\Oculus\AnnwvynSDK64-2015\bullet3\Extras\Serialize\BulletFileLoader\bFile.cpp(501): warning C4311: 'type cast': pointer truncation from 'char *' to 'long'
+C:\Oculus\AnnwvynSDK64-2015\bullet3\Extras\Serialize\BulletFileLoader\bFile.cpp(501): warning C4302: 'type cast': truncation from 'char *' to 'long'
+C:\Oculus\AnnwvynSDK64-2015\bullet3\Extras\Serialize\BulletFileLoader\bFile.cpp(1305): warning C4477: 'printf' : format string '%d' requires an argument of type 'int', but variadic argument 1 has type 'void *'
+C:\Oculus\AnnwvynSDK64-2015\bullet3\Extras\Serialize\BulletFileLoader\bFile.cpp(1305): warning C4313: 'printf': '%d' in format string conflicts with argument 1 of type 'void *'
+C:\Oculus\AnnwvynSDK64-2015\bullet3\Extras\Serialize\BulletFileLoader\bFile.cpp(1323): warning C4477: 'printf' : format string '%d' requires an argument of type 'int', but variadic argument 1 has type 'void *'
+C:\Oculus\AnnwvynSDK64-2015\bullet3\Extras\Serialize\BulletFileLoader\bFile.cpp(1323): warning C4313: 'printf': '%d' in format string conflicts with argument 1 of type 'void *'
+C:\Oculus\AnnwvynSDK64-2015\bullet3\Extras\Serialize\BulletFileLoader\bFile.cpp(1504): warning C4477: 'printf' : format string '%d' requires an argument of type 'int', but variadic argument 2 has type 'void *const '
+C:\Oculus\AnnwvynSDK64-2015\bullet3\Extras\Serialize\BulletFileLoader\bFile.cpp(1504): warning C4313: 'printf': '%d' in format string conflicts with argument 2 of type 'void *const '
+  btBulletFile.cpp
+  Generating Code...
+  BulletFileLoader.vcxproj -> C:\Oculus\AnnwvynSDK64-2015\bullet3\build3\lib\Release\BulletFileLoader.lib

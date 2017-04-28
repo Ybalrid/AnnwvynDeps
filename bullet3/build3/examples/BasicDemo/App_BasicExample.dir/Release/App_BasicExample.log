@@ -1,0 +1,6 @@
+﻿  Building Custom Rule C:/Oculus/AnnwvynSDK64-2015/bullet3/examples/BasicDemo/CMakeLists.txt
+  CMake does not need to re-run because C:\Oculus\AnnwvynSDK64-2015\bullet3\build3\examples\BasicDemo\CMakeFiles\generate.stamp is up-to-date.
+  BasicExample.cpp
+  main.cpp
+  Generating Code...
+  App_BasicExample.vcxproj -> C:\Oculus\AnnwvynSDK64-2015\bullet3\build3\examples\BasicDemo\Release\App_BasicExample.exe

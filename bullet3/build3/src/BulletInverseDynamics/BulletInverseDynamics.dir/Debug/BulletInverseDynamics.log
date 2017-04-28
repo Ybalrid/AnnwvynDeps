@@ -1,0 +1,19 @@
+﻿  Building Custom Rule C:/Oculus/AnnwvynSDK64-2015/bullet3/src/BulletInverseDynamics/CMakeLists.txt
+  CMake does not need to re-run because C:\Oculus\AnnwvynSDK64-2015\bullet3\build3\src\BulletInverseDynamics\CMakeFiles\generate.stamp is up-to-date.
+  IDMath.cpp
+c:\oculus\annwvynsdk64-2015\bullet3\src\bulletinversedynamics\details/IDLinearMathInterface.hpp(45): warning C4244: 'argument': conversion from 'double' to 'const btScalar', possible loss of data
+C:\Oculus\AnnwvynSDK64-2015\bullet3\src\BulletInverseDynamics\IDMath.cpp(164): warning C4244: 'initializing': conversion from 'double' to 'idScalar', possible loss of data
+C:\Oculus\AnnwvynSDK64-2015\bullet3\src\BulletInverseDynamics\IDMath.cpp(164): warning C4244: 'initializing': conversion from 'double' to 'const idScalar', possible loss of data
+C:\Oculus\AnnwvynSDK64-2015\bullet3\src\BulletInverseDynamics\IDMath.cpp(324): warning C4244: 'initializing': conversion from 'double' to 'idScalar', possible loss of data
+C:\Oculus\AnnwvynSDK64-2015\bullet3\src\BulletInverseDynamics\IDMath.cpp(324): warning C4244: 'initializing': conversion from 'double' to 'const idScalar', possible loss of data
+  MultiBodyTree.cpp
+c:\oculus\annwvynsdk64-2015\bullet3\src\bulletinversedynamics\details/IDLinearMathInterface.hpp(45): warning C4244: 'argument': conversion from 'double' to 'const btScalar', possible loss of data
+C:\Oculus\AnnwvynSDK64-2015\bullet3\src\BulletInverseDynamics\MultiBodyTree.cpp(127): warning C4244: 'argument': conversion from 'double' to 'const btScalar', possible loss of data
+  MultiBodyTreeInitCache.cpp
+c:\oculus\annwvynsdk64-2015\bullet3\src\bulletinversedynamics\details/IDLinearMathInterface.hpp(45): warning C4244: 'argument': conversion from 'double' to 'const btScalar', possible loss of data
+  MultiBodyTreeImpl.cpp
+c:\oculus\annwvynsdk64-2015\bullet3\src\bulletinversedynamics\details/IDLinearMathInterface.hpp(45): warning C4244: 'argument': conversion from 'double' to 'const btScalar', possible loss of data
+C:\Oculus\AnnwvynSDK64-2015\bullet3\src\BulletInverseDynamics\details\MultiBodyTreeImpl.cpp(612): warning C4244: 'argument': conversion from 'const double' to 'float', possible loss of data
+C:\Oculus\AnnwvynSDK64-2015\bullet3\src\BulletInverseDynamics\details\MultiBodyTreeImpl.cpp(637): warning C4244: 'argument': conversion from 'const double' to 'float', possible loss of data
+  Generating Code...
+  BulletInverseDynamics.vcxproj -> C:\Oculus\AnnwvynSDK64-2015\bullet3\build3\lib\Debug\BulletInverseDynamics_Debug.lib

@@ -1,0 +1,454 @@
+﻿  Building Custom Rule C:/Oculus/AnnwvynSDK64-2015/bullet3/examples/ExampleBrowser/CMakeLists.txt
+  CMake does not need to re-run because C:\Oculus\AnnwvynSDK64-2015\bullet3\build3\examples\ExampleBrowser\CMakeFiles\generate.stamp is up-to-date.
+  main.cpp
+C:\Oculus\AnnwvynSDK64-2015\bullet3\src\Bullet3Common/b3CommandLineArgs.h(71): warning C4267: 'return': conversion from 'size_t' to 'int', possible loss of data
+  ExampleEntries.cpp
+  PhysicsServer.cpp
+  PhysicsClientSharedMemory.cpp
+  PhysicsClient.cpp
+  PhysicsClientC_API.cpp
+C:\Oculus\AnnwvynSDK64-2015\bullet3\examples\SharedMemory\PhysicsClientC_API.cpp(19): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+  PhysicsServerExample.cpp
+  PhysicsClientExample.cpp
+C:\Oculus\AnnwvynSDK64-2015\bullet3\examples\SharedMemory\PhysicsClientExample.cpp(124): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Oculus\AnnwvynSDK64-2015\bullet3\examples\SharedMemory\PhysicsClientExample.cpp(130): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+  PosixSharedMemory.cpp
+  Win32SharedMemory.cpp
+  PhysicsServerSharedMemory.cpp
+  PhysicsDirect.cpp
+  PhysicsDirectC_API.cpp
+  PhysicsLoopBack.cpp
+  PhysicsLoopBackC_API.cpp
+  PhysicsServerCommandProcessor.cpp
+C:\Oculus\AnnwvynSDK64-2015\bullet3\examples\SharedMemory\PhysicsServerCommandProcessor.cpp(920): warning C4244: '=': conversion from 'const double' to 'btScalar', possible loss of data
+C:\Oculus\AnnwvynSDK64-2015\bullet3\examples\SharedMemory\PhysicsServerCommandProcessor.cpp(921): warning C4244: '=': conversion from 'const double' to 'btScalar', possible loss of data
+C:\Oculus\AnnwvynSDK64-2015\bullet3\examples\SharedMemory\PhysicsServerCommandProcessor.cpp(922): warning C4244: '=': conversion from 'const double' to 'btScalar', possible loss of data
+C:\Oculus\AnnwvynSDK64-2015\bullet3\examples\SharedMemory\PhysicsServerCommandProcessor.cpp(926): warning C4244: '=': conversion from 'const double' to 'btScalar', possible loss of data
+C:\Oculus\AnnwvynSDK64-2015\bullet3\examples\SharedMemory\PhysicsServerCommandProcessor.cpp(927): warning C4244: '=': conversion from 'const double' to 'btScalar', possible loss of data
+C:\Oculus\AnnwvynSDK64-2015\bullet3\examples\SharedMemory\PhysicsServerCommandProcessor.cpp(928): warning C4244: '=': conversion from 'const double' to 'btScalar', possible loss of data
+C:\Oculus\AnnwvynSDK64-2015\bullet3\examples\SharedMemory\PhysicsServerCommandProcessor.cpp(929): warning C4244: '=': conversion from 'const double' to 'btScalar', possible loss of data
+C:\Oculus\AnnwvynSDK64-2015\bullet3\examples\SharedMemory\PhysicsServerCommandProcessor.cpp(931): warning C4800: 'int': forcing value to bool 'true' or 'false' (performance warning)
+C:\Oculus\AnnwvynSDK64-2015\bullet3\examples\SharedMemory\PhysicsServerCommandProcessor.cpp(932): warning C4800: 'int': forcing value to bool 'true' or 'false' (performance warning)
+C:\Oculus\AnnwvynSDK64-2015\bullet3\examples\SharedMemory\PhysicsServerCommandProcessor.cpp(1060): warning C4244: 'argument': conversion from 'const double' to 'const btScalar', possible loss of data
+C:\Oculus\AnnwvynSDK64-2015\bullet3\examples\SharedMemory\PhysicsServerCommandProcessor.cpp(1063): warning C4244: 'argument': conversion from 'const double' to 'const btScalar', possible loss of data
+C:\Oculus\AnnwvynSDK64-2015\bullet3\examples\SharedMemory\PhysicsServerCommandProcessor.cpp(1073): warning C4244: 'argument': conversion from 'double' to 'btScalar', possible loss of data
+C:\Oculus\AnnwvynSDK64-2015\bullet3\examples\SharedMemory\PhysicsServerCommandProcessor.cpp(1099): warning C4244: 'initializing': conversion from 'const double' to 'btScalar', possible loss of data
+C:\Oculus\AnnwvynSDK64-2015\bullet3\examples\SharedMemory\PhysicsServerCommandProcessor.cpp(1102): warning C4244: 'initializing': conversion from 'double' to 'btScalar', possible loss of data
+C:\Oculus\AnnwvynSDK64-2015\bullet3\examples\SharedMemory\PhysicsServerCommandProcessor.cpp(1137): warning C4244: 'initializing': conversion from 'const double' to 'btScalar', possible loss of data
+C:\Oculus\AnnwvynSDK64-2015\bullet3\examples\SharedMemory\PhysicsServerCommandProcessor.cpp(1138): warning C4244: 'initializing': conversion from 'const double' to 'btScalar', possible loss of data
+C:\Oculus\AnnwvynSDK64-2015\bullet3\examples\SharedMemory\PhysicsServerCommandProcessor.cpp(1140): warning C4244: 'initializing': conversion from 'const double' to 'btScalar', possible loss of data
+C:\Oculus\AnnwvynSDK64-2015\bullet3\examples\SharedMemory\PhysicsServerCommandProcessor.cpp(1141): warning C4244: 'initializing': conversion from 'const double' to 'btScalar', possible loss of data
+C:\Oculus\AnnwvynSDK64-2015\bullet3\examples\SharedMemory\PhysicsServerCommandProcessor.cpp(1154): warning C4244: 'initializing': conversion from 'double' to 'btScalar', possible loss of data
+C:\Oculus\AnnwvynSDK64-2015\bullet3\examples\SharedMemory\PhysicsServerCommandProcessor.cpp(1357): warning C4244: '=': conversion from 'const double' to 'btScalar', possible loss of data
+C:\Oculus\AnnwvynSDK64-2015\bullet3\examples\SharedMemory\PhysicsServerCommandProcessor.cpp(1363): warning C4244: 'argument': conversion from 'const double' to 'const btScalar', possible loss of data
+C:\Oculus\AnnwvynSDK64-2015\bullet3\examples\SharedMemory\PhysicsServerCommandProcessor.cpp(1397): warning C4244: 'argument': conversion from 'const double' to 'const btScalar', possible loss of data
+C:\Oculus\AnnwvynSDK64-2015\bullet3\examples\SharedMemory\PhysicsServerCommandProcessor.cpp(1406): warning C4244: 'argument': conversion from 'const double' to 'const btScalar', possible loss of data
+C:\Oculus\AnnwvynSDK64-2015\bullet3\examples\SharedMemory\PhysicsServerCommandProcessor.cpp(1416): warning C4244: 'argument': conversion from 'const double' to 'btScalar', possible loss of data
+C:\Oculus\AnnwvynSDK64-2015\bullet3\examples\SharedMemory\PhysicsServerCommandProcessor.cpp(1459): warning C4244: 'argument': conversion from 'const double' to 'const btScalar', possible loss of data
+C:\Oculus\AnnwvynSDK64-2015\bullet3\examples\SharedMemory\PhysicsServerCommandProcessor.cpp(1468): warning C4244: 'argument': conversion from 'const double' to 'const btScalar', possible loss of data
+C:\Oculus\AnnwvynSDK64-2015\bullet3\examples\SharedMemory\PhysicsServerCommandProcessor.cpp(1478): warning C4244: 'argument': conversion from 'const double' to 'const btScalar', possible loss of data
+C:\Oculus\AnnwvynSDK64-2015\bullet3\examples\SharedMemory\PhysicsServerCommandProcessor.cpp(1484): warning C4244: '=': conversion from 'const double' to 'btScalar', possible loss of data
+C:\Oculus\AnnwvynSDK64-2015\bullet3\examples\SharedMemory\PhysicsServerCommandProcessor.cpp(1564): warning C4244: '=': conversion from 'const double' to 'btScalar', possible loss of data
+C:\Oculus\AnnwvynSDK64-2015\bullet3\examples\SharedMemory\PhysicsServerCommandProcessor.cpp(1565): warning C4244: '=': conversion from 'const double' to 'btScalar', possible loss of data
+C:\Oculus\AnnwvynSDK64-2015\bullet3\examples\SharedMemory\PhysicsServerCommandProcessor.cpp(1566): warning C4244: '=': conversion from 'const double' to 'btScalar', possible loss of data
+C:\Oculus\AnnwvynSDK64-2015\bullet3\examples\SharedMemory\PhysicsServerCommandProcessor.cpp(1567): warning C4244: '=': conversion from 'const double' to 'btScalar', possible loss of data
+C:\Oculus\AnnwvynSDK64-2015\bullet3\examples\SharedMemory\PhysicsServerCommandProcessor.cpp(1589): warning C4244: 'argument': conversion from 'const double' to 'const btScalar', possible loss of data
+C:\Oculus\AnnwvynSDK64-2015\bullet3\examples\SharedMemory\PhysicsServerCommandProcessor.cpp(1592): warning C4244: 'argument': conversion from 'const double' to 'const btScalar', possible loss of data
+C:\Oculus\AnnwvynSDK64-2015\bullet3\examples\SharedMemory\PhysicsServerCommandProcessor.cpp(1604): warning C4244: 'argument': conversion from 'const double' to 'const btScalar', possible loss of data
+C:\Oculus\AnnwvynSDK64-2015\bullet3\examples\SharedMemory\PhysicsServerCommandProcessor.cpp(1607): warning C4244: 'argument': conversion from 'const double' to 'const btScalar', possible loss of data
+  BasicExample.cpp
+  InverseDynamicsExample.cpp
+C:\Oculus\AnnwvynSDK64-2015\bullet3\src\Bullet3Common/b3FileUtils.h(100): warning C4244: 'return': conversion from 'ptrdiff_t' to 'int', possible loss of data
+C:\Oculus\AnnwvynSDK64-2015\bullet3\src\Bullet3Common/b3FileUtils.h(114): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+c:\oculus\annwvynsdk64-2015\bullet3\src\bulletinversedynamics\details/IDLinearMathInterface.hpp(45): warning C4244: 'argument': conversion from 'double' to 'const btScalar', possible loss of data
+C:\Oculus\AnnwvynSDK64-2015\bullet3\src\../Extras/InverseDynamics/btMultiBodyTreeCreator.hpp(28): warning C4373: 'btInverseDynamicsBullet3::btMultiBodyTreeCreator::getBody': virtual function overrides 'btInverseDynamicsBullet3::MultiBodyTreeCreator::getBody', previous versions of the compiler did not override when parameters only differed by const/volatile qualifiers
+  c:\oculus\annwvynsdk64-2015\bullet3\extras\inversedynamics\MultiBodyTreeCreator.hpp(27): note: see declaration of 'btInverseDynamicsBullet3::MultiBodyTreeCreator::getBody'
+C:\Oculus\AnnwvynSDK64-2015\bullet3\examples\InverseDynamics\InverseDynamicsExample.cpp(220): warning C4244: 'argument': conversion from 'btScalar' to 'unsigned char', possible loss of data
+  ForkLiftDemo.cpp
+C:\Oculus\AnnwvynSDK64-2015\bullet3\examples\ForkLift\ForkLiftDemo.cpp(535): warning C4244: 'argument': conversion from 'double' to 'const btScalar', possible loss of data
+C:\Oculus\AnnwvynSDK64-2015\bullet3\examples\ForkLift\ForkLiftDemo.cpp(538): warning C4244: 'argument': conversion from 'double' to 'const btScalar', possible loss of data
+C:\Oculus\AnnwvynSDK64-2015\bullet3\examples\ForkLift\ForkLiftDemo.cpp(541): warning C4244: 'argument': conversion from 'double' to 'const btScalar', possible loss of data
+C:\Oculus\AnnwvynSDK64-2015\bullet3\examples\ForkLift\ForkLiftDemo.cpp(544): warning C4244: 'argument': conversion from 'double' to 'const btScalar', possible loss of data
+  Tutorial.cpp
+C:\Oculus\AnnwvynSDK64-2015\bullet3\examples\Tutorial\Tutorial.cpp(174): warning C4244: 'argument': conversion from 'double' to 'const b3Scalar', possible loss of data
+C:\Oculus\AnnwvynSDK64-2015\bullet3\examples\Tutorial\Tutorial.cpp(188): warning C4244: 'argument': conversion from 'double' to 'const b3Scalar', possible loss of data
+C:\Oculus\AnnwvynSDK64-2015\bullet3\examples\Tutorial\Tutorial.cpp(193): warning C4244: 'argument': conversion from 'double' to 'const b3Scalar', possible loss of data
+C:\Oculus\AnnwvynSDK64-2015\bullet3\examples\Tutorial\Tutorial.cpp(211): warning C4244: '=': conversion from 'double' to 'b3Scalar', possible loss of data
+C:\Oculus\AnnwvynSDK64-2015\bullet3\examples\Tutorial\Tutorial.cpp(217): warning C4244: 'argument': conversion from 'double' to 'const b3Scalar', possible loss of data
+C:\Oculus\AnnwvynSDK64-2015\bullet3\examples\Tutorial\Tutorial.cpp(222): warning C4244: 'argument': conversion from 'double' to 'btScalar', possible loss of data
+C:\Oculus\AnnwvynSDK64-2015\bullet3\examples\Tutorial\Tutorial.cpp(224): warning C4244: 'argument': conversion from 'double' to 'btScalar', possible loss of data
+C:\Oculus\AnnwvynSDK64-2015\bullet3\examples\Tutorial\Tutorial.cpp(399): warning C4244: 'argument': conversion from 'int' to 'const b3Scalar', possible loss of data
+C:\Oculus\AnnwvynSDK64-2015\bullet3\examples\Tutorial\Tutorial.cpp(445): warning C4244: '=': conversion from 'double' to 'b3Scalar', possible loss of data
+C:\Oculus\AnnwvynSDK64-2015\bullet3\examples\Tutorial\Tutorial.cpp(448): warning C4244: '=': conversion from 'double' to 'b3Scalar', possible loss of data
+  Generating Code...
+  Compiling...
+  Dof6ConstraintTutorial.cpp
+  CollisionSdkC_Api.cpp
+  CollisionTutorialBullet2.cpp
+C:\Oculus\AnnwvynSDK64-2015\bullet3\examples\Collision\CollisionTutorialBullet2.cpp(118): warning C4244: 'argument': conversion from 'double' to 'const btScalar', possible loss of data
+C:\Oculus\AnnwvynSDK64-2015\bullet3\examples\Collision\CollisionTutorialBullet2.cpp(139): warning C4244: 'argument': conversion from 'double' to 'const btScalar', possible loss of data
+  Bullet2CollisionSdk.cpp
+  RealTimeBullet3CollisionSdk.cpp
+C:\Oculus\AnnwvynSDK64-2015\bullet3\examples\Collision\Internal\RealTimeBullet3CollisionSdk.cpp(128): warning C4312: 'type cast': conversion from 'int' to 'plCollisionShapeHandle' of greater size
+C:\Oculus\AnnwvynSDK64-2015\bullet3\examples\Collision\Internal\RealTimeBullet3CollisionSdk.cpp(150): warning C4312: 'type cast': conversion from 'int' to 'plCollisionShapeHandle' of greater size
+C:\Oculus\AnnwvynSDK64-2015\bullet3\examples\Collision\Internal\RealTimeBullet3CollisionSdk.cpp(172): warning C4312: 'type cast': conversion from 'int' to 'plCollisionShapeHandle' of greater size
+C:\Oculus\AnnwvynSDK64-2015\bullet3\examples\Collision\Internal\RealTimeBullet3CollisionSdk.cpp(189): warning C4312: 'type cast': conversion from 'int' to 'plCollisionShapeHandle' of greater size
+C:\Oculus\AnnwvynSDK64-2015\bullet3\examples\Collision\Internal\RealTimeBullet3CollisionSdk.cpp(268): warning C4312: 'type cast': conversion from 'int' to 'plCollisionObjectHandle' of greater size
+  GyroscopicSetup.cpp
+  Planar2D.cpp
+  RollingFrictionDemo.cpp
+C:\Oculus\AnnwvynSDK64-2015\bullet3\examples\RollingFrictionDemo\RollingFrictionDemo.cpp(237): warning C4101: 'p': unreferenced local variable
+  FractureDemo.cpp
+  btFractureBody.cpp
+  btFractureDynamicsWorld.cpp
+  MotorDemo.cpp
+C:\Oculus\AnnwvynSDK64-2015\bullet3\examples\DynamicControlDemo\MotorDemo.cpp(166): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+C:\Oculus\AnnwvynSDK64-2015\bullet3\examples\DynamicControlDemo\MotorDemo.cpp(167): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+C:\Oculus\AnnwvynSDK64-2015\bullet3\examples\DynamicControlDemo\MotorDemo.cpp(168): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+C:\Oculus\AnnwvynSDK64-2015\bullet3\examples\DynamicControlDemo\MotorDemo.cpp(206): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+C:\Oculus\AnnwvynSDK64-2015\bullet3\examples\DynamicControlDemo\MotorDemo.cpp(207): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+C:\Oculus\AnnwvynSDK64-2015\bullet3\examples\DynamicControlDemo\MotorDemo.cpp(208): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+C:\Oculus\AnnwvynSDK64-2015\bullet3\examples\DynamicControlDemo\MotorDemo.cpp(341): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+C:\Oculus\AnnwvynSDK64-2015\bullet3\examples\DynamicControlDemo\MotorDemo.cpp(359): warning C4244: 'initializing': conversion from 'double' to 'btScalar', possible loss of data
+  MultiThreadingExample.cpp
+  b3PosixThreadSupport.cpp
+  b3Win32ThreadSupport.cpp
+C:\Oculus\AnnwvynSDK64-2015\bullet3\examples\MultiThreading\b3Win32ThreadSupport.cpp(259): warning C4334: '<<': result of 32-bit shift implicitly converted to 64 bits (was 64-bit shift intended?)
+  b3ThreadSupportInterface.cpp
+  TimeSeriesCanvas.cpp
+C:\Oculus\AnnwvynSDK64-2015\bullet3\examples\RenderingExamples\TimeSeriesCanvas.cpp(69): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+C:\Oculus\AnnwvynSDK64-2015\bullet3\examples\RenderingExamples\TimeSeriesCanvas.cpp(133): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Oculus\AnnwvynSDK64-2015\bullet3\examples\RenderingExamples\TimeSeriesCanvas.cpp(136): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Oculus\AnnwvynSDK64-2015\bullet3\examples\RenderingExamples\TimeSeriesCanvas.cpp(138): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Oculus\AnnwvynSDK64-2015\bullet3\examples\RenderingExamples\TimeSeriesCanvas.cpp(241): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Oculus\AnnwvynSDK64-2015\bullet3\examples\RenderingExamples\TimeSeriesCanvas.cpp(258): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Oculus\AnnwvynSDK64-2015\bullet3\examples\RenderingExamples\TimeSeriesCanvas.cpp(260): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Oculus\AnnwvynSDK64-2015\bullet3\examples\RenderingExamples\TimeSeriesCanvas.cpp(272): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Oculus\AnnwvynSDK64-2015\bullet3\examples\RenderingExamples\TimeSeriesCanvas.cpp(300): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Oculus\AnnwvynSDK64-2015\bullet3\examples\RenderingExamples\TimeSeriesCanvas.cpp(304): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+C:\Oculus\AnnwvynSDK64-2015\bullet3\examples\RenderingExamples\TimeSeriesCanvas.cpp(320): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+  TimeSeriesFontData.cpp
+  CoordinateSystemDemo.cpp
+C:\Oculus\AnnwvynSDK64-2015\bullet3\examples\RenderingExamples\CoordinateSystemDemo.cpp(159): warning C4099: 'CommonExampleInterface': type name first seen using 'class' now seen using 'struct'
+  c:\oculus\annwvynsdk64-2015\bullet3\examples\renderingexamples\../CommonInterfaces/CommonExampleInterface.h(25): note: see declaration of 'CommonExampleInterface'
+  RaytracerSetup.cpp
+C:\Oculus\AnnwvynSDK64-2015\bullet3\examples\RenderingExamples\RaytracerSetup.cpp(106): warning C4244: 'argument': conversion from 'double' to 'const btScalar', possible loss of data
+C:\Oculus\AnnwvynSDK64-2015\bullet3\examples\RenderingExamples\RaytracerSetup.cpp(261): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+C:\Oculus\AnnwvynSDK64-2015\bullet3\examples\RenderingExamples\RaytracerSetup.cpp(302): warning C4244: 'argument': conversion from 'int' to 'const btScalar', possible loss of data
+C:\Oculus\AnnwvynSDK64-2015\bullet3\examples\RenderingExamples\RaytracerSetup.cpp(303): warning C4244: 'argument': conversion from 'int' to 'const btScalar', possible loss of data
+C:\Oculus\AnnwvynSDK64-2015\bullet3\examples\RenderingExamples\RaytracerSetup.cpp(337): warning C4244: 'initializing': conversion from 'btScalar' to 'unsigned char', possible loss of data
+C:\Oculus\AnnwvynSDK64-2015\bullet3\examples\RenderingExamples\RaytracerSetup.cpp(338): warning C4244: 'initializing': conversion from 'btScalar' to 'unsigned char', possible loss of data
+C:\Oculus\AnnwvynSDK64-2015\bullet3\examples\RenderingExamples\RaytracerSetup.cpp(339): warning C4244: 'initializing': conversion from 'btScalar' to 'unsigned char', possible loss of data
+C:\Oculus\AnnwvynSDK64-2015\bullet3\examples\RenderingExamples\RaytracerSetup.cpp(294): warning C4101: 'y': unreferenced local variable
+  Generating Code...
+  Compiling...
+  RenderInstancingDemo.cpp
+C:\Oculus\AnnwvynSDK64-2015\bullet3\examples\RenderingExamples\RenderInstancingDemo.cpp(56): warning C4244: 'argument': conversion from 'int' to 'b3Scalar', possible loss of data
+C:\Oculus\AnnwvynSDK64-2015\bullet3\examples\RenderingExamples\RenderInstancingDemo.cpp(96): warning C4244: 'argument': conversion from 'int' to 'b3Scalar', possible loss of data
+  TimeSeriesExample.cpp
+  BenchmarkDemo.cpp
+C:\Oculus\AnnwvynSDK64-2015\bullet3\examples\Benchmarks\BenchmarkDemo.cpp(1276): warning C4099: 'CommonExampleInterface': type name first seen using 'class' now seen using 'struct'
+  c:\oculus\annwvynsdk64-2015\bullet3\examples\commoninterfaces\CommonExampleInterface.h(25): note: see declaration of 'CommonExampleInterface'
+  RaytestDemo.cpp
+C:\Oculus\AnnwvynSDK64-2015\bullet3\examples\Raycast\RaytestDemo.cpp(74): warning C4244: '+=': conversion from 'double' to 'float', possible loss of data
+C:\Oculus\AnnwvynSDK64-2015\bullet3\examples\Raycast\RaytestDemo.cpp(252): warning C4244: 'argument': conversion from 'int' to 'const btScalar', possible loss of data
+  SerializeSetup.cpp
+  btWorldImporter.cpp
+C:\Oculus\AnnwvynSDK64-2015\bullet3\Extras\Serialize\BulletWorldImporter\btWorldImporter.cpp(1000): warning C4800: 'char': forcing value to bool 'true' or 'false' (performance warning)
+C:\Oculus\AnnwvynSDK64-2015\bullet3\Extras\Serialize\BulletWorldImporter\btWorldImporter.cpp(1004): warning C4800: 'char': forcing value to bool 'true' or 'false' (performance warning)
+C:\Oculus\AnnwvynSDK64-2015\bullet3\Extras\Serialize\BulletWorldImporter\btWorldImporter.cpp(1007): warning C4800: 'char': forcing value to bool 'true' or 'false' (performance warning)
+C:\Oculus\AnnwvynSDK64-2015\bullet3\Extras\Serialize\BulletWorldImporter\btWorldImporter.cpp(1278): warning C4244: 'argument': conversion from 'double' to 'btScalar', possible loss of data
+C:\Oculus\AnnwvynSDK64-2015\bullet3\Extras\Serialize\BulletWorldImporter\btWorldImporter.cpp(1327): warning C4800: 'char': forcing value to bool 'true' or 'false' (performance warning)
+C:\Oculus\AnnwvynSDK64-2015\bullet3\Extras\Serialize\BulletWorldImporter\btWorldImporter.cpp(1327): warning C4244: 'argument': conversion from 'double' to 'btScalar', possible loss of data
+C:\Oculus\AnnwvynSDK64-2015\bullet3\Extras\Serialize\BulletWorldImporter\btWorldImporter.cpp(1328): warning C4244: 'argument': conversion from 'double' to 'btScalar', possible loss of data
+C:\Oculus\AnnwvynSDK64-2015\bullet3\Extras\Serialize\BulletWorldImporter\btWorldImporter.cpp(1330): warning C4800: 'char': forcing value to bool 'true' or 'false' (performance warning)
+C:\Oculus\AnnwvynSDK64-2015\bullet3\Extras\Serialize\BulletWorldImporter\btWorldImporter.cpp(1330): warning C4244: 'argument': conversion from 'double' to 'btScalar', possible loss of data
+C:\Oculus\AnnwvynSDK64-2015\bullet3\Extras\Serialize\BulletWorldImporter\btWorldImporter.cpp(1334): warning C4800: 'char': forcing value to bool 'true' or 'false' (performance warning)
+C:\Oculus\AnnwvynSDK64-2015\bullet3\Extras\Serialize\BulletWorldImporter\btWorldImporter.cpp(1334): warning C4244: 'argument': conversion from 'double' to 'btScalar', possible loss of data
+C:\Oculus\AnnwvynSDK64-2015\bullet3\Extras\Serialize\BulletWorldImporter\btWorldImporter.cpp(1335): warning C4244: 'argument': conversion from 'double' to 'btScalar', possible loss of data
+C:\Oculus\AnnwvynSDK64-2015\bullet3\Extras\Serialize\BulletWorldImporter\btWorldImporter.cpp(1337): warning C4800: 'char': forcing value to bool 'true' or 'false' (performance warning)
+C:\Oculus\AnnwvynSDK64-2015\bullet3\Extras\Serialize\BulletWorldImporter\btWorldImporter.cpp(1337): warning C4244: 'argument': conversion from 'double' to 'btScalar', possible loss of data
+  btBulletWorldImporter.cpp
+  bChunk.cpp
+  bFile.cpp
+C:\Oculus\AnnwvynSDK64-2015\bullet3\Extras\Serialize\BulletFileLoader\bFile.cpp(34): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+C:\Oculus\AnnwvynSDK64-2015\bullet3\Extras\Serialize\BulletFileLoader\bFile.cpp(464): warning C4311: 'type cast': pointer truncation from 'char *' to 'long'
+C:\Oculus\AnnwvynSDK64-2015\bullet3\Extras\Serialize\BulletFileLoader\bFile.cpp(464): warning C4302: 'type cast': truncation from 'char *' to 'long'
+C:\Oculus\AnnwvynSDK64-2015\bullet3\Extras\Serialize\BulletFileLoader\bFile.cpp(501): warning C4311: 'type cast': pointer truncation from 'char *' to 'long'
+C:\Oculus\AnnwvynSDK64-2015\bullet3\Extras\Serialize\BulletFileLoader\bFile.cpp(501): warning C4302: 'type cast': truncation from 'char *' to 'long'
+C:\Oculus\AnnwvynSDK64-2015\bullet3\Extras\Serialize\BulletFileLoader\bFile.cpp(1305): warning C4477: 'printf' : format string '%d' requires an argument of type 'int', but variadic argument 1 has type 'void *'
+C:\Oculus\AnnwvynSDK64-2015\bullet3\Extras\Serialize\BulletFileLoader\bFile.cpp(1305): warning C4313: 'printf': '%d' in format string conflicts with argument 1 of type 'void *'
+C:\Oculus\AnnwvynSDK64-2015\bullet3\Extras\Serialize\BulletFileLoader\bFile.cpp(1323): warning C4477: 'printf' : format string '%d' requires an argument of type 'int', but variadic argument 1 has type 'void *'
+C:\Oculus\AnnwvynSDK64-2015\bullet3\Extras\Serialize\BulletFileLoader\bFile.cpp(1323): warning C4313: 'printf': '%d' in format string conflicts with argument 1 of type 'void *'
+C:\Oculus\AnnwvynSDK64-2015\bullet3\Extras\Serialize\BulletFileLoader\bFile.cpp(1504): warning C4477: 'printf' : format string '%d' requires an argument of type 'int', but variadic argument 2 has type 'void *const '
+C:\Oculus\AnnwvynSDK64-2015\bullet3\Extras\Serialize\BulletFileLoader\bFile.cpp(1504): warning C4313: 'printf': '%d' in format string conflicts with argument 2 of type 'void *const '
+  bDNA.cpp
+C:\Oculus\AnnwvynSDK64-2015\bullet3\Extras\Serialize\BulletFileLoader\bDNA.cpp(279): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+C:\Oculus\AnnwvynSDK64-2015\bullet3\Extras\Serialize\BulletFileLoader\bDNA.cpp(394): warning C4311: 'type cast': pointer truncation from 'char *' to 'long'
+C:\Oculus\AnnwvynSDK64-2015\bullet3\Extras\Serialize\BulletFileLoader\bDNA.cpp(394): warning C4302: 'type cast': truncation from 'char *' to 'long'
+C:\Oculus\AnnwvynSDK64-2015\bullet3\Extras\Serialize\BulletFileLoader\bDNA.cpp(430): warning C4311: 'type cast': pointer truncation from 'char *' to 'long'
+C:\Oculus\AnnwvynSDK64-2015\bullet3\Extras\Serialize\BulletFileLoader\bDNA.cpp(430): warning C4302: 'type cast': truncation from 'char *' to 'long'
+C:\Oculus\AnnwvynSDK64-2015\bullet3\Extras\Serialize\BulletFileLoader\bDNA.cpp(527): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+  btBulletFile.cpp
+  BspConverter.cpp
+  BspLoader.cpp
+  ImportBspExample.cpp
+C:\Oculus\AnnwvynSDK64-2015\bullet3\examples\Importers\ImportBsp\ImportBspExample.cpp(288): warning C4099: 'CommonExampleInterface': type name first seen using 'class' now seen using 'struct'
+  c:\oculus\annwvynsdk64-2015\bullet3\examples\commoninterfaces\CommonExampleInterface.h(25): note: see declaration of 'CommonExampleInterface'
+  ImportColladaSetup.cpp
+C:\Oculus\AnnwvynSDK64-2015\bullet3\src\Bullet3Common/b3FileUtils.h(100): warning C4244: 'return': conversion from 'ptrdiff_t' to 'int', possible loss of data
+C:\Oculus\AnnwvynSDK64-2015\bullet3\src\Bullet3Common/b3FileUtils.h(114): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+  LoadMeshFromCollada.cpp
+C:\Oculus\AnnwvynSDK64-2015\bullet3\src\Bullet3Common/b3FileUtils.h(100): warning C4244: 'return': conversion from 'ptrdiff_t' to 'int', possible loss of data
+C:\Oculus\AnnwvynSDK64-2015\bullet3\src\Bullet3Common/b3FileUtils.h(114): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+C:\Oculus\AnnwvynSDK64-2015\bullet3\examples\Importers\ImportColladaDemo\LoadMeshFromCollada.cpp(47): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+C:\Oculus\AnnwvynSDK64-2015\bullet3\examples\Importers\ImportColladaDemo\LoadMeshFromCollada.cpp(59): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+C:\Oculus\AnnwvynSDK64-2015\bullet3\examples\Importers\ImportColladaDemo\LoadMeshFromCollada.cpp(60): warning C4244: 'argument': conversion from 'float' to 'const int', possible loss of data
+C:\Oculus\AnnwvynSDK64-2015\bullet3\examples\Importers\ImportColladaDemo\LoadMeshFromCollada.cpp(496): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+  ImportObjExample.cpp
+C:\Oculus\AnnwvynSDK64-2015\bullet3\src\Bullet3Common/b3FileUtils.h(100): warning C4244: 'return': conversion from 'ptrdiff_t' to 'int', possible loss of data
+C:\Oculus\AnnwvynSDK64-2015\bullet3\src\Bullet3Common/b3FileUtils.h(114): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+  LoadMeshFromObj.cpp
+  Wavefront2GLInstanceGraphicsShape.cpp
+C:\Oculus\AnnwvynSDK64-2015\bullet3\examples\Importers\ImportObjDemo\Wavefront2GLInstanceGraphicsShape.cpp(23): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+  ImportSTLSetup.cpp
+c:\oculus\annwvynsdk64-2015\bullet3\examples\importers\importstldemo\LoadMeshFromSTL.h(34): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+  Generating Code...
+  Compiling...
+  ImportURDFSetup.cpp
+C:\Oculus\AnnwvynSDK64-2015\bullet3\src\Bullet3Common/b3FileUtils.h(100): warning C4244: 'return': conversion from 'ptrdiff_t' to 'int', possible loss of data
+C:\Oculus\AnnwvynSDK64-2015\bullet3\src\Bullet3Common/b3FileUtils.h(114): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+  URDF2Bullet.cpp
+  MyMultiBodyCreator.cpp
+  UrdfParser.cpp
+C:\Oculus\AnnwvynSDK64-2015\bullet3\examples\Importers\ImportURDFDemo\UrdfParser.cpp(25): warning C4244: 'argument': conversion from 'double' to 'const float', possible loss of data
+C:\Oculus\AnnwvynSDK64-2015\bullet3\examples\Importers\ImportURDFDemo\UrdfParser.cpp(46): warning C4244: 'argument': conversion from 'double' to 'const float', possible loss of data
+C:\Oculus\AnnwvynSDK64-2015\bullet3\examples\Importers\ImportURDFDemo\UrdfParser.cpp(134): warning C4244: 'argument': conversion from 'double' to 'const btScalar', possible loss of data
+  urdfStringSplit.cpp
+C:\Oculus\AnnwvynSDK64-2015\bullet3\examples\Importers\ImportURDFDemo\urdfStringSplit.cpp(17): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+C:\Oculus\AnnwvynSDK64-2015\bullet3\examples\Importers\ImportURDFDemo\urdfStringSplit.cpp(27): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+  BulletUrdfImporter.cpp
+c:\oculus\annwvynsdk64-2015\bullet3\examples\importers\importurdfdemo\../ImportSTLDemo/LoadMeshFromSTL.h(34): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+C:\Oculus\AnnwvynSDK64-2015\bullet3\src\Bullet3Common/b3FileUtils.h(100): warning C4244: 'return': conversion from 'ptrdiff_t' to 'int', possible loss of data
+C:\Oculus\AnnwvynSDK64-2015\bullet3\src\Bullet3Common/b3FileUtils.h(114): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+C:\Oculus\AnnwvynSDK64-2015\bullet3\examples\Importers\ImportURDFDemo\BulletUrdfImporter.cpp(108): warning C4800: 'int': forcing value to bool 'true' or 'false' (performance warning)
+C:\Oculus\AnnwvynSDK64-2015\bullet3\examples\Importers\ImportURDFDemo\BulletUrdfImporter.cpp(226): warning C4244: '=': conversion from 'double' to 'btScalar', possible loss of data
+C:\Oculus\AnnwvynSDK64-2015\bullet3\examples\Importers\ImportURDFDemo\BulletUrdfImporter.cpp(229): warning C4244: 'argument': conversion from 'double' to 'const btScalar', possible loss of data
+C:\Oculus\AnnwvynSDK64-2015\bullet3\examples\Importers\ImportURDFDemo\BulletUrdfImporter.cpp(257): warning C4244: '=': conversion from 'double' to 'btScalar', possible loss of data
+C:\Oculus\AnnwvynSDK64-2015\bullet3\examples\Importers\ImportURDFDemo\BulletUrdfImporter.cpp(258): warning C4244: '=': conversion from 'double' to 'btScalar', possible loss of data
+C:\Oculus\AnnwvynSDK64-2015\bullet3\examples\Importers\ImportURDFDemo\BulletUrdfImporter.cpp(293): warning C4244: 'initializing': conversion from 'const double' to 'btScalar', possible loss of data
+C:\Oculus\AnnwvynSDK64-2015\bullet3\examples\Importers\ImportURDFDemo\BulletUrdfImporter.cpp(294): warning C4244: 'initializing': conversion from 'const double' to 'btScalar', possible loss of data
+C:\Oculus\AnnwvynSDK64-2015\bullet3\examples\Importers\ImportURDFDemo\BulletUrdfImporter.cpp(296): warning C4244: 'argument': conversion from 'double' to 'const btScalar', possible loss of data
+C:\Oculus\AnnwvynSDK64-2015\bullet3\examples\Importers\ImportURDFDemo\BulletUrdfImporter.cpp(298): warning C4244: '=': conversion from 'double' to 'btScalar', possible loss of data
+C:\Oculus\AnnwvynSDK64-2015\bullet3\examples\Importers\ImportURDFDemo\BulletUrdfImporter.cpp(322): warning C4244: 'initializing': conversion from 'const double' to 'btScalar', possible loss of data
+C:\Oculus\AnnwvynSDK64-2015\bullet3\examples\Importers\ImportURDFDemo\BulletUrdfImporter.cpp(597): warning C4244: 'initializing': conversion from 'const double' to 'btScalar', possible loss of data
+C:\Oculus\AnnwvynSDK64-2015\bullet3\examples\Importers\ImportURDFDemo\BulletUrdfImporter.cpp(598): warning C4244: 'initializing': conversion from 'const double' to 'btScalar', possible loss of data
+C:\Oculus\AnnwvynSDK64-2015\bullet3\examples\Importers\ImportURDFDemo\BulletUrdfImporter.cpp(606): warning C4244: 'argument': conversion from 'double' to 'const btScalar', possible loss of data
+C:\Oculus\AnnwvynSDK64-2015\bullet3\examples\Importers\ImportURDFDemo\BulletUrdfImporter.cpp(608): warning C4244: '=': conversion from 'double' to 'btScalar', possible loss of data
+C:\Oculus\AnnwvynSDK64-2015\bullet3\examples\Importers\ImportURDFDemo\BulletUrdfImporter.cpp(638): warning C4244: 'initializing': conversion from 'const double' to 'btScalar', possible loss of data
+  VoronoiFractureDemo.cpp
+C:\Oculus\AnnwvynSDK64-2015\bullet3\examples\VoronoiFracture\VoronoiFractureDemo.cpp(336): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+C:\Oculus\AnnwvynSDK64-2015\bullet3\examples\VoronoiFracture\VoronoiFractureDemo.cpp(481): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+C:\Oculus\AnnwvynSDK64-2015\bullet3\examples\VoronoiFracture\VoronoiFractureDemo.cpp(722): warning C4244: 'argument': conversion from 'double' to 'const btScalar', possible loss of data
+C:\Oculus\AnnwvynSDK64-2015\bullet3\examples\VoronoiFracture\VoronoiFractureDemo.cpp(729): warning C4244: 'argument': conversion from 'double' to 'const btScalar', possible loss of data
+C:\Oculus\AnnwvynSDK64-2015\bullet3\examples\VoronoiFracture\VoronoiFractureDemo.cpp(737): warning C4244: 'argument': conversion from 'double' to 'const btScalar', possible loss of data
+  btConvexConvexMprAlgorithm.cpp
+C:\Oculus\AnnwvynSDK64-2015\bullet3\src\BulletCollision/NarrowPhaseCollision/btMprPenetration.h(152): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+C:\Oculus\AnnwvynSDK64-2015\bullet3\src\BulletCollision/NarrowPhaseCollision/btMprPenetration.h(156): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+C:\Oculus\AnnwvynSDK64-2015\bullet3\src\BulletCollision/NarrowPhaseCollision/btMprPenetration.h(157): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+C:\Oculus\AnnwvynSDK64-2015\bullet3\src\BulletCollision/NarrowPhaseCollision/btMprPenetration.h(566): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+C:\Oculus\AnnwvynSDK64-2015\bullet3\src\BulletCollision/NarrowPhaseCollision/btMprPenetration.h(570): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+  Hinge2Vehicle.cpp
+C:\Oculus\AnnwvynSDK64-2015\bullet3\examples\Vehicles\Hinge2Vehicle.cpp(573): warning C4101: 'm': unreferenced local variable
+C:\Oculus\AnnwvynSDK64-2015\bullet3\examples\Vehicles\Hinge2Vehicle.cpp(574): warning C4101: 'i': unreferenced local variable
+  Pendulum.cpp
+  TestJointTorqueSetup.cpp
+C:\Oculus\AnnwvynSDK64-2015\bullet3\examples\MultiBody\TestJointTorqueSetup.cpp(370): warning C4101: 'p': unreferenced local variable
+  InvertedPendulumPDControl.cpp
+C:\Oculus\AnnwvynSDK64-2015\bullet3\examples\MultiBody\InvertedPendulumPDControl.cpp(395): warning C4244: 'initializing': conversion from 'double' to 'btScalar', possible loss of data
+  MultiBodyConstraintFeedback.cpp
+C:\Oculus\AnnwvynSDK64-2015\bullet3\examples\MultiBody\MultiBodyConstraintFeedback.cpp(161): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+C:\Oculus\AnnwvynSDK64-2015\bullet3\examples\MultiBody\MultiBodyConstraintFeedback.cpp(363): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+C:\Oculus\AnnwvynSDK64-2015\bullet3\examples\MultiBody\MultiBodyConstraintFeedback.cpp(365): warning C4244: 'argument': conversion from 'int' to 'btScalar', possible loss of data
+  MultiDofDemo.cpp
+  TestHingeTorque.cpp
+  ConstraintDemo.cpp
+C:\Oculus\AnnwvynSDK64-2015\bullet3\examples\Constraints\ConstraintDemo.cpp(151): warning C4244: 'argument': conversion from 'double' to 'const btScalar', possible loss of data
+C:\Oculus\AnnwvynSDK64-2015\bullet3\examples\Constraints\ConstraintDemo.cpp(171): warning C4244: 'argument': conversion from 'double' to 'const btScalar', possible loss of data
+C:\Oculus\AnnwvynSDK64-2015\bullet3\examples\Constraints\ConstraintDemo.cpp(202): warning C4244: 'argument': conversion from 'double' to 'btScalar', possible loss of data
+  Dof6Spring2Setup.cpp
+C:\Oculus\AnnwvynSDK64-2015\bullet3\examples\Constraints\Dof6Spring2Setup.cpp(364): warning C4244: 'argument': conversion from 'int' to 'const btScalar', possible loss of data
+C:\Oculus\AnnwvynSDK64-2015\bullet3\examples\Constraints\Dof6Spring2Setup.cpp(404): warning C4244: 'argument': conversion from 'int' to 'const btScalar', possible loss of data
+C:\Oculus\AnnwvynSDK64-2015\bullet3\examples\Constraints\Dof6Spring2Setup.cpp(423): warning C4244: 'argument': conversion from 'int' to 'const btScalar', possible loss of data
+  ConstraintPhysicsSetup.cpp
+  stb_image.cpp
+C:\Oculus\AnnwvynSDK64-2015\bullet3\examples\ThirdPartyLibs\stb_image\stb_image.cpp(222): warning C4312: 'type cast': conversion from 'int' to 'unsigned char *' of greater size
+C:\Oculus\AnnwvynSDK64-2015\bullet3\examples\ThirdPartyLibs\stb_image\stb_image.cpp(230): warning C4312: 'type cast': conversion from 'int' to 'unsigned char *' of greater size
+C:\Oculus\AnnwvynSDK64-2015\bullet3\examples\ThirdPartyLibs\stb_image\stb_image.cpp(270): warning C4312: 'type cast': conversion from 'int' to 'float *' of greater size
+C:\Oculus\AnnwvynSDK64-2015\bullet3\examples\ThirdPartyLibs\stb_image\stb_image.cpp(292): warning C4312: 'type cast': conversion from 'int' to 'float *' of greater size
+C:\Oculus\AnnwvynSDK64-2015\bullet3\examples\ThirdPartyLibs\stb_image\stb_image.cpp(429): warning C4244: 'initializing': conversion from '__int64' to 'int', possible loss of data
+C:\Oculus\AnnwvynSDK64-2015\bullet3\examples\ThirdPartyLibs\stb_image\stb_image.cpp(442): warning C4244: 'initializing': conversion from '__int64' to 'int', possible loss of data
+C:\Oculus\AnnwvynSDK64-2015\bullet3\examples\ThirdPartyLibs\stb_image\stb_image.cpp(514): warning C4312: 'type cast': conversion from 'int' to 'unsigned char *' of greater size
+C:\Oculus\AnnwvynSDK64-2015\bullet3\examples\ThirdPartyLibs\stb_image\stb_image.cpp(552): warning C4312: 'type cast': conversion from 'int' to 'float *' of greater size
+C:\Oculus\AnnwvynSDK64-2015\bullet3\examples\ThirdPartyLibs\stb_image\stb_image.cpp(570): warning C4312: 'type cast': conversion from 'int' to 'unsigned char *' of greater size
+C:\Oculus\AnnwvynSDK64-2015\bullet3\examples\ThirdPartyLibs\stb_image\stb_image.cpp(1480): warning C4312: 'type cast': conversion from 'int' to 'unsigned char *' of greater size
+C:\Oculus\AnnwvynSDK64-2015\bullet3\examples\ThirdPartyLibs\stb_image\stb_image.cpp(1509): warning C4312: 'type cast': conversion from 'int' to 'unsigned char *' of greater size
+C:\Oculus\AnnwvynSDK64-2015\bullet3\examples\ThirdPartyLibs\stb_image\stb_image.cpp(1527): warning C4312: 'type cast': conversion from 'int' to 'unsigned char *' of greater size
+C:\Oculus\AnnwvynSDK64-2015\bullet3\examples\ThirdPartyLibs\stb_image\stb_image.cpp(2501): warning C4312: 'type cast': conversion from 'int' to 'unsigned char *' of greater size
+C:\Oculus\AnnwvynSDK64-2015\bullet3\examples\ThirdPartyLibs\stb_image\stb_image.cpp(2626): warning C4312: 'type cast': conversion from 'int' to 'unsigned char *' of greater size
+C:\Oculus\AnnwvynSDK64-2015\bullet3\examples\ThirdPartyLibs\stb_image\stb_image.cpp(2632): warning C4312: 'type cast': conversion from 'int' to 'unsigned char *' of greater size
+C:\Oculus\AnnwvynSDK64-2015\bullet3\examples\ThirdPartyLibs\stb_image\stb_image.cpp(2640): warning C4312: 'type cast': conversion from 'int' to 'unsigned char *' of greater size
+C:\Oculus\AnnwvynSDK64-2015\bullet3\examples\ThirdPartyLibs\stb_image\stb_image.cpp(2642): warning C4312: 'type cast': conversion from 'int' to 'unsigned char *' of greater size
+C:\Oculus\AnnwvynSDK64-2015\bullet3\examples\ThirdPartyLibs\stb_image\stb_image.cpp(2650): warning C4312: 'type cast': conversion from 'int' to 'unsigned char *' of greater size
+C:\Oculus\AnnwvynSDK64-2015\bullet3\examples\ThirdPartyLibs\stb_image\stb_image.cpp(2684): warning C4312: 'type cast': conversion from 'int' to 'unsigned char *' of greater size
+C:\Oculus\AnnwvynSDK64-2015\bullet3\examples\ThirdPartyLibs\stb_image\stb_image.cpp(2687): warning C4312: 'type cast': conversion from 'int' to 'unsigned char *' of greater size
+C:\Oculus\AnnwvynSDK64-2015\bullet3\examples\ThirdPartyLibs\stb_image\stb_image.cpp(2708): warning C4312: 'type cast': conversion from 'int' to 'unsigned char *' of greater size
+C:\Oculus\AnnwvynSDK64-2015\bullet3\examples\ThirdPartyLibs\stb_image\stb_image.cpp(2711): warning C4312: 'type cast': conversion from 'int' to 'unsigned char *' of greater size
+C:\Oculus\AnnwvynSDK64-2015\bullet3\examples\ThirdPartyLibs\stb_image\stb_image.cpp(2722): warning C4312: 'type cast': conversion from 'int' to 'unsigned char *' of greater size
+C:\Oculus\AnnwvynSDK64-2015\bullet3\examples\ThirdPartyLibs\stb_image\stb_image.cpp(2760): warning C4312: 'type cast': conversion from 'int' to 'unsigned char *' of greater size
+C:\Oculus\AnnwvynSDK64-2015\bullet3\examples\ThirdPartyLibs\stb_image\stb_image.cpp(2958): warning C4312: 'type cast': conversion from 'int' to 'unsigned char *' of greater size
+C:\Oculus\AnnwvynSDK64-2015\bullet3\examples\ThirdPartyLibs\stb_image\stb_image.cpp(2969): warning C4312: 'type cast': conversion from 'int' to 'unsigned char *' of greater size
+C:\Oculus\AnnwvynSDK64-2015\bullet3\examples\ThirdPartyLibs\stb_image\stb_image.cpp(2973): warning C4312: 'type cast': conversion from 'int' to 'unsigned char *' of greater size
+C:\Oculus\AnnwvynSDK64-2015\bullet3\examples\ThirdPartyLibs\stb_image\stb_image.cpp(3150): warning C4312: 'type cast': conversion from 'int' to 'unsigned char *' of greater size
+C:\Oculus\AnnwvynSDK64-2015\bullet3\examples\ThirdPartyLibs\stb_image\stb_image.cpp(3154): warning C4312: 'type cast': conversion from 'int' to 'unsigned char *' of greater size
+C:\Oculus\AnnwvynSDK64-2015\bullet3\examples\ThirdPartyLibs\stb_image\stb_image.cpp(3162): warning C4312: 'type cast': conversion from 'int' to 'unsigned char *' of greater size
+C:\Oculus\AnnwvynSDK64-2015\bullet3\examples\ThirdPartyLibs\stb_image\stb_image.cpp(3170): warning C4312: 'type cast': conversion from 'int' to 'unsigned char *' of greater size
+C:\Oculus\AnnwvynSDK64-2015\bullet3\examples\ThirdPartyLibs\stb_image\stb_image.cpp(3183): warning C4312: 'type cast': conversion from 'int' to 'unsigned char *' of greater size
+C:\Oculus\AnnwvynSDK64-2015\bullet3\examples\ThirdPartyLibs\stb_image\stb_image.cpp(3200): warning C4312: 'type cast': conversion from 'int' to 'unsigned char *' of greater size
+C:\Oculus\AnnwvynSDK64-2015\bullet3\examples\ThirdPartyLibs\stb_image\stb_image.cpp(3204): warning C4312: 'type cast': conversion from 'int' to 'unsigned char *' of greater size
+C:\Oculus\AnnwvynSDK64-2015\bullet3\examples\ThirdPartyLibs\stb_image\stb_image.cpp(3347): warning C4312: 'type cast': conversion from 'int' to 'unsigned char *' of greater size
+C:\Oculus\AnnwvynSDK64-2015\bullet3\examples\ThirdPartyLibs\stb_image\stb_image.cpp(3375): warning C4312: 'type cast': conversion from 'int' to 'unsigned char *' of greater size
+C:\Oculus\AnnwvynSDK64-2015\bullet3\examples\ThirdPartyLibs\stb_image\stb_image.cpp(3386): warning C4312: 'type cast': conversion from 'int' to 'unsigned char *' of greater size
+C:\Oculus\AnnwvynSDK64-2015\bullet3\examples\ThirdPartyLibs\stb_image\stb_image.cpp(3387): warning C4312: 'type cast': conversion from 'int' to 'unsigned char *' of greater size
+C:\Oculus\AnnwvynSDK64-2015\bullet3\examples\ThirdPartyLibs\stb_image\stb_image.cpp(3401): warning C4312: 'type cast': conversion from 'int' to 'unsigned char *' of greater size
+C:\Oculus\AnnwvynSDK64-2015\bullet3\examples\ThirdPartyLibs\stb_image\stb_image.cpp(3420): warning C4312: 'type cast': conversion from 'int' to 'unsigned char *' of greater size
+C:\Oculus\AnnwvynSDK64-2015\bullet3\examples\ThirdPartyLibs\stb_image\stb_image.cpp(3438): warning C4312: 'type cast': conversion from 'int' to 'unsigned char *' of greater size
+C:\Oculus\AnnwvynSDK64-2015\bullet3\examples\ThirdPartyLibs\stb_image\stb_image.cpp(3449): warning C4312: 'type cast': conversion from 'int' to 'unsigned char *' of greater size
+C:\Oculus\AnnwvynSDK64-2015\bullet3\examples\ThirdPartyLibs\stb_image\stb_image.cpp(3458): warning C4312: 'type cast': conversion from 'int' to 'unsigned char *' of greater size
+C:\Oculus\AnnwvynSDK64-2015\bullet3\examples\ThirdPartyLibs\stb_image\stb_image.cpp(3485): warning C4312: 'type cast': conversion from 'int' to 'unsigned char *' of greater size
+C:\Oculus\AnnwvynSDK64-2015\bullet3\examples\ThirdPartyLibs\stb_image\stb_image.cpp(3486): warning C4312: 'type cast': conversion from 'int' to 'unsigned char *' of greater size
+C:\Oculus\AnnwvynSDK64-2015\bullet3\examples\ThirdPartyLibs\stb_image\stb_image.cpp(3700): warning C4312: 'type cast': conversion from 'int' to 'unsigned char *' of greater size
+C:\Oculus\AnnwvynSDK64-2015\bullet3\examples\ThirdPartyLibs\stb_image\stb_image.cpp(3704): warning C4312: 'type cast': conversion from 'int' to 'unsigned char *' of greater size
+C:\Oculus\AnnwvynSDK64-2015\bullet3\examples\ThirdPartyLibs\stb_image\stb_image.cpp(3709): warning C4312: 'type cast': conversion from 'int' to 'unsigned char *' of greater size
+C:\Oculus\AnnwvynSDK64-2015\bullet3\examples\ThirdPartyLibs\stb_image\stb_image.cpp(3720): warning C4312: 'type cast': conversion from 'int' to 'unsigned char *' of greater size
+C:\Oculus\AnnwvynSDK64-2015\bullet3\examples\ThirdPartyLibs\stb_image\stb_image.cpp(3749): warning C4312: 'type cast': conversion from 'int' to 'unsigned char *' of greater size
+C:\Oculus\AnnwvynSDK64-2015\bullet3\examples\ThirdPartyLibs\stb_image\stb_image.cpp(3756): warning C4312: 'type cast': conversion from 'int' to 'unsigned char *' of greater size
+C:\Oculus\AnnwvynSDK64-2015\bullet3\examples\ThirdPartyLibs\stb_image\stb_image.cpp(3773): warning C4312: 'type cast': conversion from 'int' to 'unsigned char *' of greater size
+C:\Oculus\AnnwvynSDK64-2015\bullet3\examples\ThirdPartyLibs\stb_image\stb_image.cpp(3803): warning C4312: 'type cast': conversion from 'int' to 'unsigned char *' of greater size
+C:\Oculus\AnnwvynSDK64-2015\bullet3\examples\ThirdPartyLibs\stb_image\stb_image.cpp(3836): warning C4312: 'type cast': conversion from 'int' to 'unsigned char *' of greater size
+C:\Oculus\AnnwvynSDK64-2015\bullet3\examples\ThirdPartyLibs\stb_image\stb_image.cpp(3948): warning C4312: 'type cast': conversion from 'int' to 'float *' of greater size
+C:\Oculus\AnnwvynSDK64-2015\bullet3\examples\ThirdPartyLibs\stb_image\stb_image.cpp(3957): warning C4312: 'type cast': conversion from 'int' to 'float *' of greater size
+C:\Oculus\AnnwvynSDK64-2015\bullet3\examples\ThirdPartyLibs\stb_image\stb_image.cpp(3962): warning C4312: 'type cast': conversion from 'int' to 'float *' of greater size
+C:\Oculus\AnnwvynSDK64-2015\bullet3\examples\ThirdPartyLibs\stb_image\stb_image.cpp(3966): warning C4312: 'type cast': conversion from 'int' to 'float *' of greater size
+C:\Oculus\AnnwvynSDK64-2015\bullet3\examples\ThirdPartyLibs\stb_image\stb_image.cpp(4015): warning C4312: 'type cast': conversion from 'int' to 'float *' of greater size
+  tiny_obj_loader.cpp
+C:\Oculus\AnnwvynSDK64-2015\bullet3\examples\ThirdPartyLibs\Wavefront\tiny_obj_loader.cpp(80): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+C:\Oculus\AnnwvynSDK64-2015\bullet3\examples\ThirdPartyLibs\Wavefront\tiny_obj_loader.cpp(81): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+C:\Oculus\AnnwvynSDK64-2015\bullet3\examples\ThirdPartyLibs\Wavefront\tiny_obj_loader.cpp(191): warning C4267: 'initializing': conversion from 'size_t' to 'unsigned int', possible loss of data
+C:\Oculus\AnnwvynSDK64-2015\bullet3\examples\ThirdPartyLibs\Wavefront\tiny_obj_loader.cpp(454): warning C4244: 'initializing': conversion from '__int64' to 'int', possible loss of data
+C:\Oculus\AnnwvynSDK64-2015\bullet3\examples\ThirdPartyLibs\Wavefront\tiny_obj_loader.cpp(568): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+C:\Oculus\AnnwvynSDK64-2015\bullet3\examples\ThirdPartyLibs\Wavefront\tiny_obj_loader.cpp(572): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+C:\Oculus\AnnwvynSDK64-2015\bullet3\examples\ThirdPartyLibs\Wavefront\tiny_obj_loader.cpp(575): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+  Generating Code...
+  Compiling...
+  tinystr.cpp
+  tinyxml.cpp
+  tinyxmlerror.cpp
+  tinyxmlparser.cpp
+  pose.cpp
+C:\Oculus\AnnwvynSDK64-2015\bullet3\examples\ThirdPartyLibs\urdf/urdfdom_headers/urdf_model/include/urdf_model/pose.h(82): warning C4101: 'e': unreferenced local variable
+  model.cpp
+C:\Oculus\AnnwvynSDK64-2015\bullet3\examples\ThirdPartyLibs\urdf/urdfdom_headers/urdf_model/include/urdf_model/pose.h(82): warning C4101: 'e': unreferenced local variable
+c:\oculus\annwvynsdk64-2015\bullet3\examples\thirdpartylibs\urdf\urdfdom_headers\urdf_model\include\urdf_model\color.h(76): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+c:\oculus\annwvynsdk64-2015\bullet3\examples\thirdpartylibs\urdf\urdfdom_headers\urdf_model\include\urdf_model\color.h(78): warning C4101: 'e': unreferenced local variable
+C:\Oculus\AnnwvynSDK64-2015\bullet3\examples\ThirdPartyLibs\urdf\urdfdom\urdf_parser\src\model.cpp(106): warning C4101: 'e': unreferenced local variable
+C:\Oculus\AnnwvynSDK64-2015\bullet3\examples\ThirdPartyLibs\urdf\urdfdom\urdf_parser\src\model.cpp(163): warning C4101: 'e': unreferenced local variable
+  link.cpp
+C:\Oculus\AnnwvynSDK64-2015\bullet3\examples\ThirdPartyLibs\urdf/urdfdom_headers/urdf_model/include/urdf_model/pose.h(82): warning C4101: 'e': unreferenced local variable
+c:\oculus\annwvynsdk64-2015\bullet3\examples\thirdpartylibs\urdf\urdfdom_headers\urdf_model\include\urdf_model\color.h(76): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+c:\oculus\annwvynsdk64-2015\bullet3\examples\thirdpartylibs\urdf\urdfdom_headers\urdf_model\include\urdf_model\color.h(78): warning C4101: 'e': unreferenced local variable
+C:\Oculus\AnnwvynSDK64-2015\bullet3\examples\ThirdPartyLibs\urdf\urdfdom\urdf_parser\src\link.cpp(133): warning C4101: 'e': unreferenced local variable
+C:\Oculus\AnnwvynSDK64-2015\bullet3\examples\ThirdPartyLibs\urdf\urdfdom\urdf_parser\src\link.cpp(184): warning C4101: 'e': unreferenced local variable
+C:\Oculus\AnnwvynSDK64-2015\bullet3\examples\ThirdPartyLibs\urdf\urdfdom\urdf_parser\src\link.cpp(197): warning C4101: 'e': unreferenced local variable
+C:\Oculus\AnnwvynSDK64-2015\bullet3\examples\ThirdPartyLibs\urdf\urdfdom\urdf_parser\src\link.cpp(316): warning C4101: 'e': unreferenced local variable
+C:\Oculus\AnnwvynSDK64-2015\bullet3\examples\ThirdPartyLibs\urdf\urdfdom\urdf_parser\src\link.cpp(348): warning C4101: 'e': unreferenced local variable
+  joint.cpp
+C:\Oculus\AnnwvynSDK64-2015\bullet3\examples\ThirdPartyLibs\urdf/urdfdom_headers/urdf_model/include/urdf_model/pose.h(82): warning C4101: 'e': unreferenced local variable
+c:\oculus\annwvynsdk64-2015\bullet3\examples\thirdpartylibs\urdf\urdfdom_headers\urdf_model\include\urdf_model\color.h(76): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+c:\oculus\annwvynsdk64-2015\bullet3\examples\thirdpartylibs\urdf\urdfdom_headers\urdf_model\include\urdf_model\color.h(78): warning C4101: 'e': unreferenced local variable
+C:\Oculus\AnnwvynSDK64-2015\bullet3\examples\ThirdPartyLibs\urdf\urdfdom\urdf_parser\src\joint.cpp(107): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+  printf_console.cpp
+  string_split.cpp
+C:\Oculus\AnnwvynSDK64-2015\bullet3\examples\ThirdPartyLibs\urdf\boost_replacement\string_split.cpp(19): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+C:\Oculus\AnnwvynSDK64-2015\bullet3\examples\ThirdPartyLibs\urdf\boost_replacement\string_split.cpp(29): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+  b3Clock.cpp
+  b3ResourcePath.cpp
+C:\Oculus\AnnwvynSDK64-2015\bullet3\src\Bullet3Common/b3FileUtils.h(100): warning C4244: 'return': conversion from 'ptrdiff_t' to 'int', possible loss of data
+C:\Oculus\AnnwvynSDK64-2015\bullet3\src\Bullet3Common/b3FileUtils.h(114): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+C:\Oculus\AnnwvynSDK64-2015\bullet3\examples\Utils\b3ResourcePath.cpp(71): warning C4267: 'return': conversion from 'size_t' to 'int', possible loss of data
+C:\Oculus\AnnwvynSDK64-2015\bullet3\examples\Utils\b3ResourcePath.cpp(78): warning C4267: 'return': conversion from 'size_t' to 'int', possible loss of data
+C:\Oculus\AnnwvynSDK64-2015\bullet3\examples\Utils\b3ResourcePath.cpp(86): warning C4267: 'return': conversion from 'size_t' to 'int', possible loss of data
+  GL_ShapeDrawer.cpp
+C:\Oculus\AnnwvynSDK64-2015\bullet3\examples\ExampleBrowser\GL_ShapeDrawer.cpp(163): warning C4244: 'initializing': conversion from 'double' to 'btScalar', possible loss of data
+C:\Oculus\AnnwvynSDK64-2015\bullet3\examples\ExampleBrowser\GL_ShapeDrawer.cpp(164): warning C4244: 'initializing': conversion from 'double' to 'btScalar', possible loss of data
+C:\Oculus\AnnwvynSDK64-2015\bullet3\examples\ExampleBrowser\GL_ShapeDrawer.cpp(167): warning C4244: 'initializing': conversion from 'double' to 'btScalar', possible loss of data
+C:\Oculus\AnnwvynSDK64-2015\bullet3\examples\ExampleBrowser\GL_ShapeDrawer.cpp(168): warning C4244: 'initializing': conversion from 'double' to 'btScalar', possible loss of data
+C:\Oculus\AnnwvynSDK64-2015\bullet3\examples\ExampleBrowser\GL_ShapeDrawer.cpp(173): warning C4244: 'initializing': conversion from 'double' to 'btScalar', possible loss of data
+C:\Oculus\AnnwvynSDK64-2015\bullet3\examples\ExampleBrowser\GL_ShapeDrawer.cpp(174): warning C4244: 'initializing': conversion from 'double' to 'btScalar', possible loss of data
+  OpenGLExampleBrowser.cpp
+C:\Oculus\AnnwvynSDK64-2015\bullet3\src\Bullet3Common/b3CommandLineArgs.h(71): warning C4267: 'return': conversion from 'size_t' to 'int', possible loss of data
+C:\Oculus\AnnwvynSDK64-2015\bullet3\src\Bullet3Common/b3FileUtils.h(114): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+C:\Oculus\AnnwvynSDK64-2015\bullet3\examples\ExampleBrowser\OpenGLExampleBrowser.cpp(390): warning C4101: 'result': unreferenced local variable
+  OpenGLGuiHelper.cpp
+  GraphingTexture.cpp
+  GwenParameterInterface.cpp
+  GwenProfileWindow.cpp
+  GwenTextureWindow.cpp
+  gwenUserInterface.cpp
+C:\Oculus\AnnwvynSDK64-2015\bullet3\examples\ExampleBrowser\GwenGUISupport\gwenUserInterface.cpp(620): warning C4800: 'int': forcing value to bool 'true' or 'false' (performance warning)
+  Generating Code...
+msvcprt.lib(MSVCP140.dll) : error LNK2005: "protected: __cdecl std::basic_streambuf<char,struct std::char_traits<char> >::basic_streambuf<char,struct std::char_traits<char> >(void)" (??0?$basic_streambuf@DU?$char_traits@D@std@@@std@@IEAA@XZ) already defined in gwen.lib(ProgressBar.obj)
+msvcprt.lib(MSVCP140.dll) : error LNK2005: "public: virtual __cdecl std::basic_streambuf<char,struct std::char_traits<char> >::~basic_streambuf<char,struct std::char_traits<char> >(void)" (??1?$basic_streambuf@DU?$char_traits@D@std@@@std@@UEAA@XZ) already defined in gwen.lib(ProgressBar.obj)
+msvcprt.lib(MSVCP140.dll) : error LNK2005: "public: virtual __cdecl std::basic_ios<char,struct std::char_traits<char> >::~basic_ios<char,struct std::char_traits<char> >(void)" (??1?$basic_ios@DU?$char_traits@D@std@@@std@@UEAA@XZ) already defined in gwen.lib(ProgressBar.obj)
+msvcprt.lib(MSVCP140.dll) : error LNK2005: "public: class std::basic_ostream<char,struct std::char_traits<char> > & __cdecl std::basic_ostream<char,struct std::char_traits<char> >::flush(void)" (?flush@?$basic_ostream@DU?$char_traits@D@std@@@std@@QEAAAEAV12@XZ) already defined in gwen.lib(ProgressBar.obj)
+msvcprt.lib(MSVCP140.dll) : error LNK2005: "public: static unsigned __int64 __cdecl std::ctype<wchar_t>::_Getcat(class std::locale::facet const * *,class std::locale const *)" (?_Getcat@?$ctype@_W@std@@SA_KPEAPEBVfacet@locale@2@PEBV42@@Z) already defined in gwen.lib(BaseRender.obj)
+libcpmt.lib(raisehan.obj) : error LNK2038: mismatch detected for 'RuntimeLibrary': value 'MT_StaticRelease' doesn't match value 'MD_DynamicRelease' in main.obj
+libcpmt.lib(ios.obj) : error LNK2038: mismatch detected for 'RuntimeLibrary': value 'MT_StaticRelease' doesn't match value 'MD_DynamicRelease' in main.obj
+libcpmt.lib(ios.obj) : error LNK2005: "public: static void __cdecl std::ios_base::_Addstd(class std::ios_base *)" (?_Addstd@ios_base@std@@SAXPEAV12@@Z) already defined in msvcprt.lib(MSVCP140.dll)
+libcpmt.lib(ios.obj) : error LNK2005: "private: static void __cdecl std::ios_base::_Ios_base_dtor(class std::ios_base *)" (?_Ios_base_dtor@ios_base@std@@CAXPEAV12@@Z) already defined in msvcprt.lib(MSVCP140.dll)
+libcpmt.lib(locale0.obj) : error LNK2038: mismatch detected for 'RuntimeLibrary': value 'MT_StaticRelease' doesn't match value 'MD_DynamicRelease' in main.obj
+libcpmt.lib(locale0.obj) : error LNK2005: "void __cdecl std::_Facet_Register(class std::_Facet_base *)" (?_Facet_Register@std@@YAXPEAV_Facet_base@1@@Z) already defined in msvcprt.lib(locale0_implib.obj)
+libcpmt.lib(locale0.obj) : error LNK2005: "private: static class std::locale::_Locimp * __cdecl std::locale::_Getgloballocale(void)" (?_Getgloballocale@locale@std@@CAPEAV_Locimp@12@XZ) already defined in msvcprt.lib(MSVCP140.dll)
+libcpmt.lib(locale0.obj) : error LNK2005: "private: static class std::locale::_Locimp * __cdecl std::locale::_Init(bool)" (?_Init@locale@std@@CAPEAV_Locimp@12@_N@Z) already defined in msvcprt.lib(MSVCP140.dll)
+libcpmt.lib(locale0.obj) : error LNK2005: "public: static void __cdecl std::_Locinfo::_Locinfo_ctor(class std::_Locinfo *,char const *)" (?_Locinfo_ctor@_Locinfo@std@@SAXPEAV12@PEBD@Z) already defined in msvcprt.lib(MSVCP140.dll)
+libcpmt.lib(locale0.obj) : error LNK2005: "public: static void __cdecl std::_Locinfo::_Locinfo_dtor(class std::_Locinfo *)" (?_Locinfo_dtor@_Locinfo@std@@SAXPEAV12@@Z) already defined in msvcprt.lib(MSVCP140.dll)
+libcpmt.lib(iosptrs.obj) : error LNK2038: mismatch detected for 'RuntimeLibrary': value 'MT_StaticRelease' doesn't match value 'MD_DynamicRelease' in main.obj
+libcpmt.lib(locale.obj) : error LNK2038: mismatch detected for 'RuntimeLibrary': value 'MT_StaticRelease' doesn't match value 'MD_DynamicRelease' in main.obj
+libcpmt.lib(locale.obj) : error LNK2005: "public: __cdecl std::locale::id::operator unsigned __int64(void)" (??Bid@locale@std@@QEAA_KXZ) already defined in msvcprt.lib(MSVCP140.dll)
+libcpmt.lib(locale.obj) : error LNK2005: "public: static unsigned __int64 __cdecl std::codecvt<char,char,struct _Mbstatet>::_Getcat(class std::locale::facet const * *,class std::locale const *)" (?_Getcat@?$codecvt@DDU_Mbstatet@@@std@@SA_KPEAPEBVfacet@locale@2@PEBV42@@Z) already defined in msvcprt.lib(MSVCP140.dll)
+libcpmt.lib(locale.obj) : error LNK2005: "public: int __cdecl std::basic_streambuf<char,struct std::char_traits<char> >::sbumpc(void)" (?sbumpc@?$basic_streambuf@DU?$char_traits@D@std@@@std@@QEAAHXZ) already defined in msvcprt.lib(MSVCP140.dll)
+libcpmt.lib(locale.obj) : error LNK2005: "public: int __cdecl std::basic_streambuf<char,struct std::char_traits<char> >::sgetc(void)" (?sgetc@?$basic_streambuf@DU?$char_traits@D@std@@@std@@QEAAHXZ) already defined in msvcprt.lib(MSVCP140.dll)
+libcpmt.lib(locale.obj) : error LNK2005: "public: int __cdecl std::basic_streambuf<char,struct std::char_traits<char> >::sputc(char)" (?sputc@?$basic_streambuf@DU?$char_traits@D@std@@@std@@QEAAHD@Z) already defined in msvcprt.lib(MSVCP140.dll)
+libcpmt.lib(xlock.obj) : error LNK2038: mismatch detected for 'RuntimeLibrary': value 'MT_StaticRelease' doesn't match value 'MD_DynamicRelease' in main.obj
+libcpmt.lib(xlock.obj) : error LNK2005: "public: __cdecl std::_Lockit::_Lockit(int)" (??0_Lockit@std@@QEAA@H@Z) already defined in msvcprt.lib(MSVCP140.dll)
+libcpmt.lib(xlock.obj) : error LNK2005: "public: __cdecl std::_Lockit::~_Lockit(void)" (??1_Lockit@std@@QEAA@XZ) already defined in msvcprt.lib(MSVCP140.dll)
+libcpmt.lib(xthrow.obj) : error LNK2038: mismatch detected for 'RuntimeLibrary': value 'MT_StaticRelease' doesn't match value 'MD_DynamicRelease' in main.obj
+libcpmt.lib(xthrow.obj) : error LNK2005: "void __cdecl std::_Xbad_alloc(void)" (?_Xbad_alloc@std@@YAXXZ) already defined in msvcprt.lib(MSVCP140.dll)
+libcpmt.lib(xthrow.obj) : error LNK2005: "void __cdecl std::_Xlength_error(char const *)" (?_Xlength_error@std@@YAXPEBD@Z) already defined in msvcprt.lib(MSVCP140.dll)
+libcpmt.lib(xthrow.obj) : error LNK2005: "void __cdecl std::_Xout_of_range(char const *)" (?_Xout_of_range@std@@YAXPEBD@Z) already defined in msvcprt.lib(MSVCP140.dll)
+libcpmt.lib(wlocale.obj) : error LNK2038: mismatch detected for 'RuntimeLibrary': value 'MT_StaticRelease' doesn't match value 'MD_DynamicRelease' in main.obj
+libcpmt.lib(wlocale.obj) : error LNK2005: "public: __cdecl std::locale::id::operator unsigned __int64(void)" (??Bid@locale@std@@QEAA_KXZ) already defined in msvcprt.lib(MSVCP140.dll)
+libcpmt.lib(wlocale.obj) : error LNK2005: "public: char const * __cdecl std::ctype<wchar_t>::widen(char const *,char const *,wchar_t *)const " (?widen@?$ctype@_W@std@@QEBAPEBDPEBD0PEA_W@Z) already defined in msvcprt.lib(MSVCP140.dll)
+libcpmt.lib(xlocale.obj) : error LNK2038: mismatch detected for 'RuntimeLibrary': value 'MT_StaticRelease' doesn't match value 'MD_DynamicRelease' in main.obj
+libcpmt.lib(xlocale.obj) : error LNK2005: "public: __cdecl std::locale::id::operator unsigned __int64(void)" (??Bid@locale@std@@QEAA_KXZ) already defined in msvcprt.lib(MSVCP140.dll)
+libcpmt.lib(xlocale.obj) : error LNK2005: "public: int __cdecl std::basic_streambuf<char,struct std::char_traits<char> >::sbumpc(void)" (?sbumpc@?$basic_streambuf@DU?$char_traits@D@std@@@std@@QEAAHXZ) already defined in msvcprt.lib(MSVCP140.dll)
+libcpmt.lib(xlocale.obj) : error LNK2005: "public: int __cdecl std::basic_streambuf<char,struct std::char_traits<char> >::sgetc(void)" (?sgetc@?$basic_streambuf@DU?$char_traits@D@std@@@std@@QEAAHXZ) already defined in msvcprt.lib(MSVCP140.dll)
+libcpmt.lib(xlocale.obj) : error LNK2005: "public: int __cdecl std::basic_streambuf<char,struct std::char_traits<char> >::sputc(char)" (?sputc@?$basic_streambuf@DU?$char_traits@D@std@@@std@@QEAAHD@Z) already defined in msvcprt.lib(MSVCP140.dll)
+libcpmt.lib(xdateord.obj) : error LNK2038: mismatch detected for 'RuntimeLibrary': value 'MT_StaticRelease' doesn't match value 'MD_DynamicRelease' in main.obj
+libcpmt.lib(winapisupp.obj) : error LNK2038: mismatch detected for 'RuntimeLibrary': value 'MT_StaticRelease' doesn't match value 'MD_DynamicRelease' in main.obj
+libcpmt.lib(StlCompareStringA.obj) : error LNK2038: mismatch detected for 'RuntimeLibrary': value 'MT_StaticRelease' doesn't match value 'MD_DynamicRelease' in main.obj
+libcpmt.lib(winapinls.obj) : error LNK2038: mismatch detected for 'RuntimeLibrary': value 'MT_StaticRelease' doesn't match value 'MD_DynamicRelease' in main.obj
+libcpmt.lib(StlCompareStringW.obj) : error LNK2038: mismatch detected for 'RuntimeLibrary': value 'MT_StaticRelease' doesn't match value 'MD_DynamicRelease' in main.obj
+libcpmt.lib(StlLCMapStringW.obj) : error LNK2038: mismatch detected for 'RuntimeLibrary': value 'MT_StaticRelease' doesn't match value 'MD_DynamicRelease' in main.obj
+libcpmt.lib(StlLCMapStringA.obj) : error LNK2038: mismatch detected for 'RuntimeLibrary': value 'MT_StaticRelease' doesn't match value 'MD_DynamicRelease' in main.obj
+C:\Oculus\AnnwvynSDK64-2015\bullet3\build3\examples\ExampleBrowser\Release\App_ExampleBrowser.exe : fatal error LNK1169: one or more multiply defined symbols found

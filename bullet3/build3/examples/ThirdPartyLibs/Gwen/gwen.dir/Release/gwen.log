@@ -1,0 +1,144 @@
+﻿  Building Custom Rule C:/Oculus/AnnwvynSDK64-2015/bullet3/examples/ThirdPartyLibs/Gwen/CMakeLists.txt
+  CMake does not need to re-run because C:\Oculus\AnnwvynSDK64-2015\bullet3\build3\examples\ThirdPartyLibs\Gwen\CMakeFiles\generate.stamp is up-to-date.
+  Anim.cpp
+C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\yvals.h(385): warning CRT0000: "_STATIC_CPPLIB is deprecated"
+  BaseRender.cpp
+C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\yvals.h(385): warning CRT0000: "_STATIC_CPPLIB is deprecated"
+  DragAndDrop.cpp
+C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\yvals.h(385): warning CRT0000: "_STATIC_CPPLIB is deprecated"
+  events.cpp
+C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\yvals.h(385): warning CRT0000: "_STATIC_CPPLIB is deprecated"
+  Gwen.cpp
+C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\yvals.h(385): warning CRT0000: "_STATIC_CPPLIB is deprecated"
+  Hook.cpp
+C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\yvals.h(385): warning CRT0000: "_STATIC_CPPLIB is deprecated"
+  inputhandler.cpp
+C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\yvals.h(385): warning CRT0000: "_STATIC_CPPLIB is deprecated"
+  Skin.cpp
+C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\yvals.h(385): warning CRT0000: "_STATIC_CPPLIB is deprecated"
+  ToolTip.cpp
+C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\yvals.h(385): warning CRT0000: "_STATIC_CPPLIB is deprecated"
+  Utility.cpp
+C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\yvals.h(385): warning CRT0000: "_STATIC_CPPLIB is deprecated"
+  Base.cpp
+C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\yvals.h(385): warning CRT0000: "_STATIC_CPPLIB is deprecated"
+C:\Oculus\AnnwvynSDK64-2015\bullet3\examples\ThirdPartyLibs\Gwen\Controls\Base.cpp(332): warning C4267: 'return': conversion from 'size_t' to 'int', possible loss of data
+C:\Oculus\AnnwvynSDK64-2015\bullet3\examples\ThirdPartyLibs\Gwen\Controls\Base.cpp(731): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+  Button.cpp
+C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\yvals.h(385): warning CRT0000: "_STATIC_CPPLIB is deprecated"
+  Canvas.cpp
+C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\yvals.h(385): warning CRT0000: "_STATIC_CPPLIB is deprecated"
+  CheckBox.cpp
+C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\yvals.h(385): warning CRT0000: "_STATIC_CPPLIB is deprecated"
+  ColorControls.cpp
+C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\yvals.h(385): warning CRT0000: "_STATIC_CPPLIB is deprecated"
+  ColorPicker.cpp
+C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\yvals.h(385): warning CRT0000: "_STATIC_CPPLIB is deprecated"
+  ComboBox.cpp
+C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\yvals.h(385): warning CRT0000: "_STATIC_CPPLIB is deprecated"
+  CrossSplitter.cpp
+C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\yvals.h(385): warning CRT0000: "_STATIC_CPPLIB is deprecated"
+  DockBase.cpp
+C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\yvals.h(385): warning CRT0000: "_STATIC_CPPLIB is deprecated"
+  DockedTabControl.cpp
+C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\yvals.h(385): warning CRT0000: "_STATIC_CPPLIB is deprecated"
+  Generating Code...
+  Compiling...
+  Dragger.cpp
+C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\yvals.h(385): warning CRT0000: "_STATIC_CPPLIB is deprecated"
+  GroupBox.cpp
+C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\yvals.h(385): warning CRT0000: "_STATIC_CPPLIB is deprecated"
+  HorizontalScrollBar.cpp
+C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\yvals.h(385): warning CRT0000: "_STATIC_CPPLIB is deprecated"
+  HorizontalSlider.cpp
+C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\yvals.h(385): warning CRT0000: "_STATIC_CPPLIB is deprecated"
+  HSVColorPicker.cpp
+C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\yvals.h(385): warning CRT0000: "_STATIC_CPPLIB is deprecated"
+  ImagePanel.cpp
+C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\yvals.h(385): warning CRT0000: "_STATIC_CPPLIB is deprecated"
+  Label.cpp
+C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\yvals.h(385): warning CRT0000: "_STATIC_CPPLIB is deprecated"
+  LabelClickable.cpp
+C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\yvals.h(385): warning CRT0000: "_STATIC_CPPLIB is deprecated"
+  ListBox.cpp
+C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\yvals.h(385): warning CRT0000: "_STATIC_CPPLIB is deprecated"
+  Menu.cpp
+C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\yvals.h(385): warning CRT0000: "_STATIC_CPPLIB is deprecated"
+  MenuItem.cpp
+C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\yvals.h(385): warning CRT0000: "_STATIC_CPPLIB is deprecated"
+  MenuStrip.cpp
+C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\yvals.h(385): warning CRT0000: "_STATIC_CPPLIB is deprecated"
+  NumericUpDown.cpp
+C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\yvals.h(385): warning CRT0000: "_STATIC_CPPLIB is deprecated"
+  PanelListPanel.cpp
+C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\yvals.h(385): warning CRT0000: "_STATIC_CPPLIB is deprecated"
+  ProgressBar.cpp
+C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\yvals.h(385): warning CRT0000: "_STATIC_CPPLIB is deprecated"
+  Properties.cpp
+C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\yvals.h(385): warning CRT0000: "_STATIC_CPPLIB is deprecated"
+  RadioButton.cpp
+C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\yvals.h(385): warning CRT0000: "_STATIC_CPPLIB is deprecated"
+  RadioButtonController.cpp
+C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\yvals.h(385): warning CRT0000: "_STATIC_CPPLIB is deprecated"
+  ResizableControl.cpp
+C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\yvals.h(385): warning CRT0000: "_STATIC_CPPLIB is deprecated"
+  Resizer.cpp
+C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\yvals.h(385): warning CRT0000: "_STATIC_CPPLIB is deprecated"
+  Generating Code...
+  Compiling...
+  RichLabel.cpp
+C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\yvals.h(385): warning CRT0000: "_STATIC_CPPLIB is deprecated"
+  ScrollBar.cpp
+C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\yvals.h(385): warning CRT0000: "_STATIC_CPPLIB is deprecated"
+  ScrollBarBar.cpp
+C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\yvals.h(385): warning CRT0000: "_STATIC_CPPLIB is deprecated"
+  ScrollBarButton.cpp
+C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\yvals.h(385): warning CRT0000: "_STATIC_CPPLIB is deprecated"
+  ScrollControl.cpp
+C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\yvals.h(385): warning CRT0000: "_STATIC_CPPLIB is deprecated"
+  Slider.cpp
+C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\yvals.h(385): warning CRT0000: "_STATIC_CPPLIB is deprecated"
+  SplitterBar.cpp
+C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\yvals.h(385): warning CRT0000: "_STATIC_CPPLIB is deprecated"
+  TabButton.cpp
+C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\yvals.h(385): warning CRT0000: "_STATIC_CPPLIB is deprecated"
+  TabControl.cpp
+C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\yvals.h(385): warning CRT0000: "_STATIC_CPPLIB is deprecated"
+  TabStrip.cpp
+C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\yvals.h(385): warning CRT0000: "_STATIC_CPPLIB is deprecated"
+  Text.cpp
+C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\yvals.h(385): warning CRT0000: "_STATIC_CPPLIB is deprecated"
+C:\Oculus\AnnwvynSDK64-2015\bullet3\examples\ThirdPartyLibs\Gwen\Controls\Text.cpp(99): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+C:\Oculus\AnnwvynSDK64-2015\bullet3\examples\ThirdPartyLibs\Gwen\Controls\Text.cpp(105): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+  TextBox.cpp
+C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\yvals.h(385): warning CRT0000: "_STATIC_CPPLIB is deprecated"
+  TextBoxNumeric.cpp
+C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\yvals.h(385): warning CRT0000: "_STATIC_CPPLIB is deprecated"
+  TreeControl.cpp
+C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\yvals.h(385): warning CRT0000: "_STATIC_CPPLIB is deprecated"
+  TreeNode.cpp
+C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\yvals.h(385): warning CRT0000: "_STATIC_CPPLIB is deprecated"
+  VerticalScrollBar.cpp
+C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\yvals.h(385): warning CRT0000: "_STATIC_CPPLIB is deprecated"
+  VerticalSlider.cpp
+C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\yvals.h(385): warning CRT0000: "_STATIC_CPPLIB is deprecated"
+  WindowControl.cpp
+C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\yvals.h(385): warning CRT0000: "_STATIC_CPPLIB is deprecated"
+  FileOpen.cpp
+C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\yvals.h(385): warning CRT0000: "_STATIC_CPPLIB is deprecated"
+  FileSave.cpp
+C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\yvals.h(385): warning CRT0000: "_STATIC_CPPLIB is deprecated"
+  Generating Code...
+  Compiling...
+  Query.cpp
+C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\yvals.h(385): warning CRT0000: "_STATIC_CPPLIB is deprecated"
+  Null.cpp
+C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\yvals.h(385): warning CRT0000: "_STATIC_CPPLIB is deprecated"
+  Windows.cpp
+C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\yvals.h(385): warning CRT0000: "_STATIC_CPPLIB is deprecated"
+  OpenGL_DebugFont.cpp
+C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\yvals.h(385): warning CRT0000: "_STATIC_CPPLIB is deprecated"
+  Generating Code...
+Query.obj : warning LNK4221: This object file does not define any previously undefined public symbols, so it will not be used by any link operation that consumes this library
+ImagePanel.obj : warning LNK4221: This object file does not define any previously undefined public symbols, so it will not be used by any link operation that consumes this library
+  gwen.vcxproj -> C:\Oculus\AnnwvynSDK64-2015\bullet3\build3\lib\Release\gwen.lib

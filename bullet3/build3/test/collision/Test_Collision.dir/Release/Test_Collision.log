@@ -1,0 +1,15 @@
+﻿  Building Custom Rule C:/Oculus/AnnwvynSDK64-2015/bullet3/test/collision/CMakeLists.txt
+  CMake does not need to re-run because C:\Oculus\AnnwvynSDK64-2015\bullet3\build3\test\collision\CMakeFiles\generate.stamp is up-to-date.
+  main.cpp
+C:\Oculus\AnnwvynSDK64-2015\bullet3\test\collision\..\..\src\BulletCollision/NarrowPhaseCollision/btMprPenetration.h(566): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+C:\Oculus\AnnwvynSDK64-2015\bullet3\test\collision\..\..\src\BulletCollision/NarrowPhaseCollision/btMprPenetration.h(570): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+  btVoronoiSimplexSolver.cpp
+  btSphereShape.cpp
+  btMultiSphereShape.cpp
+  btPolyhedralConvexShape.cpp
+  btConvexShape.cpp
+  btConvexInternalShape.cpp
+  btCollisionShape.cpp
+  btConvexPolyhedron.cpp
+  Generating Code...
+  Test_Collision.vcxproj -> C:\Oculus\AnnwvynSDK64-2015\bullet3\build3\test\collision\Release\Test_Collision.exe

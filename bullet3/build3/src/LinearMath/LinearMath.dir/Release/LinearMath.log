@@ -1,0 +1,18 @@
+﻿  Building Custom Rule C:/Oculus/AnnwvynSDK64-2015/bullet3/src/LinearMath/CMakeLists.txt
+  CMake does not need to re-run because C:\Oculus\AnnwvynSDK64-2015\bullet3\build3\src\LinearMath\CMakeFiles\generate.stamp is up-to-date.
+  btAlignedAllocator.cpp
+  btConvexHull.cpp
+  btConvexHullComputer.cpp
+  btGeometryUtil.cpp
+  btPolarDecomposition.cpp
+  btQuickprof.cpp
+  btSerializer.cpp
+  btVector3.cpp
+C:\Oculus\AnnwvynSDK64-2015\bullet3\src\LinearMath\btVector3.cpp(179): warning C4267: '=': conversion from 'size_t' to 'long', possible loss of data
+C:\Oculus\AnnwvynSDK64-2015\bullet3\src\LinearMath\btVector3.cpp(184): warning C4267: '-=': conversion from 'size_t' to 'unsigned long', possible loss of data
+C:\Oculus\AnnwvynSDK64-2015\bullet3\src\LinearMath\btVector3.cpp(427): warning C4267: '=': conversion from 'size_t' to 'long', possible loss of data
+C:\Oculus\AnnwvynSDK64-2015\bullet3\src\LinearMath\btVector3.cpp(564): warning C4267: '=': conversion from 'size_t' to 'long', possible loss of data
+C:\Oculus\AnnwvynSDK64-2015\bullet3\src\LinearMath\btVector3.cpp(569): warning C4267: '-=': conversion from 'size_t' to 'unsigned long', possible loss of data
+C:\Oculus\AnnwvynSDK64-2015\bullet3\src\LinearMath\btVector3.cpp(815): warning C4267: '=': conversion from 'size_t' to 'long', possible loss of data
+  Generating Code...
+  LinearMath.vcxproj -> C:\Oculus\AnnwvynSDK64-2015\bullet3\build3\lib\Release\LinearMath.lib

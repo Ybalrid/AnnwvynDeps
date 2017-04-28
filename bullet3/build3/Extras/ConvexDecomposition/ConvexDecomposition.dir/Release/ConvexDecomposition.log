@@ -1,0 +1,18 @@
+﻿  Building Custom Rule C:/Oculus/AnnwvynSDK64-2015/bullet3/Extras/ConvexDecomposition/CMakeLists.txt
+  CMake does not need to re-run because C:\Oculus\AnnwvynSDK64-2015\bullet3\build3\Extras\ConvexDecomposition\CMakeFiles\generate.stamp is up-to-date.
+  bestfitobb.cpp
+  ConvexBuilder.cpp
+  cd_wavefront.cpp
+  fitsphere.cpp
+  meshvolume.cpp
+  raytri.cpp
+  vlookup.cpp
+  bestfit.cpp
+  cd_hull.cpp
+  ConvexDecomposition.cpp
+  concavity.cpp
+  float_math.cpp
+  planetri.cpp
+  splitplane.cpp
+  Generating Code...
+  ConvexDecomposition.vcxproj -> C:\Oculus\AnnwvynSDK64-2015\bullet3\build3\lib\Release\ConvexDecomposition.lib

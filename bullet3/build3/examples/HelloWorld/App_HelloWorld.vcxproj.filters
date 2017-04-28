@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Project ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="C:\Oculus\AnnwvynSDK64-2015\bullet3\examples\HelloWorld\HelloWorld.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Oculus\AnnwvynSDK64-2015\bullet3\examples\HelloWorld\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="C:\Oculus\AnnwvynSDK64-2015\bullet3\build3\bullet.rc">
+      <Filter>Source Files</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{DBDEFCEB-30A0-3129-BE2C-A98CE84551E0}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

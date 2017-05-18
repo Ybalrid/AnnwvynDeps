@@ -100,6 +100,19 @@ public:
         return DeadlockSeen;
     }
 
+    // Sets the callback used to trigger a Breakpad Minidump write.
+    // Note: Lock does not need to be held here because only accessed on startup before deadlocks are reported.
+    void SetMiniDumpWriteCallback(void(*pWriteMiniDump)(void*))
+    {
+        WriteMiniDump = pWriteMiniDump;
+    }
+
+    // Sets the callback used to add additional info to Breakpad client
+    void SetAddBreakpadInfoClientCallback(void(*pAddBreakpadInfoClient)(const char* name, const char* value))
+    {
+        AddBreakpadInfoClient = pAddBreakpadInfoClient;
+    }
+
 protected:
     Lock ListLock;
     Array< WatchDog* > DogList;
@@ -119,6 +132,10 @@ protected:
     String OrganizationName;
 
     void OnDeadlock(const String& deadlockedThreadName);
+
+    // Breakpad is used to write minidump files.
+    void(*WriteMiniDump)(void* pExceptionPtrs);
+    void(*AddBreakpadInfoClient)(const char* name, const char* value);
 
 protected:
     int Run();

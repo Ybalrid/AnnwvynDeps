@@ -172,6 +172,7 @@ bool Blitter::Initialize()
     return true;
 }
 
+
 bool Blitter::Blt(ID3D11RenderTargetView* dest, ID3D11ShaderResourceView* source)
 {
     OVR_ASSERT(AlreadyInitialized);
@@ -223,6 +224,269 @@ bool Blitter::Blt(ID3D11RenderTargetView* dest, ID3D11ShaderResourceView* source
 
     return true;
 }
+
+
+
+
+static bool operator !=(const DXGI_SAMPLE_DESC& s1, const DXGI_SAMPLE_DESC& s2)
+{
+    return (s1.Count != s2.Count) || (s1.Quality != s2.Quality);
+}
+
+static bool operator!=(const D3D11_TEXTURE2D_DESC& d1, const D3D11_TEXTURE2D_DESC& d2)
+{
+    return (d1.Width != d2.Width) || (d1.Height != d2.Height) || (d1.MipLevels != d2.MipLevels) || (d1.ArraySize != d2.ArraySize) || 
+            (d1.Format != d2.Format) || (d1.SampleDesc != d2.SampleDesc) || (d1.Usage != d2.Usage) || (d1.BindFlags != d2.BindFlags) || 
+            (d1.CPUAccessFlags != d2.CPUAccessFlags) || (d1.MiscFlags != d2.MiscFlags);
+}
+
+
+D3DTextureWriter::D3DTextureWriter(ID3D11Device* deviceNew)
+  : device(deviceNew)
+  , textureCopy()
+  , pixels()
+{
+    memset(&textureCopyDesc, 0, sizeof(textureCopyDesc)); // We use memset instead of ={} because the former zeroes filler memory between variables, allowing comparison via memcmp.
+}
+
+
+void D3DTextureWriter::Shutdown()
+{
+    device.Clear();
+    textureCopy.Clear();
+    textureCopyDesc = {};
+    pixels.clear();
+    pixels.shrink_to_fit(); // Frees any memory associated with the container.
+}
+
+
+void D3DTextureWriter::SetDevice(ID3D11Device* deviceNew)
+{
+    if (device != deviceNew)
+    {
+        textureCopy.Clear();
+        textureCopyDesc = {};
+        // No need to clear the pixels.
+
+        device = deviceNew;
+    }
+}
+
+
+D3DTextureWriter::Result D3DTextureWriter::SaveTexture(ID3D11Texture2D* texture, UINT subresource, bool copyTexture, const wchar_t* path)
+{
+    if (texture == nullptr)
+        return Result::NULL_SURFACE;
+
+    if (device == nullptr)
+        return Result::NULL_DEVICE;
+
+    Ptr<ID3D11DeviceContext> deviceContext;
+    device->GetImmediateContext(&deviceContext.GetRawRef()); // Always succeeds.
+
+    Ptr<ID3D11Texture2D> textureSource; // This will point to either the input texture or to our textureCopy.
+
+    // Create textureCopy surface to copy back to CPU.
+    D3D11_TEXTURE2D_DESC textureDesc{};
+    texture->GetDesc(&textureDesc);
+
+    if (copyTexture)
+    {
+        textureDesc.BindFlags = 0;
+        textureDesc.Usage = D3D11_USAGE_STAGING;
+        textureDesc.CPUAccessFlags = D3D11_CPU_ACCESS_READ;
+        textureDesc.MiscFlags = 0;
+
+        // We try to use our existing cached textureCopy as an intermediate texture, which will often 
+        // be possible because a typical usage of this class is to keep copying the same texture. 
+        if(textureDesc != textureCopyDesc) // If not equal...
+        {
+            textureCopyDesc = textureDesc;
+            textureCopy.Clear();
+
+            HRESULT hr = device->CreateTexture2D(&textureCopyDesc, nullptr, &textureCopy.GetRawRef());
+
+            if (FAILED(hr))
+            {
+                textureCopy.Clear();
+                textureCopyDesc = {};
+                return Result::TEXTURE_CREATION_FAILURE;
+            }
+        }
+
+        // Copy texture to textureCopy.
+        deviceContext->CopyResource(textureCopy, texture); // Always succeeds.
+
+        textureSource = textureCopy;
+    }
+    else
+    {
+        textureSource = texture;
+    }
+
+    // At this point we have a valid D3D device, source texture, and intermediate texture.
+    // We will write the source texture to the intermediate texture and then copy the intermediate
+    // texture to a memory buffer while converting to BGRA, then write the memory buffer to disk.
+    // We don't copy the source texture directly to the memory buffer because that will block for some time.
+
+    // Map textureSource so we can read its pixels.
+    D3D11_MAPPED_SUBRESOURCE mapped{};
+    HRESULT hr = deviceContext->Map(textureSource, subresource, D3D11_MAP_READ, 0, &mapped);
+
+    if (FAILED(hr))
+    {
+        return Result::TEXTURE_MAP_FAILURE;
+    }
+
+    // Now copy textureSource to pixels, converting textureSource's format as-needed to make pixels be BGRA.
+    pixels.resize(textureDesc.Width * textureDesc.Height);
+
+    if (textureDesc.Format == DXGI_FORMAT_R11G11B10_FLOAT)
+    {
+        // Convert from R11G11B10_FLOAT to R8G8B8
+        uint32_t inputPitchInPixels = (mapped.RowPitch / 4);
+
+        for (uint32_t y = 0; y < textureDesc.Height; ++y)
+        {
+            for (uint32_t x = 0; x < textureDesc.Width; ++x)
+            {
+                #pragma warning(disable: 4201) // nonstandard extension used: nameless struct/union
+                union XMFLOAT3PK {
+                    union{
+                        uint32_t v;
+                        struct{
+                            uint32_t xm : 6;
+                            uint32_t xe : 5;
+                            uint32_t ym : 6;
+                            uint32_t ye : 5;
+                            uint32_t zm : 5;
+                            uint32_t ze : 5;
+                        };
+                    };
+                };
+
+                XMFLOAT3PK packedFloat{ ((uint32_t*)mapped.pData)[y * inputPitchInPixels + x] };
+                float rFloat, gFloat, bFloat;
+
+                uint32_t* floatRef = (uint32_t*)&rFloat;
+                *floatRef = ((packedFloat.xe - 15 + 127) << 23U) | (packedFloat.xm << 17);
+
+                floatRef = (uint32_t*)&gFloat;
+                *floatRef = ((packedFloat.ye - 15 + 127) << 23U) | (packedFloat.ym << 17);
+
+                floatRef = (uint32_t*)&bFloat;
+                *floatRef = ((packedFloat.ze - 15 + 127) << 23U) | (packedFloat.zm << 18);
+
+                // This is back-asswards but we're converting out of linear so all 
+                // the other images stored directly match in brightness for comparison.
+                uint32_t r = (uint32_t)(powf(rFloat, 1.0f / 2.2f) * 255.0f);
+                uint32_t g = (uint32_t)(powf(gFloat, 1.0f / 2.2f) * 255.0f);
+                uint32_t b = (uint32_t)(powf(bFloat, 1.0f / 2.2f) * 255.0f);
+
+                uint32_t bgra = (255 << 24) | (r << 16) | (g << 8) | b;
+
+                pixels[(y * textureDesc.Width) + x] = bgra;
+            }
+        }
+    }
+    else if (textureDesc.Format == DXGI_FORMAT_R10G10B10A2_UNORM)
+    {
+        // Convert from R10G10B10 to R8G8B8
+        uint32_t inputPitchInPixels = mapped.RowPitch / 4;
+
+        for (uint32_t y = 0; y < textureDesc.Height; ++y)
+        {
+            for (uint32_t x = 0; x < textureDesc.Width; ++x)
+            {
+                uint32_t wideRGBA = ((uint32_t*)mapped.pData)[(y * inputPitchInPixels) + x];
+                uint32_t r = (wideRGBA >> 00) & 0x3ff;
+                uint32_t g = (wideRGBA >> 10) & 0x3ff;
+                uint32_t b = (wideRGBA >> 20) & 0x3ff;
+                uint32_t a = (wideRGBA >> 30) & 0x003;
+
+                // This is back-asswards but we're converting out of linear so all 
+                // the other images stored directly match in brightness for comparison.
+                r = (uint32_t)(powf((float)r / 1024.0f, 1.0f / 2.2f) * 255.0f);
+                g = (uint32_t)(powf((float)g / 1024.0f, 1.0f / 2.2f) * 255.0f);
+                b = (uint32_t)(powf((float)b / 1024.0f, 1.0f / 2.2f) * 255.0f);
+
+                uint32_t bgra = (a << 24) | (r << 16) | (g << 8) | b;
+
+                pixels[(y * textureDesc.Width) + x] = bgra;
+            }
+        }
+    }
+    else if ((textureDesc.Format != DXGI_FORMAT_NV12) && (textureDesc.Format != DXGI_FORMAT_R8_UNORM))
+    {
+        // Convert from RGBA to BGRA.
+        for (uint32_t y = 0; y < textureDesc.Height; ++y)
+        {
+            for (uint32_t x = 0; x < textureDesc.Width; ++x)
+            {
+                const uint8_t* rgba = (uint8_t*)mapped.pData + (y * mapped.RowPitch) + (x * 4);
+                uint32_t bgra = (rgba[3] << 24) | (rgba[0] << 16) | (rgba[1] << 8) | rgba[2];
+
+                pixels[(y * textureDesc.Width) + x] = bgra;
+            }
+        }
+    }
+    else
+    {
+        // DXGI_FORMAT_NV12, DXGI_FORMAT_R8_UNORM, DXGI_FORMAT_R8_UINT, possibly others.
+        uint32_t inputPitchInPixels = mapped.RowPitch;
+
+        for (uint32_t y = 0; y < textureDesc.Height; ++y)
+        {
+            for (uint32_t x = 0; x < textureDesc.Width; ++x)
+            {
+                uint8_t  c = ((uint8_t*)mapped.pData)[(y * inputPitchInPixels) + x];
+                uint32_t bgra = (c << 24) | (c << 16) | (c << 8) | c; // Write as an RGB-based gray.
+
+                pixels[(y * textureDesc.Width) + x] = bgra;
+            }
+        }
+    }
+
+    deviceContext->Unmap(textureSource, 0); // Always succeeds.
+
+    // Create & write the file
+    ScopedFileHANDLE bmpFile(CreateFileW(path, FILE_GENERIC_WRITE, 0, nullptr,
+                                CREATE_ALWAYS, FILE_ATTRIBUTE_NORMAL, nullptr));
+
+    if (!bmpFile.IsValid())
+    {
+        return Result::FILE_CREATION_FAILURE;
+    }
+
+    const int BytesPerPixel = 4;
+
+    BITMAPFILEHEADER bfh{};
+    bfh.bfType = 0x4d42;
+    bfh.bfSize = sizeof(BITMAPFILEHEADER) + sizeof(BITMAPINFOHEADER) + (textureDesc.Width * textureDesc.Height * BytesPerPixel);
+    bfh.bfOffBits = sizeof(BITMAPFILEHEADER) + sizeof(BITMAPINFOHEADER);
+
+    BITMAPINFOHEADER bih{};
+    bih.biSize = sizeof(bih);
+    bih.biBitCount = 8 * (WORD)BytesPerPixel;
+    bih.biPlanes = 1;
+    bih.biWidth = textureDesc.Width;
+    bih.biHeight = textureDesc.Height;
+    bih.biSizeImage = textureDesc.Width * textureDesc.Height * BytesPerPixel;
+
+    DWORD bytesWritten = 0;
+    WriteFile(bmpFile.Get(), &bfh, sizeof(bfh), &bytesWritten, nullptr);
+    WriteFile(bmpFile.Get(), &bih, sizeof(bih), &bytesWritten, nullptr);
+
+    size_t offset = textureDesc.Width * (textureDesc.Height - 1);
+    for (uint32_t y = 0; y < textureDesc.Height; ++y)
+    {
+        WriteFile(bmpFile.Get(), pixels.data() + offset, textureDesc.Width * BytesPerPixel, &bytesWritten, nullptr);
+        offset -= textureDesc.Width;
+    }
+
+    return Result::SUCCESS;
+}
+
 
 }} // namespace OVR::D3DUtil
 

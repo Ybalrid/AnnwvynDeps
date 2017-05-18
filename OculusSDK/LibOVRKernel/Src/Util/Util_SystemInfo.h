@@ -129,9 +129,12 @@ bool DeleteRegistryValue(const wchar_t* pSubKey, const wchar_t* stringName, bool
 // The tags are obtained from the registry.
 String GetMachineTags();
 
-//Mac + Linux equivelants are not implemented
-String GetFileVersionStringW(wchar_t filePath[MAX_PATH]);
-String GetSystemFileVersionStringW(wchar_t filePath[MAX_PATH]);
+String GetFileVersionStringW(const wchar_t filePath[MAX_PATH]);
+String GetSystemFileVersionStringW(const wchar_t filePath[MAX_PATH]);
+
+#else
+	//Mac + Linux equivalants are not implemented.
+
 #endif // OVR_OS_MS
 
 

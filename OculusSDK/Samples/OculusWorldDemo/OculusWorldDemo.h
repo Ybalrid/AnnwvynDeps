@@ -390,6 +390,7 @@ protected:
     ovrInputState       ActiveControllerState;
     ovrPosef            HandPoses[2];
     unsigned int        HandStatus[2];
+    ovrPosef            LeftTouchPose_3rd;
 
     // The size of the rendered HUD in pixels. If size==0, there's no HUD at the moment.
     Recti               HudRenderedSize;

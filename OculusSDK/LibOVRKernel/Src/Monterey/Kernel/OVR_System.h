@@ -25,43 +25,14 @@ See the License for the specific language governing permissions and
 limitations under the License.
 
 ************************************************************************************/
+
 #ifndef OVR_System_h
 #define OVR_System_h
 
 #include "OVR_Allocator.h"
-#include "OVR_Atomic.h"
+#include "OVR_Log.h"
 
 namespace OVR {
-
-
-//-----------------------------------------------------------------------------
-// Lightweight version of PC code.
-template<class T>
-class SystemSingletonBase
-{
-public:
-    // TODO: implement a more self controlled singleton based on thread lifecycle
-    virtual void OnThreadDestroy() {}
-
-    // must use GetInstance to access the global singleton instance
-    static T* GetInstance()
-    {
-        // A internal singleton instance used globally
-        static T SingletonInstance;
-        return &SingletonInstance;
-    }
-
-    bool IsInitialized() const
-    {
-        return Initialized;
-    }
-
-    virtual void Shutdown() = 0;
-
-protected:
-    bool Initialized = false;
-};
-
 
 // ***** System Core Initialization class
 
@@ -71,26 +42,37 @@ protected:
 // called before program exist for proper cleanup. Both of these tasks can be achieved by
 // simply creating System object first, allowing its constructor/destructor do the work.
 
+
 class System
 {
 public:
+
+    // System constructor expects allocator to be specified, if it is being substituted.
+    System(Log* log = Log::ConfigureDefaultLog(LogMask_Debug),
+           Allocator* palloc = DefaultAllocator::InitSystemSingleton())
+    {
+        Init(log, palloc);
+    }
+
+    ~System()
+    {
+        Destroy();
+    }
+
     // Returns 'true' if system was properly initialized.
     static bool OVR_CDECL IsInitialized();
 
     // Initializes System core.  Users can override memory implementation by passing
     // a different Allocator here.
-    static void OVR_CDECL Init();
+    static void OVR_CDECL Init(Log* log = Log::ConfigureDefaultLog(LogMask_Debug),
+                               Allocator *palloc = DefaultAllocator::InitSystemSingleton());
 
     // De-initializes System more, finalizing the threading system and destroying
     // the global memory allocator.
     static void OVR_CDECL Destroy();
-
-    // Dump any leaked allocations
-    static void OVR_CDECL CheckForAllocatorLeaks();
 };
 
 
 } // namespace OVR
 
 #endif
-

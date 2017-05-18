@@ -171,13 +171,15 @@ const char * GetProcessInfo()
     return "TODO";
 #endif
 }
+
+
 #ifdef OVR_OS_WIN32
 
 String OSVersionAsString()
 {
     return GetSystemFileVersionStringW(L"\\kernel32.dll");
 }
-String GetSystemFileVersionStringW(wchar_t filePath[MAX_PATH])
+String GetSystemFileVersionStringW(const wchar_t filePath[MAX_PATH])
 {
     wchar_t strFilePath[MAX_PATH]; // Local variable
     UINT sysDirLen = GetSystemDirectoryW(strFilePath, ARRAYSIZE(strFilePath));
@@ -193,7 +195,7 @@ String GetSystemFileVersionStringW(wchar_t filePath[MAX_PATH])
 }
 
 // See http://stackoverflow.com/questions/940707/how-do-i-programatically-get-the-version-of-a-dll-or-exe-file
-String GetFileVersionStringW(wchar_t filePath[MAX_PATH])
+String GetFileVersionStringW(const wchar_t filePath[MAX_PATH])
 {
     String result;
 
@@ -422,22 +424,29 @@ String GetProcessorInfo()
 
 String GetOVRPath(const wchar_t* subPath, bool create_dir)
 {
-    wchar_t fullPath[MAX_PATH];
-    SHGetFolderPathW(0, CSIDL_LOCAL_APPDATA, NULL, 0, fullPath);
-    PathAppendW(fullPath, L"\\Oculus");
-    PathAppendW(fullPath, subPath);
+    #if defined(_WIN32)
+        wchar_t fullPath[MAX_PATH];
+        SHGetFolderPathW(0, CSIDL_LOCAL_APPDATA, NULL, 0, fullPath);
+        PathAppendW(fullPath, L"\\Oculus");
+        PathAppendW(fullPath, subPath);
 
-    if (create_dir)
-    {
-        DWORD attrib = ::GetFileAttributesW(fullPath);
-        bool exists = attrib != INVALID_FILE_ATTRIBUTES && (attrib & FILE_ATTRIBUTE_DIRECTORY);
-        if (!exists)
+        if (create_dir)
         {
-            ::CreateDirectoryW(fullPath, NULL);
+            DWORD attrib = ::GetFileAttributesW(fullPath);
+            bool exists = attrib != INVALID_FILE_ATTRIBUTES && (attrib & FILE_ATTRIBUTE_DIRECTORY);
+            if (!exists)
+            {
+                ::CreateDirectoryW(fullPath, NULL);
+            }
         }
-    }
 
-    return String(fullPath);
+        return String(fullPath);
+    #else
+        (void)subPath;
+        (void)create_dir;
+        OVR_FAIL_M("GetOVRPath: needs to be implemented for this platform.");
+        return String("/"); // Need to implement this properly.
+    #endif
 }
 
 //-----------------------------------------------------------------------------
@@ -462,16 +471,10 @@ String GetBaseOVRPath(bool create_dir)
         }
     }
 
-#elif defined(OVR_OS_MS) // Other Microsoft OSs
-
-    // TODO: figure this out.
-    OVR_UNUSED ( create_dir );
-    path = "";
-
 #elif defined(OVR_OS_MAC)
 
     const char* home = getenv("HOME");
-    path = home;
+    String path = home;
     path += "/Library/Preferences/Oculus";
 
     if (create_dir)
@@ -479,7 +482,7 @@ String GetBaseOVRPath(bool create_dir)
         DIR* dir = opendir(path);
         if (dir == NULL)
         {
-            mkdir(path, S_IRWXU | S_IRWXG | S_IRWXO);
+            mkdir(path.ToCStr(), S_IRWXU | S_IRWXG | S_IRWXO);
         }
         else
         {
@@ -498,7 +501,7 @@ String GetBaseOVRPath(bool create_dir)
         DIR* dir = opendir(path);
         if (dir == NULL)
         {
-            mkdir(path, S_IRWXU | S_IRWXG | S_IRWXO);
+            mkdir(path.ToCStr(), S_IRWXU | S_IRWXG | S_IRWXO);
         }
         else
         {
@@ -768,6 +771,8 @@ bool GetDefaultFirmwarePath(String& firmwarePath)
 // This function searches for likely locations of the firmware.zip file when
 // the file path is not specified by the user.
 
+#ifdef OVR_OS_MS
+
 // We search the following paths relative to the executable:
 static const wchar_t* FWRelativePaths[] = {
     L"firmware.zip",
@@ -784,6 +789,9 @@ static const wchar_t* FWRelativePaths[] = {
     L"../oculus-tools/firmware/Firmware.zip"
 };
 static const int RelativePathsCount = OVR_ARRAY_COUNT(FWRelativePaths);
+
+#endif // OVR_OS_MS
+
 
 #ifdef OVR_OS_MS
 static std::wstring GetModulePath()
@@ -834,9 +842,9 @@ bool GetFirmwarePath(std::wstring* outPath)
         }
     }
 #else
-    OVR_UNUSED2(firmwarePath, numSearchDirs);
-    //#error "FIXME"
+    OVR_UNUSED(outPath);
 #endif //OVR_OS_MS
+
     return false;
 }
 
@@ -890,6 +898,8 @@ bool CheckIsComputerLocked()
 }
 
 
+#if defined(_WIN32)
+
 static const wchar_t* RFL2RelativePaths[] = {
     L"..\\oculus-tools\\RiftFirmLoad2.exe",
     L"RiftFirmLoad2.exe",
@@ -915,6 +925,8 @@ static const wchar_t* RFL2RelativePaths[] = {
 };
 
 static const int RFL2RelativePathsCount = OVR_ARRAY_COUNT(RFL2RelativePaths);
+
+#endif // WIN32
 
 
 bool GetRFL2Path(std::wstring* outPath)
@@ -1084,19 +1096,26 @@ bool IsAtMostWindowsVersion(WindowsVersion version)
 ProcessMemoryInfo GetCurrentProcessMemoryInfo()
 {
     ProcessMemoryInfo pmi = {};
-    PROCESS_MEMORY_COUNTERS_EX pmce = { sizeof(PROCESS_MEMORY_COUNTERS_EX), 0, 0, 0, 0, 0, 0, 0, 0, 0 };
 
-    // This should always succeed for the current process.
-    // We need PROCESS_QUERY_LIMITED_INFORMATION rights if we want to read the info from a different process.
-    // This call used nearly 1ms on a sampled computer, and so should be called infrequently.
-    if (::GetProcessMemoryInfo(GetCurrentProcess(), reinterpret_cast<PROCESS_MEMORY_COUNTERS*>(&pmce), sizeof(pmce)))
-    {
-        pmi.UsedMemory = (uint64_t)pmce.WorkingSetSize; // The set of pages in the virtual address space of the process that are currently resident in physical memory.
-    }
+    #if defined(_WIN32)
+        PROCESS_MEMORY_COUNTERS_EX pmce = { sizeof(PROCESS_MEMORY_COUNTERS_EX), 0, 0, 0, 0, 0, 0, 0, 0, 0 };
 
+        // This should always succeed for the current process.
+        // We need PROCESS_QUERY_LIMITED_INFORMATION rights if we want to read the info from a different process.
+        // This call used nearly 1ms on a sampled computer, and so should be called infrequently.
+        if (::GetProcessMemoryInfo(GetCurrentProcess(), reinterpret_cast<PROCESS_MEMORY_COUNTERS*>(&pmce), sizeof(pmce)))
+        {
+            pmi.UsedMemory = (uint64_t)pmce.WorkingSetSize; // The set of pages in the virtual address space of the process that are currently resident in physical memory.
+        }
+    #else
+        // To do: Implement this.
+    #endif
+    
     return pmi;
 }
 
+
+#if defined(_WIN32)
 
 //-----------------------------------------------------------------------------
 // PdhHelper is a helper class for querying perf counters using PDH.
@@ -1104,6 +1123,8 @@ ProcessMemoryInfo GetCurrentProcessMemoryInfo()
 // Currently, it is only used by GetSystemMemoryInfo() to obtain
 // page fault information. There is one RateCounter object within
 // PdhHelper for that.
+// https://msdn.microsoft.com/en-us/library/windows/desktop/aa373083(v=vs.85).aspx
+//
 class PdhHelper : public SystemSingletonBase<PdhHelper>
 {
     OVR_DECLARE_SINGLETON(PdhHelper);
@@ -1155,7 +1176,9 @@ public:
             {
                 // Calculate the rate (since this is a rate counter).
                 // FirstValue is the instance count. SecondValue is the timestamp.
-                double result = HasLast ? double(now.FirstValue - Last.FirstValue) / (double(now.SecondValue - Last.SecondValue) * Timer::GetPerfFrequencyInverse()) : 0.0;
+                double result = (HasLast && (now.SecondValue - Last.SecondValue)) ?
+                                double(now.FirstValue - Last.FirstValue) / (double(now.SecondValue - Last.SecondValue) * Timer::GetPerfFrequencyInverse()) :
+                                0.0;
 
                 Last = now;
                 HasLast = true;
@@ -1223,6 +1246,9 @@ void PdhHelper::OnSystemDestroy()
     delete this;
 }
 
+#endif // _WIN32
+
+
 
 //-----------------------------------------------------------------------------
 
@@ -1230,34 +1256,36 @@ SystemMemoryInfo GetSystemMemoryInfo()
 {
     SystemMemoryInfo smi = {};
 
-    PdhHelper* ph = PdhHelper::GetInstance();
+    #if defined(_WIN32)
+        PdhHelper* ph = PdhHelper::GetInstance();
 
-    if (ph)
-    {
-        // A single Collect call is required for the query object regardless of how many counters
-        // we are interested in.
-        if (ph->Collect())
+        if (ph)
         {
-            smi.PageFault = ph->CounterPageFault.Query();
-        }
-        else
-        {
-            // Can't get the counter for some reason. Use default.
-            smi.PageFault = 0.0;
-        }
+            // A single Collect call is required for the query object regardless of how many counters
+            // we are interested in.
+            if (ph->Collect())
+            {
+                smi.PageFault = ph->CounterPageFault.Query();
+            }
+            else
+            {
+                // Can't get the counter for some reason. Use default.
+                smi.PageFault = 0.0;
+            }
 
-        PERFORMANCE_INFORMATION pi = { sizeof(pi) };
-        if (GetPerformanceInfo(&pi, sizeof(pi)))
-            smi.CommittedTotal = pi.CommitTotal;
-    }
-
+            PERFORMANCE_INFORMATION pi = { sizeof(pi) };
+            if (GetPerformanceInfo(&pi, sizeof(pi)))
+                smi.CommittedTotal = pi.CommitTotal;
+        }
+    #endif
+    
     return smi;
 }
 
 
 
 static void cpuid(int output[4], int functionNumber)
-{   
+{
     #if defined (_MSC_VER) || defined (__INTEL_COMPILER)
         __cpuidex(output, functionNumber, 0);
     #elif defined(__GNUC__) || defined(__clang__)
@@ -1332,12 +1360,17 @@ CPUInstructionSet GetSupportedCPUInstructionSet(bool* popcntSupported, bool* lzc
         return cpuIS;
     cpuIS = CPUInstructionSet::SSE42;
 
+    #if defined(_MSC_VER)
     if ((features[2] & (1 << 27)) == 0  || // If OSXSAVE is not supported...
         (_xgetbv(0) & 6) != 6           || // If AVX is not recognized by the OS...
         (features[2] & (1 << 28)) == 0)    // If AVX is not supported by the CPU...
     {
         return cpuIS;
     }
+    #else
+        // To do: Implement this.
+    #endif
+    
     cpuIS = CPUInstructionSet::AVX1;
 
     cpuid(features, 7);
@@ -1350,11 +1383,15 @@ CPUInstructionSet GetSupportedCPUInstructionSet(bool* popcntSupported, bool* lzc
 
 
 
-
-
-
 } // namespace Util
 
 } // namespace OVR
 
+
+#if defined(_WIN32)
 OVR_DEFINE_SINGLETON(OVR::Util::PdhHelper);
+#endif
+
+
+
+

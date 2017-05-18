@@ -68,6 +68,42 @@ private:
     };
 };
 
+
+// Writes a D3D texture to a file path.
+class D3DTextureWriter
+{
+public:
+    D3DTextureWriter(ID3D11Device* deviceNew = nullptr);
+    
+    void Shutdown();
+
+    void SetDevice(ID3D11Device* deviceNew);
+
+    enum class Result
+    {
+        SUCCESS,
+        NULL_SURFACE,
+        NULL_DEVICE,
+        TEXTURE_CREATION_FAILURE,
+        TEXTURE_MAP_FAILURE,
+        FILE_CREATION_FAILURE,
+    };
+
+    // Beware that if the texture being saved is one that is a render target then the rendering to that 
+    // texture will need to be complete for this to work properly. You may need to flush the device or 
+    // command buffer to achieve this. 
+    // If copyTexture is true then we make a copy of the input texture before writing it to disk. 
+    // If texture is mapped for writing then you may want to use copyTexture because reading from it will be slow.
+    Result SaveTexture(ID3D11Texture2D* texture, UINT subresource, bool copyTexture, const wchar_t* path);
+
+protected:
+    Ptr<ID3D11Device>     device;           // D3D11Device we use. Must match the textures we work with.
+    Ptr<ID3D11Texture2D>  textureCopy;      // The last texture we used. Cached for future use.
+    D3D11_TEXTURE2D_DESC  textureCopyDesc;  // This is a D3D11_TEXTURE2D_DESC. The description of textureCopy, which allows us to know if we need to free it and reallocate it anew.
+    std::vector<uint32_t> pixels;           // Windows RGB .bmp files are actually in BGRA or BGR format.
+};
+
+
 }} // namespace OVR::D3DUtil
 
 #endif // OVR_OS_MS

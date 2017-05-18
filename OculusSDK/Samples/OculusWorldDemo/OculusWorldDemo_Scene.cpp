@@ -617,6 +617,17 @@ void OculusWorldDemoApp::RenderControllers(ovrEyeType eye)
         Matrix4f playerPose(worldPose);
         ControllerScene.Render(pRender, ViewFromWorld[eye] * playerPose * scaleUp);
     }
+    
+    if (ConnectedControllerTypes & ovrControllerType_Object0)
+    {
+        Matrix4f scaleUp = Matrix4f::Scaling(1.0f);
+        Posef    worldPose = ThePlayer.VirtualWorldTransformfromRealPose(LeftTouchPose_3rd, TrackingOriginType);
+        Matrix4f playerPose(worldPose);
+        pRender->SetGlobalTint(Vector4f(0.0f, 1.0f, 1.0f, 1.0f));
+        ControllerScene.Render(pRender, ViewFromWorld[eye] * playerPose * scaleUp);
+        pRender->SetGlobalTint(Vector4f(1.0f, 1.0f, 1.0f, 1.0f));
+    }
+
     pRender->SetCullMode(RenderDevice::Cull_Back);
 }
 

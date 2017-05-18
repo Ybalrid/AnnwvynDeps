@@ -38,11 +38,11 @@ using namespace DirectX;
 #pragma comment(lib, "d3dcompiler.lib")
 
 #ifndef VALIDATE
-    #define VALIDATE(x, msg) if (!(x)) { MessageBoxA(NULL, (msg), "OculusRoomTiny", MB_ICONERROR | MB_OK); exit(-1); }
+    #define VALIDATE(x, msg) if (!(x)) { MessageBoxA(nullptr, (msg), "OculusRoomTiny", MB_ICONERROR | MB_OK); exit(-1); }
 #endif
 
 #ifndef FATALERROR
-#define FATALERROR(msg) { MessageBoxA(NULL, (msg), "OculusRoomTiny", MB_ICONERROR | MB_OK); exit(-1); }
+    #define FATALERROR(msg) { MessageBoxA(nullptr, (msg), "OculusRoomTiny", MB_ICONERROR | MB_OK); exit(-1); }
 #endif
 
 // clean up member COM pointers
@@ -74,8 +74,8 @@ struct DepthBuffer
         dsDesc.MiscFlags = 0;
         dsDesc.BindFlags = D3D11_BIND_DEPTH_STENCIL;
         ID3D11Texture2D * Tex;
-        Device->CreateTexture2D(&dsDesc, NULL, &Tex);
-        Device->CreateDepthStencilView(Tex, NULL, &TexDsv);
+        Device->CreateTexture2D(&dsDesc, nullptr, &Tex);
+        Device->CreateDepthStencilView(Tex, nullptr, &TexDsv);
         Tex->Release();
     }
     ~DepthBuffer()
@@ -100,7 +100,7 @@ struct DataBuffer
         D3D11_SUBRESOURCE_DATA sr;
         sr.pSysMem = buffer;
         sr.SysMemPitch = sr.SysMemSlicePitch = 0;
-        Device->CreateBuffer(&desc, buffer ? &sr : NULL, &D3DBuffer);
+        Device->CreateBuffer(&desc, buffer ? &sr : nullptr, &D3DBuffer);
     }
     ~DataBuffer()
     {
@@ -261,7 +261,7 @@ struct DirectX11
 
         // Create backbuffer
         SwapChain->GetBuffer(0, __uuidof(ID3D11Texture2D), (void**)&BackBuffer);
-        hr = Device->CreateRenderTargetView(BackBuffer, NULL, &BackBufferRT);
+        hr = Device->CreateRenderTargetView(BackBuffer, nullptr, &BackBufferRT);
         VALIDATE((hr == ERROR_SUCCESS), "CreateRenderTargetView failed");
 
         // Main depth buffer
@@ -269,7 +269,7 @@ struct DirectX11
         Context->OMSetRenderTargets(1, &BackBufferRT, MainDepthBuffer->TexDsv);
 
         // Buffer for shader constants
-        UniformBufferGen = new DataBuffer(Device, D3D11_BIND_CONSTANT_BUFFER, NULL, UNIFORM_DATA_SIZE);
+        UniformBufferGen = new DataBuffer(Device, D3D11_BIND_CONSTANT_BUFFER, nullptr, UNIFORM_DATA_SIZE);
         Context->VSSetConstantBuffers(0, 1, &UniformBufferGen->D3DBuffer);
 
         // Set max frame latency to 1
@@ -303,7 +303,7 @@ struct DirectX11
     bool HandleMessages(void)
     {
         MSG msg;
-        while (PeekMessage(&msg, NULL, 0U, 0U, PM_REMOVE))
+        while (PeekMessage(&msg, nullptr, 0U, 0U, PM_REMOVE))
         {
             TranslateMessage(&msg);
             DispatchMessage(&msg);
@@ -338,7 +338,7 @@ struct DirectX11
         Release(BackBufferRT);
         if (SwapChain)
         {
-            SwapChain->SetFullscreenState(FALSE, NULL);
+            SwapChain->SetFullscreenState(FALSE, nullptr);
             Release(SwapChain);
         }
         Release(Context);
@@ -383,10 +383,10 @@ struct Texture
         dsDesc.BindFlags = D3D11_BIND_SHADER_RESOURCE;
         if (rendertarget) dsDesc.BindFlags |= D3D11_BIND_RENDER_TARGET;
 
-        DIRECTX.Device->CreateTexture2D(&dsDesc, NULL, &Tex);
-        DIRECTX.Device->CreateShaderResourceView(Tex, NULL, &TexSv);
+        DIRECTX.Device->CreateTexture2D(&dsDesc, nullptr, &Tex);
+        DIRECTX.Device->CreateShaderResourceView(Tex, nullptr, &TexSv);
         TexRtv = nullptr;
-        if (rendertarget) DIRECTX.Device->CreateRenderTargetView(Tex, NULL, &TexRtv);
+        if (rendertarget) DIRECTX.Device->CreateRenderTargetView(Tex, nullptr, &TexRtv);
     }
     Texture(int sizeW, int sizeH, bool rendertarget, int mipLevels = 1, int sampleCount = 1)
     {
@@ -411,7 +411,7 @@ struct Texture
         int sizeH = SizeH;
         for (int level = 0; level < MipLevels; level++)
         {
-            DIRECTX.Context->UpdateSubresource(Tex, level, NULL, (unsigned char *)pix, sizeW * 4, sizeH * sizeW * 4);
+            DIRECTX.Context->UpdateSubresource(Tex, level, nullptr, (unsigned char *)pix, sizeW * 4, sizeH * sizeW * 4);
 
             for (int j = 0; j < (sizeH & ~1); j += 2)
             {
@@ -480,8 +480,8 @@ struct Material
     ID3D11BlendState        * BlendState;
 
     enum { MAT_WRAP = 1, MAT_WIRE = 2, MAT_ZALWAYS = 4, MAT_NOCULL = 8 , MAT_TRANS = 16};
-    Material(Texture * t, uint32_t flags = MAT_WRAP | MAT_TRANS, D3D11_INPUT_ELEMENT_DESC * vertexDesc = NULL, int numVertexDesc = 3,
-        char* vertexShader = NULL, char* pixelShader = NULL, int vSize = 24) : Tex(t), VertexSize(vSize)
+    Material(Texture * t, uint32_t flags = MAT_WRAP | MAT_TRANS, D3D11_INPUT_ELEMENT_DESC * vertexDesc = nullptr, int numVertexDesc = 3,
+        char* vertexShader = nullptr, char* pixelShader = nullptr, int vSize = 24) : Tex(t), VertexSize(vSize)
     {
         D3D11_INPUT_ELEMENT_DESC defaultVertexDesc[] = {
             { "Position", 0, DXGI_FORMAT_R32G32B32_FLOAT, 0, 0,  D3D11_INPUT_PER_VERTEX_DATA, 0 },
@@ -530,10 +530,10 @@ struct Material
         HRESULT result = D3DCompile(vertexShader, strlen(vertexShader), 0, 0, 0, "main", "vs_4_0", 0, 0, &blobData, &errorBlob);
         if (FAILED(result))
         {
-            MessageBoxA(NULL, (char *)errorBlob->GetBufferPointer(), "Error compiling vertex shader", MB_OK);
+            MessageBoxA(nullptr, (char *)errorBlob->GetBufferPointer(), "Error compiling vertex shader", MB_OK);
             exit(-1);
         }
-        DIRECTX.Device->CreateVertexShader(blobData->GetBufferPointer(), blobData->GetBufferSize(), NULL, &VertexShader);
+        DIRECTX.Device->CreateVertexShader(blobData->GetBufferPointer(), blobData->GetBufferSize(), nullptr, &VertexShader);
 
         // Create input layout
         DIRECTX.Device->CreateInputLayout(vertexDesc, numVertexDesc,
@@ -544,15 +544,15 @@ struct Material
         result = D3DCompile(instancedStereoVertexShaderSrc, strlen(instancedStereoVertexShaderSrc), 0, 0, 0, "main", "vs_4_0", 0, 0, &blobData, &errorBlob);
         if (FAILED(result))
         {
-            MessageBoxA(NULL, (char *)errorBlob->GetBufferPointer(), "Error compiling vertex shader", MB_OK);
+            MessageBoxA(nullptr, (char *)errorBlob->GetBufferPointer(), "Error compiling vertex shader", MB_OK);
             exit(-1);
         }
-        DIRECTX.Device->CreateVertexShader(blobData->GetBufferPointer(), blobData->GetBufferSize(), NULL, &VertexShaderInstanced);
+        DIRECTX.Device->CreateVertexShader(blobData->GetBufferPointer(), blobData->GetBufferSize(), nullptr, &VertexShaderInstanced);
         blobData->Release();
 
         // Create pixel shader
         D3DCompile(pixelShader, strlen(pixelShader), 0, 0, 0, "main", "ps_4_0", 0, 0, &blobData, 0);
-        DIRECTX.Device->CreatePixelShader(blobData->GetBufferPointer(), blobData->GetBufferSize(), NULL, &PixelShader);
+        DIRECTX.Device->CreatePixelShader(blobData->GetBufferPointer(), blobData->GetBufferSize(), nullptr, &PixelShader);
         blobData->Release();
 
         // Create sampler state
@@ -741,12 +741,12 @@ struct Model
         UINT offset = 0;
         DIRECTX.Context->IASetVertexBuffers(0, 1, &VertexBuffer->D3DBuffer, &Fill->VertexSize, &offset);
         DIRECTX.Context->IASetPrimitiveTopology(D3D11_PRIMITIVE_TOPOLOGY_TRIANGLELIST);
-        DIRECTX.Context->VSSetShader(Fill->VertexShader, NULL, 0);
-        DIRECTX.Context->PSSetShader(Fill->PixelShader, NULL, 0);
+        DIRECTX.Context->VSSetShader(Fill->VertexShader, nullptr, 0);
+        DIRECTX.Context->PSSetShader(Fill->PixelShader, nullptr, 0);
         DIRECTX.Context->PSSetSamplers(0, 1, &Fill->SamplerState);
         DIRECTX.Context->RSSetState(Fill->Rasterizer);
         DIRECTX.Context->OMSetDepthStencilState(Fill->DepthState, 0);
-        DIRECTX.Context->OMSetBlendState(Fill->BlendState, NULL, 0xffffffff);
+        DIRECTX.Context->OMSetBlendState(Fill->BlendState, nullptr, 0xffffffff);
         DIRECTX.Context->PSSetShaderResources(0, 1, &Fill->Tex->TexSv);
 
         DIRECTX.Context->DrawIndexed((UINT)NumIndices, 0, 0);
@@ -778,12 +778,12 @@ struct Model
         UINT offset = 0;
         DIRECTX.Context->IASetVertexBuffers(0, 1, &VertexBuffer->D3DBuffer, &Fill->VertexSize, &offset);
         DIRECTX.Context->IASetPrimitiveTopology(D3D11_PRIMITIVE_TOPOLOGY_TRIANGLELIST);
-        DIRECTX.Context->VSSetShader(Fill->VertexShaderInstanced, NULL, 0);
-        DIRECTX.Context->PSSetShader(Fill->PixelShader, NULL, 0);
+        DIRECTX.Context->VSSetShader(Fill->VertexShaderInstanced, nullptr, 0);
+        DIRECTX.Context->PSSetShader(Fill->PixelShader, nullptr, 0);
         DIRECTX.Context->PSSetSamplers(0, 1, &Fill->SamplerState);
         DIRECTX.Context->RSSetState(Fill->Rasterizer);
         DIRECTX.Context->OMSetDepthStencilState(Fill->DepthState, 0);
-        DIRECTX.Context->OMSetBlendState(Fill->BlendState, NULL, 0xffffffff);
+        DIRECTX.Context->OMSetBlendState(Fill->BlendState, nullptr, 0xffffffff);
         DIRECTX.Context->PSSetShaderResources(0, 1, &Fill->Tex->TexSv);
 
         // draw 2 instances

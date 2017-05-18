@@ -58,6 +58,18 @@ static uint32_t GetFastMsTime()
 #endif
 }
 
+static std::string SanitizeString(const char* cstr)
+{
+    std::ostringstream ss;
+    char ch;
+    while (ch = *cstr++, ch != '\0')
+    {
+        if (ch < ' ' || ch == '\"' || ch == '\'' || ch == '\\' || ch == '`' || ch > '~')
+            ch = '_';
+        ss << ch;
+    }
+    return ss.str();
+}
 
 //-----------------------------------------------------------------------------
 // WatchDogObserver
@@ -72,7 +84,9 @@ WatchDogObserver::WatchDogObserver() :
     DeadlockSeen(false),
     AutoTerminateOnDeadlock(true),
     ApplicationName(),
-    OrganizationName()
+    OrganizationName(),
+    WriteMiniDump(nullptr),
+    AddBreakpadInfoClient(nullptr)
 {
     WatchdogThreadHandle = std::make_unique<std::thread>([this] { this->Run(); });
     // Must be at end of function
@@ -114,7 +128,24 @@ void WatchDogObserver::OnDeadlock(const String& deadlockedThreadName)
                 moduleListOutput.ToCStr(), "\n---END OF DEADLOCK STATE---");
         }
 
-        ExceptionHandler::ReportDeadlock(deadlockedThreadName, OrganizationName, ApplicationName);
+        // For internal builds done by our engineers, we write minidumps as per the settings below. We don't
+        // generate breakpad minidumps nor upload breakpad crash reports. For non-internal builds (typically
+        // public builds), we generate breakpad mindumps and will upload them as necessary.
+        if (WriteMiniDump != nullptr)
+        {
+            // non-internal builds
+            OVR_ASSERT(AddBreakpadInfoClient != nullptr);
+            AddBreakpadInfoClient("is_deadlock_minidump", "true");
+            // deadlockedThreadName might contain special characters
+            std::string threadName = SanitizeString(deadlockedThreadName.ToCStr());
+            AddBreakpadInfoClient("deadlock_thread_name", threadName.c_str());
+            WriteMiniDump(nullptr);
+        }
+        else
+        {
+            // internal builds
+            ExceptionHandler::ReportDeadlock(deadlockedThreadName, OrganizationName, ApplicationName);
+        }
 
         // Disable reporting after the first deadlock report
         DisableReporting();

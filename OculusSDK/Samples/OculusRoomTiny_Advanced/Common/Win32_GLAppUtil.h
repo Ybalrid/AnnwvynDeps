@@ -1,4 +1,4 @@
-﻿/************************************************************************************
+/************************************************************************************
  Filename    :   Win32_GLAppUtil.h
  Content     :   OpenGL and Application/Window setup functionality for RoomTiny
  Created     :   October 20th, 2014
@@ -17,11 +17,13 @@
  limitations under the License.
  *************************************************************************************/
 
+#ifndef OVR_Win32_GLAppUtil_h
+#define OVR_Win32_GLAppUtil_h
+
 #include "GL/CAPI_GLE.h"
 #include "Extras/OVR_Math.h"
 #include "OVR_CAPI_GL.h"
 #include <assert.h>
-
 
 using namespace OVR;
 
@@ -904,3 +906,5 @@ struct Scene
         Release();
     }
 };
+
+#endif // OVR_Win32_GLAppUtil_h

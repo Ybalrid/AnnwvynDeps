@@ -31,10 +31,6 @@ limitations under the License.
 #include <thread>         // std::this_thread::sleep_for
 #include <chrono>         // std::chrono::seconds
 
-#if defined(OVR_OS_MS)
-#include "OVR_CAPI_D3D.h"
-#endif
-
 
 
 OVR_DISABLE_MSVC_WARNING(4996) // "scanf may be unsafe"
@@ -531,6 +527,8 @@ int OculusWorldDemoApp::OnStartup(int argc, const char** argv)
 
 int OculusWorldDemoApp::InitializeRendering(bool firstTime)
 {
+    OVR_ASSERT(!HmdDisplayAcquired);
+
     ovrGraphicsLuid luid;
     ovrResult error = ovr_Create(&Session, &luid);
 
@@ -547,8 +545,6 @@ int OculusWorldDemoApp::InitializeRendering(bool firstTime)
             return 0;
         }
     }
-
-    HmdDisplayAcquired = true;
 
 
     // Did we end up with a debug HMD?
@@ -568,12 +564,14 @@ int OculusWorldDemoApp::InitializeRendering(bool firstTime)
         if (firstTime)
         {
             DisplayLastErrorMessageBox("Unable to initialize rendering");
+            DestroyRendering();
             return 1;
         }
         else
         {
             HmdDisplayAcquired = false;
             GetPlatformCore()->SetNotificationOverlay(0, 28, 8, "Unable to initialize rendering");
+            DestroyRendering();
             return 0;
         }
     }
@@ -590,6 +588,7 @@ int OculusWorldDemoApp::InitializeRendering(bool firstTime)
         if (firstTime)
         {
             DisplayLastErrorMessageBox("Unable to initialize rendering");
+            DestroyRendering();
             return 1;
         }
         else
@@ -598,6 +597,9 @@ int OculusWorldDemoApp::InitializeRendering(bool firstTime)
 
             // Destroy what was initialized
             HandleOvrError(error);
+
+            DestroyRendering();
+
             return 0;
         }
     }
@@ -664,6 +666,8 @@ int OculusWorldDemoApp::InitializeRendering(bool firstTime)
     // demonstrate/test the API.
     //OVR_ASSERT ( pCockpitLayerList == nullptr );
     //pCockpitLayerList = ovr_CreateLayerList ( Session );
+
+    HmdDisplayAcquired = true;
 
     return 0;
 }
@@ -1027,7 +1031,6 @@ void OculusWorldDemoApp::PopulateOptionMenu()
     Menu.AddInt ( "Layers.Cockpit Enable Bitfield", &LayerCockpitEnabled, 0, 31, 1);
     Menu.AddBool( "Layers.Cockpit HighQuality",     &LayerCockpitHighQuality);
     Menu.AddBool( "Layers.HUD/Menu HighQuality",    &LayerHudMenuHighQuality);
-
 
     // Test pattern menu.
 
@@ -1801,12 +1804,6 @@ Matrix4f OculusWorldDemoApp::CalculateViewFromPose(const Posef& pose)
 {
     Posef worldPose = ThePlayer.VirtualWorldTransformfromRealPose(pose, TrackingOriginType);
 
-    // Apply barnacle
-    if (UseBarnacle)
-    {
-        worldPose = worldPose * BarnaclePose;
-    }
-
     // Rotate and position View Camera
     Vector3f up      = worldPose.Rotation.Rotate(UpVector);
     Vector3f forward = worldPose.Rotation.Rotate(ForwardVector);
@@ -2104,13 +2101,17 @@ void OculusWorldDemoApp::OnIdle()
 
     if (!HmdDisplayAcquired)
     {
-        InitializeRendering(false);
+        int result = InitializeRendering(false);
 
-        if (!HmdDisplayAcquired)
+        // There were cases where InitializeRendering would fail but
+        // HmdDisplayAcquired was still set to true.
+        OVR_ASSERT(!((result == 1) && HmdDisplayAcquired));
+
+        if (!HmdDisplayAcquired || (result == 1))
         {
             std::this_thread::sleep_for(std::chrono::seconds(1));
             return;
-    }
+        }
     }
 
     double curtime = ovr_GetTimeInSeconds();
@@ -2122,7 +2123,11 @@ void OculusWorldDemoApp::OnIdle()
 
     if (HmdSettingsChanged)
     {
-        CalculateHmdValues();
+        ovrResult error = CalculateHmdValues();
+        if (HandleOvrError(error))
+        {
+            return;
+        }
     }
 
     if (LoadingState == LoadingState_DoLoad)
@@ -2317,25 +2322,28 @@ void OculusWorldDemoApp::OnIdle()
     // skipped based on FreezeEyeUpdate and Time-warp timing state.
     bool bupdateRenderedView = FrameNeedsRendering(curtime) && (sessionStatus.IsVisible || (LoadingState == LoadingState_Frame0));
 
+    // Pick an appropriately "big enough" size for the HUD and menu and render them their textures texture.
+    Sizei hudTargetSize = Sizei ( 2048, 2048 );
+    EnsureRendertargetAtLeastThisBig(Rendertarget_Hud, hudTargetSize, false, -1, error);
+    if (HandleOvrError(error))
+        return;
+
+    // Menu brought up by tab
+    Menu.SetShortcutChangeMessageEnable ( ShortcutChangeMessageEnable );
+    Sizei menuTargetSize = Sizei ( 2048, 2048 );
+    EnsureRendertargetAtLeastThisBig(Rendertarget_Menu, menuTargetSize, false, -1, error);
+    if (HandleOvrError(error))
+        return;
+
     if (bupdateRenderedView)
     {
         float textHeight = MenuHudTextPixelHeight;
-        // Pick an appropriately "big enough" size for the HUD and menu and render them their textures texture.
-        Sizei hudTargetSize = Sizei ( 2048, 2048 );
-        EnsureRendertargetAtLeastThisBig(Rendertarget_Hud, hudTargetSize, false, -1, error);
-        if (HandleOvrError(error))
-            return;
+
         HudRenderedSize = RenderTextInfoHud(textHeight);
         OVR_ASSERT ( HudRenderedSize.w <= hudTargetSize.w );        // Grow hudTargetSize if needed.
         OVR_ASSERT ( HudRenderedSize.h <= hudTargetSize.h );
         OVR_UNUSED ( hudTargetSize );
 
-        // Menu brought up by tab
-        Menu.SetShortcutChangeMessageEnable ( ShortcutChangeMessageEnable );
-        Sizei menuTargetSize = Sizei ( 2048, 2048 );
-        EnsureRendertargetAtLeastThisBig(Rendertarget_Menu, menuTargetSize, false, -1, error);
-        if (HandleOvrError(error))
-            return;
         MenuRenderedSize = RenderMenu(textHeight);
         OVR_ASSERT ( MenuRenderedSize.w <= menuTargetSize.w );        // Grow hudTargetSize if needed.
         OVR_ASSERT ( MenuRenderedSize.h <= menuTargetSize.h );
@@ -2625,15 +2633,6 @@ void OculusWorldDemoApp::OnIdle()
             {
                 for (int eyeIndex = 0; eyeIndex < ovrEye_Count; eyeIndex++)
                 {
-                    // FIXME! FIXME! FIXME!
-                    // In reconnect someone is stomping on our textures. If this happens
-                    // bail. In the next pass we'll get it right
-                    if (MsaaRenderTargets[eyeIndex].pColorTex == nullptr)
-                    {
-                        HmdSettingsChanged = true;
-                        return;
-                    }
-
                     pRender->ResolveMsaa(MsaaRenderTargets[eyeIndex].pColorTex, RenderTargets[eyeIndex].pColorTex);
                 }
             }
@@ -3827,12 +3826,12 @@ Recti OculusWorldDemoApp::RenderTextInfoHud(float textHeight)
                 snprintf(buf, sizeof(buf),
                     " SDK Performance Stats\n\n"
                     " HMD Frame #:\t400 %d\n"
-                    " App Frame #:\t400 %d\t650 App Dropped Count:\t1200 %d\n"
-                    " Comp Frame #:\t400 %d\t650 Comp Dropped Count:\t1200 %d\n\n"
-                    " App Latency (ms):\t580 %4.2f\t770 Comp Latency (ms):\t1450 %4.2f\n"
-                    " App GPU Time (ms):\t580 %4.2f\t770 App CPU Time (ms):\t1450 %4.2f\n"
+                    " App Frame #:\t400 %d\t650 App Dropped Count:\t1200 %d\t1650\n"
+                    " Comp Frame #:\t400 %d\t650 Comp Dropped Count:\t1200 %d\t1650\n\n"
+                    " App Latency (ms):\t580 %4.2f\t770 Comp Latency (ms):\t1450 %4.2f\t1650\n"
+                    " App GPU Time (ms):\t580 %4.2f\t770 App CPU Time (ms):\t1450 %4.2f\t1650\n"
                     " App Q-Ahead (ms):\t580 %4.2f\n"
-                    " Comp CPU Time (ms):\t580 %4.2f\t770 Comp CPU Time (ms):\t1450 %4.2f\n"
+                    " Comp GPU Time (ms):\t580 %4.2f\t770 Comp CPU Time (ms):\t1450 %4.2f\n"
                     " Comp CPU-to-GPU (ms):\t580 %4.2f\t770 Comp Present Buffer (ms):\t1450 %4.2f\n\n"
                     " ASW Status:\t330 %s\t770 ASW Toggle Count:\t1250 %d\n"
                     " ASW Present Count:\t550 %d\t770 ASW Fail Count:\t1250 %d\n\n"
@@ -3857,12 +3856,12 @@ Recti OculusWorldDemoApp::RenderTextInfoHud(float textHeight)
                 snprintf(buf, sizeof(buf),
                     " SDK Performance Stats\n\n"
                     " HMD Frame #:\t400 N/A\n"
-                    " App Frame #:\t400 N/A\t650 App Dropped Count:\t1200 N/A\n"
-                    " Comp Frame #:\t400 N/A\t650 Comp Dropped Count:\t1200 N/A\n\n"
-                    " App Latency (ms):\t550 N/A\t770 Comp Latency (ms):\t1310 N/A\n"
-                    " App GPU Time (ms):\t550 N/A\t770 App CPU Time (ms):\t1310 N/A\n"
+                    " App Frame #:\t400 N/A\t650 App Dropped Count:\t1200 N/A\t1650\n"
+                    " Comp Frame #:\t400 N/A\t650 Comp Dropped Count:\t1200 N/A\t1650\n\n"
+                    " App Latency (ms):\t550 N/A\t770 Comp Latency (ms):\t1310 N/A\t1650\n"
+                    " App GPU Time (ms):\t550 N/A\t770 App CPU Time (ms):\t1310 N/A\t1650\n"
                     " App Q-Ahead (ms):\t580 N/A\n"
-					" Comp CPU Time (ms):\t550 N/A\t770 Comp CPU Time (ms):\t1310 N/A\n"
+					" Comp GPU Time (ms):\t550 N/A\t770 Comp CPU Time (ms):\t1310 N/A\n"
                     " Comp CPU-to-GPU Time (ms):\t750 N/A\n\n"
                     " ASW Status:\t330 %s - N/A\t770 ASW Toggles: N/A\n"
                     " ASW Present Count:\t550 N/A\t770 ASW Fail Count: N/A\n\n"

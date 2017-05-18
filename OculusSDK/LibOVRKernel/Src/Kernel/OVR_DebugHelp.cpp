@@ -26,6 +26,7 @@ limitations under the License.
 #include "OVR_Atomic.h"
 #include "OVR_SysFile.h"
 #include "OVR_Log.h"
+#include "OVR_Std.h"
 #include "Util/Util_SystemGUI.h"
 
 
@@ -210,9 +211,9 @@ static size_t SprintfAddress(char* addressStr, size_t addressStrCapacity, const 
         #endif
     #else
         #if (OVR_PTR_SIZE >= 8)
-            return snprintf(addressStr, addressStrCapacity, "%016llx", pAddress);     // e.g. 0x0123456789abcdef
+            return snprintf(addressStr, addressStrCapacity, "%016lx", (uintptr_t)pAddress);     // e.g. 0x0123456789abcdef
         #else
-            return snprintf(addressStr, addressStrCapacity, "%08x", pAddress);        // e.g. 0x89abcdef
+            return snprintf(addressStr, addressStrCapacity, "%08lx", (uintptr_t)pAddress);      // e.g. 0x89abcdef
         #endif
     #endif
 }
@@ -605,7 +606,7 @@ bool RedirectCdeclFunction(void* pFunction, const void* pDestFunction, OVR::Save
         }
 
     #else
-        OVR_UNUSED2(pFunction, pSavedFunction);
+        OVR_UNUSED3(pFunction, pDestFunction, pSavedFunction);
     #endif
 
     return false;
@@ -712,6 +713,8 @@ const void* CopiedFunction::Copy(const void* pFunction, size_t size)
             memcpy(pNewFunction, pRealFunction, size);
             Function = pNewFunction;
         }
+    #else
+        OVR_UNUSED2(pFunction, size);
     #endif
 
     return Function;
@@ -2454,9 +2457,9 @@ bool SymbolLookup::LookupSymbols(uint64_t* addressArray, SymbolInfo* pSymbolInfo
             for(size_t i = 0; i < arraySize; i++)
             {
                 // Generates a string like this: "0 OculusWorldDemo 0x000000010000cfd5 _ZN18OculusWorldDemoApp9OnStartupEiPPKc + 213"
-                static_assert(OVR_ARRAY_COUNT(pSymbolInfoArray[i].function) == 128, "Need to change the string format size below");
+                static_assert(OVR_ARRAY_COUNT(pSymbolInfoArray[i].function) == 384, "Need to change the string format size below");
 
-                sscanf(symbolArray[i], "%*d %*s %*x %128s + %d", pSymbolInfoArray[i].function, &pSymbolInfoArray[i].functionOffset);
+                sscanf(symbolArray[i], "%*d %*s %*x %384s + %d", pSymbolInfoArray[i].function, &pSymbolInfoArray[i].functionOffset);
 
                 if(AllowMemoryAllocation)
                 {
@@ -2612,7 +2615,7 @@ void ExceptionHandler::GetCrashDumpDirectoryFromNames(char* path, const char* or
         if (requiredUTF8Length < OVR_ARRAY_COUNT(wpath))
             CreateDirectoryW(wpath, NULL);
     #else
-        mkdir(exceptionPath,S_IRWXU | S_IRWXG | S_IROTH | S_IXOTH);
+        mkdir(path, S_IRWXU | S_IRWXG | S_IROTH | S_IXOTH);
     #endif
 
     #ifdef OVR_OS_MS
@@ -2628,7 +2631,7 @@ void ExceptionHandler::GetCrashDumpDirectoryFromNames(char* path, const char* or
         if (requiredUTF8Length < OVR_ARRAY_COUNT(wpath))
             CreateDirectoryW(wpath, NULL);
     #else
-        mkdir(exceptionPath,S_IRWXU | S_IRWXG | S_IROTH | S_IXOTH);
+        mkdir(path, S_IRWXU | S_IRWXG | S_IROTH | S_IXOTH);
     #endif
     OVR_strlcat(path, separator, OVR_MAX_PATH);
 }
@@ -2680,13 +2683,13 @@ size_t ExceptionHandler::GetCrashDumpDirectory(char* directoryPath, size_t direc
     #elif defined(OVR_OS_MAC)
         // This is the same location that Apple puts its OS-generated .crash files.
         const char* home = getenv("HOME");
-        size_t requiredStrlen = OVR::snprintf(directoryPath, directoryPathCapacity, "%s/Library/Logs/DiagnosticReports/", home ? home : "/Users/Shared/Logs/DiagnosticReports/");
+        size_t requiredStrlen = snprintf(directoryPath, directoryPathCapacity, "%s/Library/Logs/DiagnosticReports/", home ? home : "/Users/Shared/Logs/DiagnosticReports/");
         // To do: create the directory if it doesn't already exist.
         return requiredStrlen;
 
     #elif defined(OVR_OS_UNIX)
         const char* home = getenv("HOME");
-        size_t requiredStrlen = OVR::snprintf(directoryPath, directoryPathCapacity, "%s/Library/", home ? home : "/Users/Shared/");
+        size_t requiredStrlen = snprintf(directoryPath, directoryPathCapacity, "%s/Library/", home ? home : "/Users/Shared/");
         // To do: create the directory if it doesn't already exist.
         return requiredStrlen;
     #endif
@@ -2893,7 +2896,9 @@ static ExceptionHandler* sExceptionHandler = nullptr;
         if(machTask != mach_task_self())
             return ForwardMachException(threadSysId, machTask, machExceptionType, pMachExceptionData, exceptionDataCount);
 
-        if(handlingBusy.CompareAndSet_Acquire(0, 1)) // If we can successfully change it from 0 to 1.
+        unsigned int tmp_zero = 0;
+
+        if (handlingBusy.compare_exchange_strong(tmp_zero, 1, std::memory_order_acquire)) // If we can successfully change it from 0 to 1.
         {
             exceptionOccurred = true;
 
@@ -2962,7 +2967,7 @@ static ExceptionHandler* sExceptionHandler = nullptr;
             // Re-restore the handler.
             // To do.
 
-            handlingBusy.Store_Release(0);
+            handlingBusy.store(0, std::memory_order_release);
         }
 
         kern_return_t result = KERN_FAILURE; // By default pass on the exception to another handler after we are done here.
@@ -3373,15 +3378,15 @@ void ExceptionHandler::WriteExceptionDescription()
             }
         };
 
-        OVR::snprintf(exceptionInfo.exceptionDescription, OVR_ARRAY_COUNT(exceptionInfo.exceptionDescription),
+        snprintf(exceptionInfo.exceptionDescription, OVR_ARRAY_COUNT(exceptionInfo.exceptionDescription),
                             "Mach exception type: %llu (%s)\n", exceptionInfo.exceptionType, MachExceptionInfo::GetMachExceptionTypeString(exceptionInfo.exceptionType));
 
-        OVR::snprintf(scratchBuffer, OVR_ARRAY_COUNT(scratchBuffer), "CPU exception info: exception id: %u (%s), exception id error: %u, fault memory address: %p\n",
+        snprintf(scratchBuffer, OVR_ARRAY_COUNT(scratchBuffer), "CPU exception info: exception id: %u (%s), exception id error: %u, fault memory address: %p\n",
                             exceptionInfo.cpuExceptionId, MachExceptionInfo::GetCPUExceptionIdString(exceptionInfo.cpuExceptionId), exceptionInfo.cpuExceptionIdError, exceptionInfo.pExceptionMemoryAddress);
         OVR::OVR_strlcat(exceptionInfo.exceptionDescription, scratchBuffer, OVR_ARRAY_COUNT(exceptionInfo.exceptionDescription));
 
 
-        OVR::snprintf(scratchBuffer, OVR_ARRAY_COUNT(scratchBuffer), "Mach exception info: exception id: %llu (%s), 0x%llx (%llu)\n", (uint64_t)exceptionInfo.machExceptionData[0],
+        snprintf(scratchBuffer, OVR_ARRAY_COUNT(scratchBuffer), "Mach exception info: exception id: %llu (%s), 0x%llx (%llu)\n", (uint64_t)exceptionInfo.machExceptionData[0],
                            MachExceptionInfo::GetMachExceptionIdString(exceptionInfo.exceptionType, exceptionInfo.machExceptionData[0]),
                            (uint64_t)exceptionInfo.machExceptionData[1], (uint64_t)exceptionInfo.machExceptionData[1]);
         OVR::OVR_strlcat(exceptionInfo.exceptionDescription, scratchBuffer, OVR_ARRAY_COUNT(exceptionInfo.exceptionDescription));
@@ -3740,6 +3745,7 @@ void ExceptionHandler::WriteReport(const char* reportType)
             BSTR                  bstrWQL  = nullptr;
             BSTR                  bstrPath = nullptr;
             IEnumWbemClassObject* pEnum = nullptr;
+			IWbemClassObject*     pObj = nullptr;
 
             CoInitializeEx(nullptr, COINIT_MULTITHREADED);
 
@@ -3764,7 +3770,6 @@ void ExceptionHandler::WriteReport(const char* reportType)
                 goto End;
 
             ULONG uReturned;
-            IWbemClassObject* pObj = nullptr;
             hr = pEnum->Next(WBEM_INFINITE, 1, &pObj, &uReturned);
             if(FAILED(hr))
                 goto End;

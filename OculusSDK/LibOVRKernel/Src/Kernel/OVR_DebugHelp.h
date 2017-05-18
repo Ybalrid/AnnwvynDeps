@@ -580,7 +580,7 @@ protected:
 
         // Runtime variables
         bool                     exceptionOccurred;
-        std::atomic<uint32_t> handlingBusy = { 0 };
+        std::atomic<uint32_t>    handlingBusy = { 0 };
         char                     reportFilePathActual[OVR_MAX_PATH];
         char                     minidumpFilePathActual[OVR_MAX_PATH];
         int                      terminateReturnValue;

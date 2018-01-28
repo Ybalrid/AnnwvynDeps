@@ -27,7 +27,7 @@
 # This file was extracted from https://github.com/PixarAnimationStudios/OpenSubdiv
 # 
 # The modifications made are just changing a path form vc2012 to vc2015.
-# In accordance with the Apache licence, you'll find a NOTICE.PIXAR.txt file
+# In accordance witht the Apache licence, you'll find a NOTICE.PIXAR.txt file
 # in the _legal in the archive it came from.
 
 # Try to find GLFW library and include path.

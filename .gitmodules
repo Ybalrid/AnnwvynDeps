@@ -1,3 +1,6 @@
 [submodule "openvr"]
 	path = openvr
 	url = https://github.com/ValveSoftware/openvr
+[submodule "json"]
+	path = json
+	url = https://github.com/nlohmann/json

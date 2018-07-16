@@ -76,7 +76,7 @@ static_assert(_MSC_FULL_VER >= 190024210, "Visual C++ 2015 Update 3 or later req
 
 namespace chaiscript {
   static const int version_major = 6;
-  static const int version_minor = 0;
+  static const int version_minor = 1;
   static const int version_patch = 0;
 
   static const char *compiler_version = CHAISCRIPT_COMPILER_VERSION;
@@ -170,7 +170,7 @@ namespace chaiscript {
     auto parse_num(const char *t_str) -> typename std::enable_if<!std::is_integral<T>::value, T>::type
     {
        T t = 0;
-       T base;
+       T base{};
        T decimal_place = 0;
        int exponent = 0;
 
@@ -205,15 +205,15 @@ namespace chaiscript {
           case '9':
              if (decimal_place < 10) {
                 t *= 10;
-                t += c - '0';
+                t += static_cast<T>(c - '0');
              }
              else {
-                t += (c - '0') / decimal_place;
+                t += static_cast<T>(c - '0') / decimal_place;
                 decimal_place *= 10;
              }
              break;
           default:
-             return exponent ? base * std::pow(T(10), t * exponent) : t;
+             return exponent ? base * std::pow(T(10), t * static_cast<T>(exponent)) : t;
           }
        }
     }
